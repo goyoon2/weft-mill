@@ -1,0 +1,17 @@
+{
+  "name": "weft-mill",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The weft registry (mill): harness patterns + generated index/spools.",
+  "scripts": {
+    "build": "tsx scripts/build.ts"
+  },
+  "dependencies": {
+    "@weft/loom": "link:../weft/packages/loom",
+    "@weft/schema": "link:../weft/packages/schema"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

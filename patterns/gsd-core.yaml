@@ -1,0 +1,68 @@
+schema: 1
+id: gsd-core
+displayName: GSD Core
+description: Spec-driven development system for AI coding agents (agents, skills, commands, hooks).
+homepage: https://github.com/open-gsd/gsd-core
+keywords:
+  - gsd
+  - spec
+  - planning
+  - workflow
+  - tdd
+  - review
+
+source:
+  type: npm
+  package: "@opengsd/gsd-core"
+
+versioning:
+  strategy: semver
+  track: latest
+
+# gsd-core already prefixes every artifact with `gsd-*`, so no auto-prefixing — only
+# namespace on a genuine cross-harness collision.
+namespace:
+  mode: as-is
+
+# gsd-core's own installer actively rewrites content at install time per runtime (path refs,
+# gsd: → gsd- command-name flattening, frontmatter injection, profile selection, its own
+# bookkeeping files) and natively supports every CLI below. Replicating that by hand in
+# declarative rules is brittle and was incomplete (the old non-Claude maps shipped only a
+# degraded skills/agents subset). Instead, run the real installer once in a sandbox per target
+# and snapshot exactly what it produced; the only re-localization weft does is turning the
+# sandbox config path back into {{WEFT_PAYLOAD_DIR}}. Verified: each runtime installs into a
+# single dir that matches the adapter's payloadBase (global also writes ~/.gsd defaults, which
+# is outside the captured tree and surfaced as a build note).
+targets:
+  claude-code:
+    strategy: captured
+    capture:
+      installCmd: "npx -y {pkg}@{version} --claude {scopeFlag}"
+      configDir: ".claude"
+
+  codex:
+    strategy: captured
+    capture:
+      installCmd: "npx -y {pkg}@{version} --codex {scopeFlag}"
+      configDir: ".codex"
+
+  gemini:
+    strategy: captured
+    capture:
+      installCmd: "npx -y {pkg}@{version} --gemini {scopeFlag}"
+      configDir: ".gemini"
+
+  opencode:
+    strategy: captured
+    capture:
+      installCmd: "npx -y {pkg}@{version} --opencode {scopeFlag}"
+      # opencode targets different dirs per scope (XDG global vs project-local).
+      configDir:
+        global: ".config/opencode"
+        local: ".opencode"
+
+  cursor:
+    strategy: captured
+    capture:
+      installCmd: "npx -y {pkg}@{version} --cursor {scopeFlag}"
+      configDir: ".cursor"

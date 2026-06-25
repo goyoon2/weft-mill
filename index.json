@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-06-25T12:57:36.837Z",
+  "entries": [
+    {
+      "id": "gsd-core",
+      "displayName": "GSD Core",
+      "description": "Spec-driven development system for AI coding agents (agents, skills, commands, hooks).",
+      "homepage": "https://github.com/open-gsd/gsd-core",
+      "keywords": [
+        "gsd",
+        "spec",
+        "planning",
+        "workflow",
+        "tdd",
+        "review"
+      ],
+      "latest": "1.6.0",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "1.6.0",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:5b44ee28bcefcf41bbf1a2af7060de2a91be1ad5701573db75046700f34acece",
+              "spoolJsonSha": "sha256:06ea51e68dcbe8192da0b6e42bd93c7c70cd2a7b6a868104b6d62f09be9d56df"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:cbb97ce502c59529e0af48e7112b066390ba003bcb84b74416b40239f12900dd",
+              "spoolJsonSha": "sha256:cec6483bb7947cc3eacff2c3fdf9aa741aea4fdd867bdf10e05bde75a4c5a655"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/codex.global.spool.tgz",
+              "spoolSha": "sha256:25eaaa460efd1205f8a6730a28ebbac4315598ff5266c74004554a78260d8f91",
+              "spoolJsonSha": "sha256:f16815d33be998d92fe408a9832cc8ee4949d7154a5ba56ae5ee5525c6fcce11"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/codex.local.spool.tgz",
+              "spoolSha": "sha256:4a70d276ec335dc41965793ff1acc54a8fdf2df1b42956435cf7ff8e5e76faef",
+              "spoolJsonSha": "sha256:3f984109abe806140f06f4f3543d82f448fdd9cc66c1846bd7178c8f68056447"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/gemini.global.spool.tgz",
+              "spoolSha": "sha256:9b26e05be28fcab4fb2c1dbad460af7abb50fed3bf24f5678b4bcbcd008adcc8",
+              "spoolJsonSha": "sha256:ec192a0c188117767fc9881912937d8206e10d1cdea8a4a5f63bc93f703b3454"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/gemini.local.spool.tgz",
+              "spoolSha": "sha256:5ca409d6e7b2deabbc04c755444a67f83808dbbc5893cef9d7f03d68d1694c19",
+              "spoolJsonSha": "sha256:5a3b760b24c25d0c0412c4eb323d389980eccc4a9d61db2e31e5195ef8b0a1eb"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/opencode.global.spool.tgz",
+              "spoolSha": "sha256:8e010012724d89b0aaecb44df13375ed5120679ab03ec3e33acb7d440edf2fe6",
+              "spoolJsonSha": "sha256:c390ca281d500c57e945192e8e149c25599951a201dd9cc375aa4932c8df8f60"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/opencode.local.spool.tgz",
+              "spoolSha": "sha256:1d9176e48ea2c2162ff01e0af981b158ea3648ff23c82f14288a07b35c4b8bbc",
+              "spoolJsonSha": "sha256:6af344b5a7df7ab5872618ec39e4a4eb789d9b55e95b5b16abea16d514382080"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/cursor.global.spool.tgz",
+              "spoolSha": "sha256:9dc0deef7730b1c3e6b5c0995c6b86b0b48c341d4d08aea5da3ca0269936356a",
+              "spoolJsonSha": "sha256:e077375c11f15397f38ecee0f41bb70a0b9c7b852216879c6630753485e964a7"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "file:///Users/kalen/projects/weft/weft-mill/spools/gsd-core/1.6.0/cursor.local.spool.tgz",
+              "spoolSha": "sha256:834ff374a6a528fa9aa0695adfbe4ffef28be3609fa812f58d22dce50c7d5a05",
+              "spoolJsonSha": "sha256:56b0ae972f11112a356952b43df025c3db379df4d9a91b8eeb686d12e663f229"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
