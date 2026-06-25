@@ -1,14 +1,29 @@
 name: build-catalog
 
-# Rebuild the weft catalog (index.json + spools) in CI. This is the INTENDED home for `captured`
-# builds: the untrusted upstream installers run on a clean, isolated runner — never a dev machine —
-# and GitHub Actions sets CI=true automatically, so scripts/build.ts FAILS the build if any captured
-# spool still carries a build-machine absolute path (a portability leak). Captures need network
-# (each runs the harness's own `npx` installer), so this job talks to the npm registry.
+# Rebuild the weft catalog (index.json + spools) in CI — the intended home for `captured` builds:
+# untrusted upstream installers run on a clean, isolated runner, and CI=true makes the build fail
+# on any machine-path leak (portability gate).
+#
+# Scaling (A/C/F/B):
+#  - A: only runs when patterns/scripts/this-workflow change (not on every push).
+#  - C: scripts/build.ts builds patterns in parallel (isolated child processes).
+#  - F: one pattern failing doesn't abort the rest; the build still fails (red) at the end.
+#  - B: the GitHub Actions cache of `spools/` is the "fridge" — unchanged patterns are reused from
+#       it (hashed by yaml), so only the changed pattern(s) rebuild. A scheduled/manual run with
+#       WEFT_BUILD_ALL=1 does a full rebuild to pick up `track: latest` upstream version drift.
 on:
   push:
+    paths: [patterns/**, scripts/**, .github/workflows/build.yml]
   pull_request:
+    paths: [patterns/**, scripts/**, .github/workflows/build.yml]
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC — full rebuild to catch upstream `latest` bumps
   workflow_dispatch:
+    inputs:
+      force_all:
+        description: "Rebuild every pattern from scratch (ignore the cache)"
+        type: boolean
+        default: false
 
 jobs:
   build:
@@ -33,8 +48,6 @@ jobs:
 
       - uses: pnpm/action-setup@v4
         with:
-          # both repos are in subdirs, so the workspace root has no package.json — read the
-          # packageManager pin from the engine repo (weft-mill's own package.json omits it).
           package_json_file: weft/package.json
       - uses: actions/setup-node@v4
         with:
@@ -52,9 +65,22 @@ jobs:
         run: pnpm install --frozen-lockfile
         working-directory: weft-mill
 
-      - name: Build catalog (captures run here; CI fails the build on any machine-path leak)
+      # The "fridge": restore previously-built spools so unchanged patterns are reused. Rolling key
+      # (unique per run) always saves a fresh snapshot; restore-keys pulls the most recent prior one.
+      - name: Restore spool cache
+        if: ${{ !inputs.force_all }}
+        uses: actions/cache@v4
+        with:
+          path: weft-mill/spools
+          key: mill-spools-${{ github.run_id }}
+          restore-keys: mill-spools-
+
+      - name: Build catalog (parallel + incremental; CI fails on any machine-path leak)
         run: pnpm build
         working-directory: weft-mill
+        env:
+          # Full rebuild on the weekly schedule or a manual force (picks up `track: latest` drift).
+          WEFT_BUILD_ALL: ${{ (github.event_name == 'schedule' || inputs.force_all) && '1' || '' }}
 
       - name: Upload built catalog
         if: always()
