@@ -1,0 +1,64 @@
+schema: 1
+id: andrej-karpathy-skills
+displayName: Karpathy Guidelines
+description: Behavioral guidelines to reduce common LLM coding mistakes — think before coding, simplicity first, surgical changes, goal-driven execution — derived from Andrej Karpathy's observations.
+homepage: https://github.com/multica-ai/andrej-karpathy-skills
+keywords:
+  - guidelines
+  - best-practices
+  - coding
+  - karpathy
+  - behavior
+
+# A plain skills repo, like mattpocock-skills (Archetype B): no installer, no per-CLI rewrites, no
+# runtime/host-side activation. `.claude-plugin/plugin.json` registers exactly ONE thing —
+# `"skills": ["./skills/karpathy-guidelines"]` (no hooks/commands/agents/MCP/bootstrap) — so the
+# Claude Code plugin install is precisely "register this one skill", which weft's declarative `skill`
+# slot reproduces faithfully. Hence declarative, not captured.
+#
+# Fidelity note (why only the skill is onboarded): the repo ships the SAME four principles in THREE
+# parallel forms — the on-demand `skills/karpathy-guidelines/SKILL.md`, an always-on Cursor rule
+# `.cursor/rules/karpathy-guidelines.mdc` (`alwaysApply: true`), and a root `CLAUDE.md`. weft has a
+# `skill` slot but no "always-apply rule" / "root-instruction" slot, and the .mdc/CLAUDE.md are
+# *alternative representations*, not extra pieces of the plugin install — so shipping the skill alone
+# fully reproduces the recommended (plugin) install and is the right, faithful scope.
+
+source:
+  type: git
+  url: https://github.com/multica-ai/andrej-karpathy-skills
+  # The repo has NO git tags/releases and is not on npm — there is no version surface. Pin the
+  # checkout to `main`; without a `ref` the build's tag resolver would throw "no semver tags". The
+  # built spool version is therefore the literal "main" (honest: this harness tracks the branch).
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest # ignored here — `source.ref` pins the checkout — but the field is required.
+
+# Per the maintainer's choice: no auto-bump. There are no tags/releases to observe and the content
+# is effectively static, so we opt OUT of livecheck entirely rather than let the derived `git-tags`
+# strategy fail on a tagless repo. (skipReason is required when skip.)
+livecheck:
+  skip: true
+  skipReason: "no upstream tags/releases; static single-skill content repo tracked at main, not auto-bumped"
+
+# Skill dir is self-descriptive (`karpathy-guidelines`), unlikely to collide; keep it as authored.
+# weft namespaces a skill at install time only on a genuine clash.
+namespace:
+  mode: as-is
+
+# One declarative map shared across all five CLIs (YAML anchor): the single `SKILL.md` is Claude-style
+# markdown that codex/cursor/gemini/opencode also read from their `skills/` dir. The `from` ending in
+# SKILL.md bundles the skill's whole directory. `skills/*/SKILL.md` matches the lone
+# `karpathy-guidelines` skill and would pick up any future sibling skills automatically.
+targets:
+  claude-code: &skill
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skill
+  gemini: *skill
+  cursor: *skill
+  opencode: *skill

@@ -1,0 +1,45 @@
+schema: 1
+id: gstack
+displayName: Garry's Stack
+description: Claude Code skills + a fast headless browser, installed by gstack's own ./setup.
+homepage: https://github.com/garrytan/gstack
+keywords: [browser, skills, qa, planning, review, claude]
+
+# gstack is a CASK, not a set of static files. Its real install is `git clone … && ./setup`, and that
+# setup BUILDS a native `browse` binary (via bun), DOWNLOADS Playwright Chromium, writes runtime state
+# under ~/.gstack, and symlinks ~50 skills back into the cloned repo. None of that can be snapshotted
+# into portable spool files (per-OS binary + browser download + whole-repo runtime). So instead of
+# `captured` (snapshot at build) we use `delegated`: weft runs gstack's OWN installer ON THE USER'S
+# MACHINE at install time, behind an explicit consent gate. See archetypes.md "Vendored-whole-repo +
+# native-binary ./setup" — previously declared NOT onboardable; the `delegated` strategy is what makes
+# it onboardable without shipping a degraded skills-only subset.
+source: { type: git, url: "https://github.com/garrytan/gstack", ref: main }
+versioning: { strategy: semver, track: latest }
+
+# No git tags upstream — the version lives in a VERSION file (read at build via delegate.versionFile).
+# Standard livecheck (git-tags) can't see that, so OVERRIDE with the `version-file` strategy: it GETs
+# raw VERSION from main and compares it to the catalog, so drift IS detected and the bump→rebuild→
+# `weft upgrade --trust` loop works. (Opt-in, gstack-specific — normal harnesses are unaffected.)
+livecheck:
+  strategy: version-file
+  versionFile: VERSION   # read at source.ref (main) → https://raw.githubusercontent.com/garrytan/gstack/main/VERSION
+
+targets:
+  # One delegated target under claude-code/global: the repo lives at ~/.claude/skills/gstack, and its
+  # ./setup auto-detects and wires every OTHER agent you have (codex, opencode, …) on its own — so a
+  # single delegated install reproduces the full, real gstack footprint. Global only (no per-project
+  # dir → the local scope is skipped at build).
+  claude-code:
+    strategy: delegated
+    delegate:
+      summary: >-
+        Clones gstack into ~/.claude/skills/gstack and runs ./setup — builds the 'browse' binary with
+        bun, downloads Playwright Chromium, registers MCP, and symlinks ~50 skills (auto-wires other
+        detected agents too).
+      requires: [git, bun]
+      versionFile: VERSION
+      dir:
+        global: "{home}/.claude/skills/gstack"
+      installCmd: "git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git {dir} && cd {dir} && ./setup"
+      upgradeCmd: "cd {dir} && git pull --ff-only && ./setup"
+      uninstallCmd: "{dir}/bin/gstack-uninstall --force"

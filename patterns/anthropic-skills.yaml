@@ -1,0 +1,74 @@
+schema: 1
+id: anthropic-skills
+displayName: Anthropic Agent Skills
+description: Anthropic's official example agent skills — document processing (Word/Excel/PowerPoint/PDF), MCP server building, skill authoring, visual & web design, algorithmic art, internal comms, and the Claude API guide.
+homepage: https://github.com/anthropics/skills
+keywords:
+  - skills
+  - anthropic
+  - document-processing
+  - mcp
+  - design
+  - examples
+
+# A plain skills repo, same shape as mattpocock-skills / andrej-karpathy-skills (Archetype B): no
+# installer, no per-CLI rewrites, no runtime/host-side activation. Every `skills/*/SKILL.md` is
+# Claude-style markdown that codex/cursor/gemini/opencode also read from their `skills/` dir, so the
+# `captured` strategy (which runs an upstream installer in a sandbox) doesn't apply — one declarative
+# map serves all five CLIs (shared via a YAML anchor). Skills are bundled as whole directories, so the
+# heavy ones (docx/pdf/pptx/xlsx ship Python `scripts/`, skill-creator ships an `agents/` subdir) come
+# along with their reference docs and scripts intact.
+#
+# Distribution wrinkle (why this is still plain Archetype B, not the plugin-host-native Archetype C):
+# the repo is published as a Claude Code MARKETPLACE — `.claude-plugin/marketplace.json` defines THREE
+# plugins (document-skills, example-skills, claude-api) rather than a single plugin.json. But each
+# plugin's ONLY payload is `skills` (no hooks/commands/MCP/agents/bootstrap), so there is no host-side
+# activation to reproduce. The union of the three plugins' skill lists is exactly the 17 directories
+# under `skills/`, which `skills/*/SKILL.md` reproduces in full. Shipping the skills declaratively is
+# therefore a FAITHFUL, complete reproduction of installing the marketplace's plugins — not a degraded
+# subset. (The top-level `spec/agent-skills-spec.md` and `template/SKILL.md` are reference/scaffold
+# material, not registered skills and not under `skills/`, so the glob correctly excludes them.)
+
+source:
+  type: git
+  url: https://github.com/anthropics/skills
+  # The repo has NO git tags/releases (verified `git ls-remote --tags` → 0) and is not on npm — there
+  # is no version surface. Pin the checkout to `main`; without a `ref` the build's tag resolver would
+  # throw "no semver tags". The built spool version is therefore the literal "main" (honest: this
+  # harness tracks the branch). marketplace.json carries a metadata `version: 1.0.0`, but weft reads
+  # no such field for declarative sources, so it doesn't change this.
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest # ignored here — `source.ref` pins the checkout — but the field is required.
+
+# No tags/releases to observe, so opt OUT of livecheck rather than let the derived `git-tags` strategy
+# fail on a tagless repo. (skipReason is required when skip.) If Anthropic starts tagging releases,
+# revisit: drop this block and `source.ref` to let the derived git-tags livecheck + bump→PR loop run.
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+# Skill dir names are bare/descriptive (`docx`, `pdf`, `xlsx`, `claude-api`, `frontend-design`, …) and
+# some can collide with other harnesses or the user's own skills (e.g. a `claude-api` skill). Keep
+# them as authored; weft's install-time collision detection namespaces a skill (prefixing its whole
+# directory) only on a genuine clash. See [[weft-profiles-verify-not-guess]] for the don't-over-namespace stance.
+namespace:
+  mode: as-is
+
+# One declarative map shared across all five CLIs (YAML anchor). `skills/*/SKILL.md` matches exactly
+# the 17 registered skills (the `*` is the skill directory → `${name}` = that dir name, e.g. `docx`).
+# Ending `from` in SKILL.md bundles each skill's whole directory (scripts, agents/, templates, schemas,
+# LICENSE.txt, reference docs). New skills added under `skills/` are picked up automatically.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skills
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills
