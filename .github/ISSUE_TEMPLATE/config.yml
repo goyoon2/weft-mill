@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: weft CLI / engine bug
+    url: https://github.com/goyoon2/weft/issues/new/choose
+    about: If the weft command itself misbehaves (not a specific harness's files), file it on the engine repo.
