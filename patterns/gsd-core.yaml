@@ -19,6 +19,10 @@ versioning:
   strategy: semver
   track: latest
 
+# No `livecheck:` block needed — it's DERIVED from the npm source above: the daily livecheck
+# workflow reads the `latest` dist-tag of @opengsd/gsd-core and flags drift vs the built catalog.
+# Add an explicit `livecheck:` only to override the strategy or to opt out (skip + skipReason).
+
 # gsd-core already prefixes every artifact with `gsd-*`, so no auto-prefixing — only
 # namespace on a genuine cross-harness collision.
 namespace:

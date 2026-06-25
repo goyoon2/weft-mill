@@ -1,0 +1,122 @@
+name: livecheck
+
+# Observe upstream version drift CHEAPLY (no rebuild): walk every pattern, resolve its newest
+# upstream version from registry/API metadata, and diff against the version the catalog (index.json)
+# was built at. weft's Homebrew-`brew bump --auto` analogue.
+#
+# Because the checks are cheap (one `npm view` / GitHub API call / `git ls-remote` per pattern), this
+# runs DAILY and iterates the whole catalog every run — but only *acts* on what actually moved. On
+# drift it (1) updates a single rolling tracking issue as a dashboard, and (2) dispatches `bump.yml`
+# ONCE PER drifted harness, which rebuilds just that harness and opens a reviewable PR carrying the
+# new catalog data. It never rebuilds inline — that stays in bump.yml. Set the repo variable
+# LIVECHECK_OPEN_PRS=false to keep the issue dashboard but stop auto-opening PRs.
+on:
+  schedule:
+    - cron: "0 5 * * *" # daily 05:00 UTC — an hour before build.yml's weekly Monday full rebuild
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write # open / update the drift tracking issue
+  actions: write # dispatch build-catalog on drift (opt-in)
+
+concurrency:
+  group: livecheck
+  cancel-in-progress: true
+
+jobs:
+  livecheck:
+    runs-on: ubuntu-latest
+    steps:
+      # Same side-by-side layout as build.yml: the resolver lives in the engine's @weft/loom, so the
+      # mill and engine repos must sit next to each other under the workspace.
+      - name: Checkout weft-mill
+        uses: actions/checkout@v4
+        with:
+          path: weft-mill
+
+      - name: Checkout weft (engine — provides @weft/loom + @weft/schema)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/weft
+          ref: main
+          path: weft
+          token: ${{ github.token }}
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: weft/package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24 # matches build.ts / build.yml (node:fs.globSync needs 22+)
+          cache: pnpm
+          cache-dependency-path: |
+            weft/pnpm-lock.yaml
+            weft-mill/pnpm-lock.yaml
+
+      - name: Install engine deps
+        run: pnpm install --frozen-lockfile
+        working-directory: weft
+      - name: Install mill deps
+        run: pnpm install --frozen-lockfile
+        working-directory: weft-mill
+
+      - name: Livecheck (resolve upstream versions; diff vs built catalog)
+        id: livecheck
+        run: pnpm livecheck
+        working-directory: weft-mill
+        env:
+          # Authenticated GitHub API calls (github-latest / github-tags strategies) dodge the low
+          # unauthenticated rate limit. npm / git ls-remote need no auth.
+          GITHUB_TOKEN: ${{ github.token }}
+
+      # The reviewable artifact: one rolling issue (labeled `livecheck`) whose body is the report.
+      # Updated in place each run so drift never spams a new issue.
+      - name: Open / update drift tracking issue
+        if: steps.livecheck.outputs.outdated == 'true' || steps.livecheck.outputs.errors == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('weft-mill/livecheck-report.md', 'utf8');
+            const title = 'chore(livecheck): upstream harness updates available';
+            const label = 'livecheck';
+            try {
+              await github.rest.issues.createLabel({ ...context.repo, name: label, color: 'fbca04' });
+            } catch (e) { /* label already exists */ }
+            const open = await github.rest.issues.listForRepo({
+              ...context.repo, state: 'open', labels: label, per_page: 1,
+            });
+            if (open.data.length) {
+              await github.rest.issues.update({
+                ...context.repo, issue_number: open.data[0].number, title, body,
+              });
+              core.info(`Updated issue #${open.data[0].number}`);
+            } else {
+              const created = await github.rest.issues.create({ ...context.repo, title, body, labels: [label] });
+              core.info(`Opened issue #${created.data.number}`);
+            }
+
+      # Open one reviewable PR per drifted harness by dispatching bump.yml. On by default; set the
+      # repo variable LIVECHECK_OPEN_PRS=false to disable. Each dispatch rebuilds only its harness
+      # (WEFT_BUILD_ONLY), which the yaml-hash incremental cache would otherwise mask on a pure
+      # upstream bump. (Note: a workflow dispatched by the default GITHUB_TOKEN may not be allowed to
+      # chain into another run on some repos — use a PAT secret if so.)
+      - name: Open a bump PR per drifted harness
+        if: steps.livecheck.outputs.outdated == 'true' && vars.LIVECHECK_OPEN_PRS != 'false'
+        uses: actions/github-script@v7
+        env:
+          BUMPS: ${{ steps.livecheck.outputs.bumps }}
+        with:
+          script: |
+            const bumps = JSON.parse(process.env.BUMPS || '[]');
+            for (const b of bumps) {
+              core.info(`Dispatching bump for ${b.id}: ${b.from ?? '(new)'} → ${b.to}`);
+              await github.rest.actions.createWorkflowDispatch({
+                ...context.repo,
+                workflow_id: 'bump.yml',
+                ref: context.ref,
+                inputs: { id: b.id, version: String(b.to ?? '') },
+              });
+            }
+            core.info(`Dispatched ${bumps.length} bump(s).`);

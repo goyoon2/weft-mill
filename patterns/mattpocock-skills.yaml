@@ -1,0 +1,59 @@
+schema: 1
+id: mattpocock-skills
+displayName: Matt Pocock Skills
+description: Matt Pocock's agent skills for real engineering — TDD, bug diagnosis, domain modeling, PRDs/issues, prototyping, and productivity workflows.
+homepage: https://github.com/mattpocock/skills
+keywords:
+  - skills
+  - engineering
+  - tdd
+  - debugging
+  - planning
+  - productivity
+
+source:
+  type: git
+  url: https://github.com/mattpocock/skills
+
+versioning:
+  strategy: semver
+  track: latest
+
+# The repo carries two tag families: release tags (`v1.0.1`) and changesets' package tags
+# (`mattpocock-skills@1.0.0`). Pin tag resolution — both the livecheck observation and the build's
+# own clone-the-latest-tag step — to the `v*` releases so the package tags don't shadow them.
+livecheck:
+  tagPattern: "v*"
+
+# Skill names are bare (`tdd`, `triage`, `prototype`, …) — not self-prefixed like gsd-core's `gsd-*`,
+# so they can collide with other harnesses or the user's own skills. Keep them as-authored; weft's
+# install-time collision detection namespaces a skill (prefixing its whole directory) only on a
+# genuine clash. See [[weft-profiles-verify-not-guess]] for the "don't over-namespace" stance.
+namespace:
+  mode: as-is
+
+# A plain skills repo: no installer and no per-CLI rewrites, so the `captured` strategy (which runs
+# an upstream installer in a sandbox) doesn't apply — every `SKILL.md` here is Claude-style markdown
+# that codex/cursor/gemini/opencode also read from their `skills/` dir. One declarative map therefore
+# serves all five CLIs (shared via a YAML anchor).
+#
+# Scope = the maintainer's released categories: `engineering/*` and `productivity/*`. This mirrors
+# `.claude-plugin/plugin.json`'s category choice and deliberately excludes `deprecated/`,
+# `in-progress/`, `misc/`, and `personal/`. (The glob ships every skill in those two categories — at
+# v1.0.1 that is 19 skills, i.e. plugin.json's 17 plus `engineering/implement` and
+# `engineering/resolving-merge-conflicts`, which live in a shipped category but aren't yet listed in
+# plugin.json.) Each skill is bundled as its whole directory (SKILL.md + reference docs + scripts).
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/engineering/*/SKILL.md"
+        as: "skill:${name}"
+      - kind: skill
+        from: "skills/productivity/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills

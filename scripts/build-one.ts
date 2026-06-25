@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildIndexEntry, parsePatternFile } from "@weft/loom";
+import { relativizeEntrySpools } from "@weft/schema";
 
 /**
  * Build a SINGLE pattern into `<mill>/spools/<id>/` and persist its index entry as
@@ -19,9 +20,13 @@ async function main(): Promise<void> {
   const pattern = parsePatternFile(join(millDir, "patterns", file));
   const { entry, notes } = await buildIndexEntry(pattern, { outDir: millDir });
 
+  // Store spool urls RELATIVE to the mill dir so the committed entry.json / index.json are portable
+  // across machines (the engine re-absolutizes them on load against the local checkout).
+  const portableEntry = relativizeEntrySpools(entry, millDir);
+
   const dir = join(millDir, "spools", pattern.id);
   mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, "entry.json"), `${JSON.stringify(entry, null, 2)}\n`);
+  writeFileSync(join(dir, "entry.json"), `${JSON.stringify(portableEntry, null, 2)}\n`);
 
   for (const note of notes) console.log(note);
 

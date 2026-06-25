@@ -4,6 +4,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { listPatternFiles, parsePatternFile } from "@weft/loom";
+import { relativizeEntrySpools } from "@weft/schema";
 import type { Index, IndexEntry } from "@weft/schema";
 
 /**
@@ -30,6 +31,16 @@ const tsxBin = (() => {
 
 const CONCURRENCY = Math.max(1, Number(process.env.WEFT_BUILD_CONCURRENCY) || 4);
 const FORCE_ALL = process.env.WEFT_BUILD_ALL === "1";
+// WEFT_BUILD_ONLY=<comma ids>: rebuild ONLY these harnesses (bypassing the yaml-hash cache, since a
+// pure upstream-version bump leaves the yaml unchanged) while every OTHER harness is reused from its
+// committed spools/entry.json as-is. This is how the per-harness bump workflow produces a clean,
+// single-harness diff. Empty (the default) → normal incremental build keyed on the yaml hash.
+const BUILD_ONLY = new Set(
+  (process.env.WEFT_BUILD_ONLY ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean),
+);
 
 type BuildState = Record<string, { yamlSha: string }>;
 const sha256 = (buf: Buffer | string): string => createHash("sha256").update(buf).digest("hex");
@@ -46,12 +57,17 @@ function entryFile(id: string): string {
   return join(spoolsDir, id, "entry.json");
 }
 
+/** Resolve a spool `url` to an absolute path: a relative committed path is joined onto the mill dir. */
+function spoolPath(url: string): string {
+  return url.startsWith("file://") ? fileURLToPath(url) : join(millDir, url);
+}
+
 /** A cached entry is only reusable if every spool .tgz it references is actually still on disk. */
 function spoolsPresent(entry: IndexEntry): boolean {
   return entry.versions.every((v) =>
     v.spools.every((s) => {
       try {
-        return existsSync(fileURLToPath(s.url));
+        return existsSync(spoolPath(s.url));
       } catch {
         return false;
       }
@@ -107,16 +123,25 @@ async function main(): Promise<void> {
     current.push({ file, id, yamlSha });
 
     const cachedEntry = readJson<IndexEntry>(entryFile(id));
+    const haveCache = cachedEntry !== undefined && spoolsPresent(cachedEntry);
+    // In WEFT_BUILD_ONLY mode the targeted ids always rebuild and every other harness is reused
+    // purely on whether its committed spools are present (ignoring the yaml-hash check) — so the
+    // bump touches only the targeted harness. Otherwise: normal incremental, keyed on the yaml hash.
+    const forced = FORCE_ALL || BUILD_ONLY.has(id);
     const reusable =
-      !FORCE_ALL && prior[id]?.yamlSha === yamlSha && cachedEntry !== undefined && spoolsPresent(cachedEntry);
+      !forced && haveCache && (BUILD_ONLY.size > 0 ? true : prior[id]?.yamlSha === yamlSha);
     if (!reusable) toBuild.push({ file, id });
   }
 
   const currentIds = new Set(current.map((c) => c.id));
   const reused = current.filter((c) => !toBuild.some((t) => t.id === c.id));
+  const mode = FORCE_ALL
+    ? " (WEFT_BUILD_ALL — full rebuild)"
+    : BUILD_ONLY.size > 0
+      ? ` (WEFT_BUILD_ONLY — ${[...BUILD_ONLY].join(", ")})`
+      : "";
   console.log(
-    `${files.length} pattern(s): ${toBuild.length} to build, ${reused.length} reused from cache` +
-      `${FORCE_ALL ? " (WEFT_BUILD_ALL — full rebuild)" : ""}`,
+    `${files.length} pattern(s): ${toBuild.length} to build, ${reused.length} reused from cache${mode}`,
   );
 
   // ── prune cached spools for patterns that no longer exist ──
@@ -143,12 +168,24 @@ async function main(): Promise<void> {
   const missing: string[] = [];
   for (const { id } of current) {
     const entry = readJson<IndexEntry>(entryFile(id));
-    if (entry) entries.push(entry);
-    else missing.push(id);
+    if (!entry) {
+      missing.push(id);
+      continue;
+    }
+    // Normalize to portable relative spool urls (idempotent). build-one already does this for freshly
+    // built entries; this also migrates any reused entry.json that predates relative urls — so a plain
+    // `pnpm build` makes the whole committed catalog portable without a full upstream rebuild.
+    const portable = relativizeEntrySpools(entry, millDir);
+    if (JSON.stringify(portable) !== JSON.stringify(entry)) {
+      writeFileSync(entryFile(id), `${JSON.stringify(portable, null, 2)}\n`);
+    }
+    entries.push(portable);
   }
   entries.sort((a, b) => a.id.localeCompare(b.id));
 
-  const index: Index = { schema: 1, generatedAt: new Date().toISOString(), entries };
+  // No `generatedAt`: a wall-clock stamp would churn the committed index.json on every rebuild and
+  // collide across concurrent per-harness bump PRs. The diff should reflect only what upstream moved.
+  const index: Index = { schema: 1, entries };
   writeFileSync(join(millDir, "index.json"), `${JSON.stringify(index, null, 2)}\n`);
 
   // ── persist build state for the next incremental run ──

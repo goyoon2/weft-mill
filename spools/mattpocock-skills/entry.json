@@ -1,0 +1,99 @@
+{
+  "id": "mattpocock-skills",
+  "displayName": "Matt Pocock Skills",
+  "description": "Matt Pocock's agent skills for real engineering — TDD, bug diagnosis, domain modeling, PRDs/issues, prototyping, and productivity workflows.",
+  "homepage": "https://github.com/mattpocock/skills",
+  "keywords": [
+    "skills",
+    "engineering",
+    "tdd",
+    "debugging",
+    "planning",
+    "productivity"
+  ],
+  "latest": "1.0.1",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "1.0.1",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/mattpocock-skills/1.0.1/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:23f8456e8bff84768b77a755e9ad491a88f2df1af6108add28915445e6f4eb48",
+          "spoolJsonSha": "sha256:51dfd3669028cd7c3721eb56ce18bc9d37bbc1b2e87da7b9452643f21c27c1a6"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/mattpocock-skills/1.0.1/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:acd630af95ce24e5cdfa5936f62f299c3a6a99e4e3c3cbbb54cc625a07db773b",
+          "spoolJsonSha": "sha256:076c57f45624958600642663eeb6311516d6cd385fa0661cf538d76eaec10299"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/mattpocock-skills/1.0.1/codex.global.spool.tgz",
+          "spoolSha": "sha256:c7de12ce05a5f8ace12527503263708d358eeab6f740f50392af88a48cc617ed",
+          "spoolJsonSha": "sha256:18ac70c5942024cae5538d5f2700ae573ea7afc7591855ceadfeed3632f69e11"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/mattpocock-skills/1.0.1/codex.local.spool.tgz",
+          "spoolSha": "sha256:4c8582b1d84321cbe0b56849e89532642e05dd37e2385987205b30d900c54448",
+          "spoolJsonSha": "sha256:019efe3a5445e2457e51cfbd1463fb1ef207cb6138d02fba21789683843810be"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/mattpocock-skills/1.0.1/gemini.global.spool.tgz",
+          "spoolSha": "sha256:7ebcf87fe7dc6016b6f5484ff96f5ed65db9b515f05934df6e3a520b95347953",
+          "spoolJsonSha": "sha256:446426c2755bd4ba6866ba6c29a30fd1070d6736232ada3bf08db8729a48ad96"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/mattpocock-skills/1.0.1/gemini.local.spool.tgz",
+          "spoolSha": "sha256:c12e80e1c759720868911df97e7865097d15ce94d1d9c5e8f5441ef8640adf91",
+          "spoolJsonSha": "sha256:0bdcb4615993acd776e0f8f1e71cfc3b386c1347984441b4ee10f1d4078c72db"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/mattpocock-skills/1.0.1/opencode.global.spool.tgz",
+          "spoolSha": "sha256:b54e7a942cd4b0b18ae1d5d00a8b60b662dcc725393cc6bad2c73e5d0c10d7e0",
+          "spoolJsonSha": "sha256:19b993fcb0346ca88a8b74cd4f7f10d91f87d0f2e5128fdd7978259ebcc901c1"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/mattpocock-skills/1.0.1/opencode.local.spool.tgz",
+          "spoolSha": "sha256:8ec8fdcb801674c561bcd6914523d3158d2a4a57dcf40807ab17878c5df41f2f",
+          "spoolJsonSha": "sha256:bb125f7dee36ff2c0ba12053f973886b42c1b35cd7e01f7298b3ab25a6b53f1f"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/mattpocock-skills/1.0.1/cursor.global.spool.tgz",
+          "spoolSha": "sha256:699d3b4f7b72aa5a169db4d428aa0a5dda70fc2ab5e3e7fb520c4768abc21196",
+          "spoolJsonSha": "sha256:69f2459b13c04116c506de9d13e01c7bb56afcb8df13a0d608d96e4786d98128"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/mattpocock-skills/1.0.1/cursor.local.spool.tgz",
+          "spoolSha": "sha256:c7f75e764a8081c9afb5b11e63d9d4c2ef254797d56fdc72cc30df725e41a2fb",
+          "spoolJsonSha": "sha256:57e52e2ef8d2ee746234a4cecf2bf20c51450b6c38ecaf779e75f26f7fbb4f81"
+        }
+      ]
+    }
+  ]
+}
