@@ -31,10 +31,14 @@ jobs:
           path: weft
           token: ${{ github.token }}
 
-      - uses: pnpm/action-setup@v4 # reads packageManager from package.json
+      - uses: pnpm/action-setup@v4
+        with:
+          # both repos are in subdirs, so the workspace root has no package.json — read the
+          # packageManager pin from the engine repo (weft-mill's own package.json omits it).
+          package_json_file: weft/package.json
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24 # build.ts uses node:fs.globSync (Node 22+); 20 lacks it
           cache: pnpm
           cache-dependency-path: |
             weft/pnpm-lock.yaml
