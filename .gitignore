@@ -1,5 +1,12 @@
 node_modules/
-# generated build outputs — regenerate with `pnpm build`
-spools/
+# The catalog payload (spool .tgz + per-harness entry.json) IS committed — it's the in-repo
+# distribution that a bump PR carries and that `weft` installs from. Only the incremental
+# build-state stays local (it's machine/cache-specific, not part of the catalog).
+spools/.build-state.json
+# Stray npm-pack tarballs from capture, but NOT the committed spool archives.
 *.tgz
+!spools/**/*.spool.tgz
+# Regenerated each run; surfaced as a workflow artifact / issue / PR body.
+livecheck-report.md
+pr-body.md
 .DS_Store

@@ -1,0 +1,55 @@
+name: verify-catalog
+
+# Integrity gate for the committed catalog. Runs on any PR that touches index.json or spools (e.g. a
+# bump PR from bump.yml): parse index.json and confirm every referenced spool .tgz is present and its
+# sha256 matches the recorded spoolSha. Cheap — no upstream installer re-run — so a bump can't merge
+# with a dangling or tampered spool.
+on:
+  pull_request:
+    paths: [index.json, spools/**]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-catalog-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout weft-mill
+        uses: actions/checkout@v4
+        with:
+          path: weft-mill
+
+      - name: Checkout weft (engine — provides @weft/schema)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/weft
+          ref: main
+          path: weft
+          token: ${{ github.token }}
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: weft/package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: |
+            weft/pnpm-lock.yaml
+            weft-mill/pnpm-lock.yaml
+
+      - name: Install engine deps
+        run: pnpm install --frozen-lockfile
+        working-directory: weft
+      - name: Install mill deps
+        run: pnpm install --frozen-lockfile
+        working-directory: weft-mill
+
+      - name: Verify catalog (spools present + hashes match)
+        run: pnpm verify
+        working-directory: weft-mill

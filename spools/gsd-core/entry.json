@@ -1,0 +1,99 @@
+{
+  "id": "gsd-core",
+  "displayName": "GSD Core",
+  "description": "Spec-driven development system for AI coding agents (agents, skills, commands, hooks).",
+  "homepage": "https://github.com/open-gsd/gsd-core",
+  "keywords": [
+    "gsd",
+    "spec",
+    "planning",
+    "workflow",
+    "tdd",
+    "review"
+  ],
+  "latest": "1.6.0",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "1.6.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/gsd-core/1.6.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:ac8351bde9d01cd618b8c31bd733352480f0b6b999452277fac4e89e812589a2",
+          "spoolJsonSha": "sha256:692dcf402fd48e6a23a7313fe7aea39f0d6fe8a839ab04a117330961d46a91fb"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/gsd-core/1.6.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:17951595e4c00a68200e437bf3cbecc0ce7fe6cf011b3d3340abef2ca38aea6c",
+          "spoolJsonSha": "sha256:97b03fbd68e387fb5ab54ced4feb965bae74d55c0539d56dad16d0b9329bf6c8"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/gsd-core/1.6.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:52e2bc27566abfad8d5bd2ff433c7730961e90b182936a9f040d50fdb02948be",
+          "spoolJsonSha": "sha256:d5c7984eb09f30cfc14b15ac13cdd0c79bda219d54f3b83332554e32a2525f42"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/gsd-core/1.6.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:cf6e0c3b2a0689180dfc88f64840d232cca119caa2cf99261ea3e75a60fd4d16",
+          "spoolJsonSha": "sha256:7d9c7b71816c758ea115b603c2664ec95530266d0d222294971941aa4f98a21a"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/gsd-core/1.6.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:a9e24e11f00d78e6d23bbb0ef7f2e18d7e1601ddb77e51d519acb01556e1485e",
+          "spoolJsonSha": "sha256:aa2f00c24670bd0def0a94654fdcc825d8c35efdf095fdc93b61a5d33679614a"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/gsd-core/1.6.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:c30300a67a6b6cce57e85e8bd2d44dfd82848274d22d1bcb6c6995071642e37c",
+          "spoolJsonSha": "sha256:84dabcefc8eb360e4683a52170de2d159d3d913a80a2744f168826a73a878891"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/gsd-core/1.6.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:a5245b465672da7e1d95c55907e6cccc401e8ac5d5982bd7964cd8579a3a1716",
+          "spoolJsonSha": "sha256:0e7d7620d280c6b9a3dfdd57b6e397a1662ba4f3360875393a5f502e89be1c30"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/gsd-core/1.6.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:4b82ab7841acd5f503b42f686d871fa28bb7d12cd1430a183502b702a2825047",
+          "spoolJsonSha": "sha256:8041dcc2dbc569372395d23433afa25314e7ea2bcd6722f4151ee026dd531d7d"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/gsd-core/1.6.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:c4b3694de3295766396fdc66a2015ba4c3990cb70db5002e3fc38da9bfe42cdf",
+          "spoolJsonSha": "sha256:f8fd55c23614c88edb7d0cb11cf841c01518d1e2acd8382b0b7fbb49dacf4b85"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/gsd-core/1.6.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:41a03d9beaeced9c218e5494935a4607b36bbadbcc2c627b0fcbf547f0fd138d",
+          "spoolJsonSha": "sha256:24a9ecf462260e30b183be18f9b765dff5f0488247553cc531b174ca4d5f3d3b"
+        }
+      ]
+    }
+  ]
+}

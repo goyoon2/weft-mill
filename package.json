@@ -5,7 +5,10 @@
   "type": "module",
   "description": "The weft registry (mill): harness patterns + generated index/spools.",
   "scripts": {
-    "build": "tsx scripts/build.ts"
+    "build": "tsx scripts/build.ts",
+    "livecheck": "tsx scripts/livecheck.ts",
+    "verify": "tsx scripts/verify-catalog.ts",
+    "render-bump-pr": "tsx scripts/render-bump-pr.ts"
   },
   "dependencies": {
     "@weft/loom": "link:../weft/packages/loom",
