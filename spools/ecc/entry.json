@@ -1,0 +1,101 @@
+{
+  "id": "ecc",
+  "displayName": "Everything Claude Code (ECC)",
+  "description": "Harness-native agent operating system — agents, skills, command shims, hooks, rules, and MCP conventions for Claude Code, Codex, Cursor, Gemini, and OpenCode.",
+  "homepage": "https://github.com/affaan-m/ECC",
+  "keywords": [
+    "ecc",
+    "agents",
+    "skills",
+    "hooks",
+    "rules",
+    "mcp",
+    "operator",
+    "workflow"
+  ],
+  "latest": "2.0.0",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "2.0.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/ecc/2.0.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:0ef0d91c127b94f3216ff851a968ce2098bc5032ff920ec66467428677666c8d",
+          "spoolJsonSha": "sha256:e135d2264dddec9a97bc6456ae58e64948d2b9cd7e3e716ac9989be775dcfa7f"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/ecc/2.0.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:d530a8d9d69030faa162754e6fdf761fd2f27b9a99644a669212f594d231aa9c",
+          "spoolJsonSha": "sha256:b2606a0f7552baf60e05744c86d26253fb91b8315b86248bf7fab7695a8caa5f"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/ecc/2.0.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:7254ccca795ba567e4fb37ad85a778d38688e096d1c15a86a54e5e5685b54de6",
+          "spoolJsonSha": "sha256:e6b5adda578591945740e1fa76d6b46bcbe35d6a80fe79c5a2086c2e0e6e056d"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/ecc/2.0.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:804f6ca02f83400fbee3ddf4e0285f85e62e24971e48c4fd885ecabd175a0d66",
+          "spoolJsonSha": "sha256:0b223a50e3bdb419d37eb76ecd6119e7971ac89338c1a3c9d5bbdb0e13618334"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/ecc/2.0.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:49d3eb7957d0322fc9a03e2b3f9b305191ca50e4fd5293607db28edbdf5c808b",
+          "spoolJsonSha": "sha256:09bf7a135f4c5938190dee4dc43d70e6b8f3fdac728a7c96287763ae9fb298e4"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/ecc/2.0.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:dfd24f169e29638c156627ea1c5680ad962bed312124b115ad5a554d091fc467",
+          "spoolJsonSha": "sha256:585ec6e96c7c1b0dc7eb139e1a2e0c3405e370b07d271f8f6cfe1e6929521686"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/ecc/2.0.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:9d39ec866a4b019600c34f9424b97b2660dd3915224c94a50b50e153543c2c53",
+          "spoolJsonSha": "sha256:9fb783a68ef1142f571d1eee0a2f5cc5d931cffc547f0c1732f0c4769088d22a"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/ecc/2.0.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:47989af77ea7568790750f34fbe72b42635c408bbffee51675c7ac1c0f283c6d",
+          "spoolJsonSha": "sha256:ffaf89b07ddb1c9f446a9418afe6f476a1fe818d9436acb8bf713727f4740538"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/ecc/2.0.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:37f7bf39ec9a35e0ab9c4a311b3eeec47f83fa219b32fcbfe7d1e23a3c3094b9",
+          "spoolJsonSha": "sha256:51fb658870ea1301da143057dc84f1fae37d95f39ce87308d31c41f537085b34"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/ecc/2.0.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:c8bfd5a0c34a9049b6b5d3ade41e83bcab8eb81bd9d0670190d09a483c066d75",
+          "spoolJsonSha": "sha256:2f757f47bcdb1cedee3d890c50dbbec3a381b1a3cfb73f784d956caf336f4a86"
+        }
+      ]
+    }
+  ]
+}

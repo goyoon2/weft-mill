@@ -1,0 +1,104 @@
+schema: 1
+id: ecc
+displayName: Everything Claude Code (ECC)
+description: Harness-native agent operating system — agents, skills, command shims, hooks, rules, and MCP conventions for Claude Code, Codex, Cursor, Gemini, and OpenCode.
+homepage: https://github.com/affaan-m/ECC
+keywords:
+  - ecc
+  - agents
+  - skills
+  - hooks
+  - rules
+  - mcp
+  - operator
+  - workflow
+
+source:
+  type: npm
+  package: "ecc-universal"
+
+versioning:
+  strategy: semver
+  track: latest
+
+# No `livecheck:` block — DERIVED from the npm source (npm-dist-tag): the daily livecheck reads the
+# `latest` dist-tag of ecc-universal and flags drift vs the built catalog. The repo also carries git
+# tags (v2.0.0, …) that match the npm version, but the npm dist-tag is the canonical release surface.
+
+# ECC artifacts are bare-named (skills like `tdd-workflow`, agents like `architect`), NOT self-prefixed.
+# That doesn't matter here: captured ships the installer's whole per-CLI tree as ONE payload rooted at
+# the CLI's config dir (baseRel ""), so there are no individually-named slots to collide — `namespace`
+# is effectively inert for a captured harness. Kept `as-is` for parity with the other captured patterns.
+namespace:
+  mode: as-is
+
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# Strategy: CAPTURED (run ECC's own installer in a sandbox, snapshot the result). Why, not declarative:
+# ECC ships `ecc-install` (npm bin), which RENDERS a *different* tree per target — claude gets a plugin
+# (plugin.json + marketplace.json + hooks/hooks.json + rules/ecc + skills/ecc), codex a `config.toml`
+# + adapted agents, gemini a `GEMINI.md` + MCP config, opencode a built `dist/` + `opencode.json`,
+# cursor flattened rules + `hooks.json`. Hand-mapping repo globs would be a lossy re-implementation of
+# that per-target rendering. The install is also self-contained file ops (no per-machine build —
+# opencode's `dist/` is pre-built in the published tarball via `prepack`), so it snapshots cleanly →
+# captured, NOT delegated. ([[weft-captured-strategy]], Archetype A.)
+#
+# Verified by REAL install (ecc-universal@2.0.0, --profile full) into an isolated sandbox per target:
+# every target writes ONLY inside its own config dir — nothing lands in cwd/HOME outside it, so the
+# captured `configDir` snapshot is the COMPLETE install (zero capture miss). Footprints: claude 772
+# files, codex 354, gemini 5, cursor 780, opencode 535. claude activation is file-based (a Claude
+# plugin discovered from plugin.json/marketplace.json in the config dir — no settings.json mutation,
+# no external `claude plugin add` step), so weft's byte-identical payload placement activates it the
+# same way the native installer does. NOT an Archetype-C host-activation case, NOT an omc config-clobber
+# (ECC owns its plugin tree; it doesn't merge into the user's settings.json/CLAUDE.md).
+#
+# Profile baked: `--profile full`. ECC installs are parameterized (minimal/opencode/core/developer/
+# security/research/full + --modules/--skills); captured must bake ONE. `full` = all 23 *functional*
+# modules — a SUPERSET of every other profile — so the user gets the complete harness, never a subset.
+# The only modules `full` omits are the 9 `docs-<locale>` translated-docs modules (opt-in alternative-
+# language copies of the same docs, via `--locale`); those are alternative representations, not missing
+# functionality. So baking `full` is the faithful "give them all of ECC" choice, not a degraded install.
+#
+# installCmd shape: ecc-universal exposes THREE bins (ecc / ecc-control-pane / ecc-install), so a bare
+# `npx ecc-universal` can't resolve one — use `npx -p {pkg}@{version} ecc-install`. ECC selects the
+# install location by TARGET NAME (claude→~/.claude, claude-project→./.claude, codex→~/.codex, …), not
+# a `--global/--local` flag, so there is NO `{scopeFlag}` to pass. weft still builds both a global and a
+# local spool from the same command (identical content; capture runs with cwd==HOME==sandbox, so a
+# project- and a home-target both resolve to `sandbox/.X`), and the adapter places it at ~/.X (global)
+# vs ./.X (local) at install time — both are real config locations ECC documents for each tool.
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+targets:
+  claude-code:
+    strategy: captured
+    capture:
+      # claude-project writes ./.claude (cwd==sandbox); byte-identical to the `claude` home target
+      # since cwd==HOME==sandbox → both resolve to sandbox/.claude.
+      installCmd: "npx -y -p {pkg}@{version} ecc-install --target claude-project --profile full"
+      configDir: ".claude"
+
+  codex:
+    strategy: captured
+    capture:
+      installCmd: "npx -y -p {pkg}@{version} ecc-install --target codex --profile full"
+      configDir: ".codex"
+
+  gemini:
+    strategy: captured
+    capture:
+      # gemini's full install is intentionally small (GEMINI.md + MCP config + 2 helper scripts) —
+      # Gemini consumes a context file + MCP, not file-dropped agents/skills. Verified: 5 files, faithful.
+      installCmd: "npx -y -p {pkg}@{version} ecc-install --target gemini --profile full"
+      configDir: ".gemini"
+
+  cursor:
+    strategy: captured
+    capture:
+      installCmd: "npx -y -p {pkg}@{version} ecc-install --target cursor --profile full"
+      configDir: ".cursor"
+
+  opencode:
+    strategy: captured
+    capture:
+      # ECC's opencode target writes ~/.opencode directly (NOT the XDG .config/opencode dir gsd-core
+      # uses) and needs the pre-built .opencode/dist, which ships in the published npm tarball.
+      installCmd: "npx -y -p {pkg}@{version} ecc-install --target opencode --profile full"
+      configDir: ".opencode"

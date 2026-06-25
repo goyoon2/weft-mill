@@ -1,0 +1,99 @@
+{
+  "id": "anthropic-skills",
+  "displayName": "Anthropic Agent Skills",
+  "description": "Anthropic's official example agent skills — document processing (Word/Excel/PowerPoint/PDF), MCP server building, skill authoring, visual & web design, algorithmic art, internal comms, and the Claude API guide.",
+  "homepage": "https://github.com/anthropics/skills",
+  "keywords": [
+    "skills",
+    "anthropic",
+    "document-processing",
+    "mcp",
+    "design",
+    "examples"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/anthropic-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:6cde4def1941ae543530a485d7e474a007c72bc3c7da65787927e66f91555491",
+          "spoolJsonSha": "sha256:c518b4cae72cb10978cc135e3a29de0d612e583fd88c887560b0ca4e1c220a6c"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/anthropic-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:1941c4371f4812ac5e3bae54b334851c77b8809af2f5ab40f2595b82f9c2511b",
+          "spoolJsonSha": "sha256:d8179e4afaf32df11ad6fb58b1346c6e1e228c4e9b7af7ff956238b74222912e"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/anthropic-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:a2a5877b1e93d2ebc51c199513794099836b60403af5e5e5535c852976b40be3",
+          "spoolJsonSha": "sha256:403c3db13dc25eef9e2fdfe0217218f3d9bdd998d8b96a9812480f230b9d41d8"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/anthropic-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:830594a30601cdc105b22ac8840a4b7cbf13a2d62796f8bb704956f392eeefd1",
+          "spoolJsonSha": "sha256:8170b6cedc22a11b158909276079aba8f8dece7f5db5ee57cb50eb594598e38b"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/anthropic-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:ade8ad66a64d75f7536fbe42b44a62774a8695a4d13947075da4adf9cf0ce3aa",
+          "spoolJsonSha": "sha256:f4b951446a49f52f84c89cfeb796b4c2da3c077cb2e2c8bd02572c7443ba5a14"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/anthropic-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:08e0e987c969a2bed1cffe6d210ff9eb4011ce8143b706985ebf997531cb2cf3",
+          "spoolJsonSha": "sha256:67ff00d82b9171fefa9dfafbfdd3166aa45cc84291c923db9e555774ddce0ec4"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/anthropic-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:93aeb922427f855e3b6c5afa4aa83274ee2cd1c21453ce1e57525264bcee2ff3",
+          "spoolJsonSha": "sha256:7879de47380cfdc29373654c8690b165349c7cb7515e0461bc907d01207c964b"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/anthropic-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:8c769adc53bbca30d68e18997ca46fbb9cf27bdcb691282a7f552eb15a40e884",
+          "spoolJsonSha": "sha256:a490d51879a6ac612f03f17e1c20ef1f236caf1c56914b2015e70d6aaf5d4919"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/anthropic-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:18d5340b7f3c2ee179fce1edd18e6c504c6b0c22ad385c5370c9a622c58001eb",
+          "spoolJsonSha": "sha256:2dc882ea8666b201edf85eb82dafa84c78e75d8f39576b7ed2a46bcd0ffeb9bc"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/anthropic-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:7372d1bdf066d64019d3a5cc63c09331127156c1efee48ece0c1769e00de5fb7",
+          "spoolJsonSha": "sha256:b45b77e2491c4d70e3069ce9d7feaa5b7ab6e165e0e664af259f83331e9182c2"
+        }
+      ]
+    }
+  ]
+}
