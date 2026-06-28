@@ -1,0 +1,98 @@
+{
+  "id": "guizang-ppt-skill",
+  "displayName": "Guizang PPT Skill",
+  "description": "Generate polished single-file HTML slide decks (editorial-magazine & Swiss-international styles) with WebGL backgrounds, image prompts, and social covers.",
+  "homepage": "https://github.com/op7418/guizang-ppt-skill",
+  "keywords": [
+    "skills",
+    "presentation",
+    "slides",
+    "html",
+    "design"
+  ],
+  "latest": "1.1.0",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "1.1.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/guizang-ppt-skill/1.1.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:60ef57122929927b5c60588716947c8bbf9848e0ff9f4e4b964902412fb50534",
+          "spoolJsonSha": "sha256:b5f4ceffbd39103ee891cffc726a7422820f1f4a1769d56e572203ebb66a2fe4"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/guizang-ppt-skill/1.1.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:b8a1c56cbd9eb8198777053bf8f97bc55dfcce953e5994070a0708f8f4074f61",
+          "spoolJsonSha": "sha256:142405b6a38c2af287b20a30b0fb669b9f7e1a64c3b4ebeb6458d1971b5bc76c"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/guizang-ppt-skill/1.1.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:0c72145cead2ee2748ba1589b3f44e66f0589bf0057b127c9f735d4aa4e053dd",
+          "spoolJsonSha": "sha256:d4c8af335a488f1732a2ed4107fde3c4dd42a2ea24731554d6344d9f692e245a"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/guizang-ppt-skill/1.1.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:d5d1c70dc68b527b09486a5d88e172cf2141c1a1a1ae76c4877b8c27ae56f3ac",
+          "spoolJsonSha": "sha256:22c154b66370aba0427fa75bdc650405325b09e7e0950d39ed03ce5851a89db8"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/guizang-ppt-skill/1.1.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:4880ab923ac7b4e7b573332803f57128ab5a88df9329a88c5240c117fe3aea19",
+          "spoolJsonSha": "sha256:11b005df8ede9761085a127dcd7f8da1f091b0dee360fffdb8d154be8233ea2d"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/guizang-ppt-skill/1.1.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:3db1f98dfcf390994cf6e0a07c9e95b237f186c8869838f2c007a3fff1e30b9f",
+          "spoolJsonSha": "sha256:66b0c45fd45ded9c5ceac4bb762535e0825b9fd0ca34818a2966b19cfdc5ccf2"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/guizang-ppt-skill/1.1.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:5dcf5cf27a4b1478c49b1165816421069e56b6e545f88c7866142fc87fee5f9f",
+          "spoolJsonSha": "sha256:6ba26a38982d32a7dad422dcde54576d388ad3fe2c0096e267845031b5989baf"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/guizang-ppt-skill/1.1.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:49c7122dd668b943f8015a22c70e589e19ec34d3fd25ef12273453f03a9d7052",
+          "spoolJsonSha": "sha256:c6cfd4a531f74c919aa6cab1fb74b3cabb6e9d8de6198f00ff3a6edfe50ecde9"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/guizang-ppt-skill/1.1.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:2f732e284259bc6dac16989d04691f478e62230400c4936cce0d61c28e04bca6",
+          "spoolJsonSha": "sha256:5fce01277b5e2196e47409b2c099563362539d8bf635a17971c0d7e13c00302e"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/guizang-ppt-skill/1.1.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:d7967a23470681acba3d032b872784d4ea140cde3551be5d88aa6a1acbba0950",
+          "spoolJsonSha": "sha256:4f898ebff05f6347a021e4411dfe498a500ba97b6085a933403b6c0bf5859a3a"
+        }
+      ]
+    }
+  ]
+}

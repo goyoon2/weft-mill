@@ -1,0 +1,99 @@
+{
+  "id": "vercel-agent-skills",
+  "displayName": "Vercel Agent Skills",
+  "description": "Vercel's official agent skills — Next.js/React best practices, composition patterns, view transitions, React Native, deploy-to-Vercel, web design & writing guidelines.",
+  "homepage": "https://github.com/vercel-labs/agent-skills",
+  "keywords": [
+    "skills",
+    "vercel",
+    "nextjs",
+    "react",
+    "frontend",
+    "deployment"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/vercel-agent-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:137862309b19883da878c2e675b64ab686545704c252df74087a8b06ba9cd0d7",
+          "spoolJsonSha": "sha256:bac9806c5b41eddedf6a7ea50ae67b392d4bdedfcc52a3704e4a56d3cd9b24fc"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/vercel-agent-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:fbd11eff729d8525601b336250c8468466ddaee455e92b62ef7d28e2809e10eb",
+          "spoolJsonSha": "sha256:dd96f90f523f76d0ce93ef627e831adf1829edfd602b42ad4b3eee0844fb3012"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/vercel-agent-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:e76aec3bf3b1356f5c251516db49344c2752bdc460270952f63ec6a3c9e14c4d",
+          "spoolJsonSha": "sha256:3d7e0a7d5c2bac9eb2a66a7fe4afafc56f863989f4257c4ecd573af688475be7"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/vercel-agent-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:6023dc8d078f02c4ce82fcd0ea14060a974abf0e0ec2cf36119d52ad681d38f7",
+          "spoolJsonSha": "sha256:814b0ca3f8ed231969e88463df9cd846a5761d9dbc4bd604419c313383209494"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/vercel-agent-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:cccc10cbc2153182dde639b433075fe86977a73cabaa44b3ae4c3c6355059411",
+          "spoolJsonSha": "sha256:b5577646930d94fb6022a9d1c29b7d10d882a14d650ed4f871d4b3fc6bb8b187"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/vercel-agent-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:e72bceb49cbeb93136c9199b23f7996da30dc0409a9e13e746cb2aa1e046c5ac",
+          "spoolJsonSha": "sha256:2d280223ab5c2a8f877d72d4b940a465db035ea0be4e9f44a4d0921edfdce697"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/vercel-agent-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:7f9fe0f511568940aded0d482b278e73860c6da2423c5e45ba6586c9d3a76dc5",
+          "spoolJsonSha": "sha256:07f5b358c21d666b89a19e3d2f35b338c5b4b64b6839d5d764decf4eeafd6bfe"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/vercel-agent-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:1b9e8f57178e024c131eaae3db914dda017bcf75d06e9683812f3b64c5100045",
+          "spoolJsonSha": "sha256:38acdd54d4c796baf6179ebad540135351fe53ce55fc757d9db6c0fddc4d8e02"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/vercel-agent-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:df0e43ad1a81cf7e297bc25b677b2942a017fe7d444009473013574d6b6e9279",
+          "spoolJsonSha": "sha256:b744cd3b8032405ef16ea7beaaa85f3ce95c34414ee6a8866ac158e0f2ed13b2"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/vercel-agent-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:4590252c5f02552e883ecfbe3be5154a7935248ea74dd6ea04f996703a72bd39",
+          "spoolJsonSha": "sha256:d602ed5f8b2a1c34b7f0e40a0d181d3be84eb3c50d8776a9fe49da69dd471b4d"
+        }
+      ]
+    }
+  ]
+}

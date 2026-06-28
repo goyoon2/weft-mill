@@ -1,0 +1,45 @@
+schema: 1
+id: context-engineering-skills
+displayName: Context Engineering Skills
+description: Muratcan Koylan's context- & harness-engineering skills — context fundamentals, compression, degradation, multi-agent coordination, memory systems, tool design, evaluation, and more.
+homepage: https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+keywords:
+  - skills
+  - context-engineering
+  - agents
+  - memory
+  - evaluation
+  - multi-agent
+
+# Archetype B (plain git skills repo). Verified by real clone: `skills/<name>/` dirs (SKILL.md), no
+# installer, no host-side activation. `.claude-plugin/marketplace.json` registers ONE plugin whose
+# only payload is a `skills:[...]` list (no hooks/commands/mcp/bootstrap) → no activation to reproduce;
+# the declarative `skill` slot reproduces the plugin install faithfully.
+
+source:
+  type: git
+  url: https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+  # Clean `vMAJOR.MINOR.PATCH` git tags → derived `git-tags` livecheck (no block, no ref).
+
+versioning:
+  strategy: semver
+  track: latest
+
+namespace:
+  mode: as-is
+
+# One declarative map across all five CLIs (anchor). `skills/*/SKILL.md` matches exactly the 15 skill
+# dirs the marketplace plugin registers (single-level). The repo ALSO carries a root `SKILL.md`, a
+# `template/SKILL.md`, and `examples/**/SKILL.md` — those are NOT registered skills and live OUTSIDE
+# `skills/`, so this glob correctly excludes them (mapping only what a real plugin install gives).
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skills
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills

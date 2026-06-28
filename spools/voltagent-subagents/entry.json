@@ -1,0 +1,83 @@
+{
+  "id": "voltagent-subagents",
+  "displayName": "VoltAgent Subagents",
+  "description": "A collection of 150+ specialized subagents — core dev, language specialists, infra, quality/security, data/AI, DX, domains, business/product, orchestration, and research.",
+  "homepage": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+  "keywords": [
+    "agents",
+    "subagents",
+    "engineering",
+    "specialists",
+    "orchestration"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/voltagent-subagents/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:cb9a8ec4f52b91a6e7a361ac0163fd4431eddbf8b2a554957ab4b09c293606f6",
+          "spoolJsonSha": "sha256:10e93823b30f5196780965d72d8deea651497712a3b7b49a96adccc84768982a"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/voltagent-subagents/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:6dd44329bd9f187f4ec511b7e42497e4b44ff1f626f4bb59fc02e7f72cb90243",
+          "spoolJsonSha": "sha256:fd0253bdcd6e82c0319afaeab5972f2e823c8d269b8f953da501bd6eb0808536"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/voltagent-subagents/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:a1579bd08ce5387e068ca3cd4aeb2e0a4bc94df3e852304376288f43257d69ee",
+          "spoolJsonSha": "sha256:46ddef94f4853db3b0d0898fbd1141f0ce13ed4bf6d7942a6bbab1e18df05c1b"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/voltagent-subagents/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:de6df2f11146971d61a0dbc2b3a515ed2ecc2d979010635bbd4693a48029d8c8",
+          "spoolJsonSha": "sha256:ab09471a9ba5c1a48b914a64e8ba8d8895964718ccb96ec11dfee716e144baef"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/voltagent-subagents/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:72a636f17e8bd5b28c55ae25abf8d2899eedbe7c15c40e5398d4d5436300dc06",
+          "spoolJsonSha": "sha256:85214dc7b9ad0b4f6394923346bbfbaa8ec6a2425bd0be138e8292182b5933ba"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/voltagent-subagents/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:22bd7b7e0ec25f941456878b0512846f3ae14f5c7e71af7a0d9216c73fd2f64c",
+          "spoolJsonSha": "sha256:fa3373b524450afe5e9ee1f0e35eda63bc0a94888da5154cf821b818ca5bf379"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/voltagent-subagents/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:01d0a36d541abe47fea0ba61e92716f43dcf071af936e8c2ef1d02fcc2af5258",
+          "spoolJsonSha": "sha256:56719211ba4af45cd749d9854fa3451f1f9f9ca0dce1ffe8aa35c8f6d2d35da6"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/voltagent-subagents/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:8b10b7edac688a02918adf7da0e06dd00fabad9822aa11ebf6344aca0dc974f6",
+          "spoolJsonSha": "sha256:42a764fbc65a2d8df4572d6419e58be6454d3ce47ad72f98ee9aec2ad79e6c1b"
+        }
+      ]
+    }
+  ]
+}

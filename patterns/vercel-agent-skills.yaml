@@ -1,0 +1,63 @@
+schema: 1
+id: vercel-agent-skills
+displayName: Vercel Agent Skills
+description: Vercel's official agent skills — Next.js/React best practices, composition patterns, view transitions, React Native, deploy-to-Vercel, web design & writing guidelines.
+homepage: https://github.com/vercel-labs/agent-skills
+keywords:
+  - skills
+  - vercel
+  - nextjs
+  - react
+  - frontend
+  - deployment
+
+# Archetype B (plain git skills repo). Verified by real clone: a tree of self-contained
+# `skills/<name>/` dirs (SKILL.md + rules/ references/ lib/ scripts/ resources/), no installer, no
+# plugin-host manifest, no host-side activation. The upstream `npx skills add` is just a file copier,
+# so a declarative file copy is a faithful, complete reproduction. Every SKILL.md is Claude-style
+# markdown that codex/cursor/gemini/opencode also read from their skills dir → one map, five CLIs.
+#
+# Runtime note (NOT an install concern): a few skills (deploy-to-vercel, vercel-optimize,
+# vercel-cli-with-tokens) run bundled scripts needing the Vercel CLI + a token at AGENT-USE time —
+# the same prerequisite the upstream skill has. They install fine; the whole skill dir is bundled so
+# the scripts resolve.
+
+source:
+  type: git
+  url: https://github.com/vercel-labs/agent-skills
+  # No git tags (verified `git ls-remote --tags` → empty) and not published from this repo — there is
+  # no version surface. Pin to `main`; without a ref the build's tag resolver throws "no semver tags".
+  # The built spool version is the literal "main" (honest: this harness tracks the branch).
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest # ignored — `source.ref` pins the checkout — but the field is required.
+
+# Tagless, so opt OUT of livecheck rather than let the derived `git-tags` strategy fail. (skipReason
+# is required when skip.) If Vercel starts tagging releases, drop this block + `source.ref`.
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+# Five skills already self-prefix `vercel-*`; the others (composition-patterns, web-design-guidelines,
+# writing-guidelines) are bare but unlikely to collide. Keep names as authored; weft namespaces a
+# colliding skill (its whole dir) only on a genuine clash at install time.
+namespace:
+  mode: as-is
+
+# One declarative map shared across all five CLIs (YAML anchor). `skills/*/SKILL.md` matches the 9
+# skill dirs (single-level — the `*` sits at the skill-dir position, so `${name}` = that dir name).
+# Ending `from` in SKILL.md bundles each skill's WHOLE directory (rules/ references/ lib/ scripts/
+# resources/), so script/resource paths inside SKILL.md resolve after install.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skills
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills

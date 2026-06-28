@@ -1,0 +1,99 @@
+{
+  "id": "context-engineering-skills",
+  "displayName": "Context Engineering Skills",
+  "description": "Muratcan Koylan's context- & harness-engineering skills — context fundamentals, compression, degradation, multi-agent coordination, memory systems, tool design, evaluation, and more.",
+  "homepage": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+  "keywords": [
+    "skills",
+    "context-engineering",
+    "agents",
+    "memory",
+    "evaluation",
+    "multi-agent"
+  ],
+  "latest": "2.3.0",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "2.3.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/context-engineering-skills/2.3.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:b8e00db468090e1e44d221ccf3db10c07cc752aeed2efe32edc672ff1d939b55",
+          "spoolJsonSha": "sha256:991843b67414c43a138830e95b137e9b9299e1e95c142b315692796ce17672b0"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/context-engineering-skills/2.3.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:22547a055ee4dc29037805be16a72478290ecec5069bc6829063f24db3e2b2b9",
+          "spoolJsonSha": "sha256:117dbb7f37ef80d271f1edb74d8542a09095b66865e6c766c0a35494bc9256d3"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/context-engineering-skills/2.3.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:03a30d38e8f99c1dc45e2b02ef9c462bc16a61acc5bac3793570d48c991ce06e",
+          "spoolJsonSha": "sha256:d9cbd412eb9df4d1ad6b158e0d4c99f0ba659ab9e1d623ef9d3bfb052d56ebf5"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/context-engineering-skills/2.3.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:e97bd8fe407db26ef429f5b9bda669359866b06cff5528b23b306ce58ab0c2c3",
+          "spoolJsonSha": "sha256:7c2f2a444bb0cc9ffc70ec8c756f57dc37cc9217ce91d26cc258bcd0c98fba57"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/context-engineering-skills/2.3.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:8be9b6c2f85a428ed2062954348b86d8f4d80316e6a4f56a59c190af8bf25797",
+          "spoolJsonSha": "sha256:69a2ab4f10331e74cb98e08efd62e8af288a8c42935e24db2d3708985db87d1a"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/context-engineering-skills/2.3.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:7734a31750a107ac596735fe9379d99e22fbab081057ed96526ef2d77d7323f5",
+          "spoolJsonSha": "sha256:b888d8221e1eb6200d80fded2f15cd8648bf4ff83d1348ed4bb055801036dd89"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/context-engineering-skills/2.3.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:0711dec641c77391258a739deecf70e08eec836e62f7fe1c6f5f6d2342b7aa2e",
+          "spoolJsonSha": "sha256:5ffbfc0f896cb3e581653027217b43304727b4d02b367ffe756acc82cf5b2098"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/context-engineering-skills/2.3.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:1ef2cc85065b645307d03c6c1b7dade6cc45eb6a978ce78b817b10b48273d64f",
+          "spoolJsonSha": "sha256:8ffd36fc09641c6c5043ae06cecfec56fa517e6518e6bc775c2f27a6e0752868"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/context-engineering-skills/2.3.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:2d75178d117a1e459bdf9ac1c4ed6ae86f87746ed781239ea6a997f1418671fd",
+          "spoolJsonSha": "sha256:f7ac8cdb23ef1da465819167a1d83397ee680005beafa9cdcd67e72dbf0b642f"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/context-engineering-skills/2.3.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:8dc3d195d065cd487adcb1f5f9e08b735671feffff7cfc7dfeaf9e71b43bd050",
+          "spoolJsonSha": "sha256:ade764481ac92e77250031d8ec84baae0e6d3b41138a852b6d72eca8fa119240"
+        }
+      ]
+    }
+  ]
+}

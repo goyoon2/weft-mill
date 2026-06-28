@@ -1,0 +1,99 @@
+{
+  "id": "obsidian-skills",
+  "displayName": "Obsidian Skills",
+  "description": "Steph Ango (kepano)'s agent skills for Obsidian — author & edit Markdown, Bases, and JSON Canvas, drive the Obsidian CLI, and clean web content with Defuddle.",
+  "homepage": "https://github.com/kepano/obsidian-skills",
+  "keywords": [
+    "skills",
+    "obsidian",
+    "markdown",
+    "canvas",
+    "notes",
+    "pkm"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/obsidian-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:85f05ebdcf9ccc681ee6b21538499e71e2399ac00cf97855e5eac858d95dac0d",
+          "spoolJsonSha": "sha256:c53b80a0d82309cdade733938a5cc905dc28f50fba351ebf7b22c06f6ca5216a"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/obsidian-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:209d07e588d273419ab796d1852861c7278e2e59e0b240937719784be298a51b",
+          "spoolJsonSha": "sha256:dc99d7141c87152ac9aaf98f5e6be9e4ef0e58fd14a7ce1af8c211f3985a6a1c"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/obsidian-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:a37df4f3e554add92cbb1640d7f187dae7eeebc708acca4b124dd4cadf2ff20a",
+          "spoolJsonSha": "sha256:b53603f4fb6f6bcfc6ec8d901ffbbe217200ed8e4fa29648707bcb3d5772adf3"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/obsidian-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:2ed5318c55c3f8dab023b5748a6a47be5645c441312aa560f7817003de3f9c4d",
+          "spoolJsonSha": "sha256:bfd9e7f9cd649ab2bc231aa0b2996f185c5c20fdf7bcca7b96ef526a1ca5194c"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/obsidian-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:12580d992c252deb66fc6b1cc61d931b12b22e01d82e5431f5daa236e71eee4a",
+          "spoolJsonSha": "sha256:96587414d94f1f3bdecef808f9ad58f90b4d4393f22d761db5a696582b72058b"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/obsidian-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:7335b6d38ec93bdb286e06aa6b3e37637fa0a3afc92b3e749a1d20c700a4847b",
+          "spoolJsonSha": "sha256:e5d1149e06d0b7b2853850fd6ebeedd0fc0e2d2283d2bae7129713e544769098"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/obsidian-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:dcea1618ab166e92a6c06ed4bba9e70296d48f79d998a360b0ad3d1cdca6ce02",
+          "spoolJsonSha": "sha256:56e854b775dc898d34b036939efaf026dcba6fbe4689080121778a068b7f48d2"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/obsidian-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:c81429be10b821d539ebde5e97aea9fb7693205efe21089db75506caedee06ae",
+          "spoolJsonSha": "sha256:a1097da654907f31687ead4367877b956e9a4d35e6d4a321e5fae184378a934d"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/obsidian-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:c121bf998953d955e11e9d8d46d396c81a04b341379947656894f85f20f22532",
+          "spoolJsonSha": "sha256:de9ef7e28321ceb7a04d960ccb7226e9d272e03c2caad935ea72d33abc8aaeac"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/obsidian-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:e68818dedbb6c4d8f56a9202a394056c351b3f1ab76ba645015018ea546db6bc",
+          "spoolJsonSha": "sha256:bc9421d5184b96509195f6fef874868b21b70c1aef9b5dbb6e73235fb4e246ed"
+        }
+      ]
+    }
+  ]
+}

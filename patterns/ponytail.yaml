@@ -1,0 +1,70 @@
+schema: 1
+id: ponytail
+displayName: Ponytail
+description: "Lazy-senior-dev mode: forces the simplest solution that works (YAGNI, stdlib-first), auto-loaded every session via a SessionStart hook, plus on-demand audit/debt/gain/review skills."
+homepage: https://github.com/DietrichGebert/ponytail
+keywords:
+  - hooks
+  - yagni
+  - simplicity
+  - code-review
+  - productivity
+
+# Archetype: DECLARATIVE PLUGIN WITH HOOKS (claude-code only). Verified by real clone: ponytail's
+# defining behavior is a SessionStart hook that injects its "lazy senior dev" ruleset every session.
+# That hook is reproducible WITHOUT a plugin host because its scripts resolve siblings via Node
+# `__dirname` (NOT `process.env.CLAUDE_PLUGIN_ROOT`) and use only standard env (XDG/HOME) — so baking
+# the absolute install path into the hook command (via the transform below) and shipping the whole
+# plugin tree as a payload faithfully reproduces what `/plugin install` does. This is the first
+# onboarded instance of Archetype C's "hook-based: maybe" path (contrast `superpowers`, declined).
+#
+# CLAUDE-ONLY on purpose (all-or-nothing per CLI): ponytail's NON-claude activation is host-side and
+# weft can't reproduce it — opencode uses a JS runtime plugin (`.opencode/plugins/ponytail.mjs`),
+# cursor an always-apply `.cursor/rules/*.mdc`, gemini a `contextFileName: AGENTS.md` extension. For
+# those CLIs a weft install could only ship the skills WITHOUT the always-on activation — a degraded
+# subset — so we don't claim to support them. For claude the activation IS the hook, fully reproduced.
+
+source:
+  type: git
+  url: https://github.com/DietrichGebert/ponytail
+  # `vMAJOR.MINOR.PATCH` git tags (moves in lockstep with the npm package) → derived `git-tags`
+  # livecheck. (Source is git, not npm: the npm tarball's `files[]` omits some plugin assets.)
+
+versioning:
+  strategy: semver
+  track: latest
+
+# Already self-namespaced (`ponytail`, `ponytail-*`) — low collision risk.
+namespace:
+  mode: as-is
+
+targets:
+  claude-code:
+    strategy: declarative
+    map:
+      # User-facing skills (the 6 ponytail* skills): discoverable in ~/.claude/skills.
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+      # The whole runtime tree as ONE payload at .claude/ponytail/ — so {{WEFT_PAYLOAD_DIR}} resolves
+      # to it and the hook's `node …/hooks/ponytail-activate.js` finds its `__dirname` siblings
+      # (config/instructions/runtime js) AND reads `../skills/ponytail/SKILL.md` for the ruleset.
+      - kind: payload
+        from: "hooks/**"
+        as: "payload:ponytail"
+      - kind: payload
+        from: "skills/ponytail/**"
+        as: "payload:ponytail"
+      # Register the SessionStart/SubagentStart/UserPromptSubmit hooks into settings.json. The build
+      # explodes hooks.json into one merge fragment per command (folded into the user's settings.json,
+      # never overwriting it).
+      - kind: hook
+        from: "hooks/claude-codex-hooks.json"
+        as: "hook"
+    transforms:
+      # The hook commands reference the plugin-host var `${CLAUDE_PLUGIN_ROOT}`, which weft never sets.
+      # Rewrite it (both the POSIX and PowerShell spellings) to the resolved payload dir so the baked
+      # path points at the placed runtime. Applied to the hooks.json BEFORE it's exploded into
+      # fragments (and to the payload's own copy).
+      - { type: substitute-var, appliesTo: "hooks/claude-codex-hooks.json", from: "${CLAUDE_PLUGIN_ROOT}", to: "{{WEFT_PAYLOAD_DIR}}" }
+      - { type: substitute-var, appliesTo: "hooks/claude-codex-hooks.json", from: "$env:CLAUDE_PLUGIN_ROOT", to: "{{WEFT_PAYLOAD_DIR}}" }

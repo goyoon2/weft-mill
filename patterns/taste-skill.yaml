@@ -1,0 +1,50 @@
+schema: 1
+id: taste-skill
+displayName: Taste Skill
+description: Leon's design-taste skills — frontend aesthetics, brutalist/minimalist/soft styles, image-to-code, redesign, brandkit, and image-gen helpers that stop AI from producing generic slop.
+homepage: https://github.com/Leonxlnx/taste-skill
+keywords:
+  - skills
+  - design
+  - frontend
+  - ui
+  - taste
+  - image-to-code
+
+# Archetype B (plain git skills repo). Verified by real clone: ~13 `skills/<name>/` dirs (SKILL.md),
+# no host-side activation. `.claude-plugin/{plugin.json,marketplace.json}` exist but register ONLY
+# skills (no hooks/commands/mcp keys → skills auto-discovered), so the plugin install = "register
+# these skills", which the declarative `skill` slot reproduces. The root `scripts/*.mjs` + `skill.sh`
+# are README-asset/build helpers, NOT install or runtime — they live outside `skills/` and aren't mapped.
+
+source:
+  type: git
+  url: https://github.com/Leonxlnx/taste-skill
+  # No git tags (verified) and not on npm — pin to `main` (else the tag resolver throws). Built spool
+  # version is the literal "main".
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest # ignored — `source.ref` pins the checkout — but the field is required.
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+namespace:
+  mode: as-is
+
+# One declarative map across all five CLIs (anchor). `skills/*/SKILL.md` = the single-level skill dirs.
+# Each skill's whole dir is bundled (SKILL.md + any references/assets), so its internal refs resolve.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skills
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills
