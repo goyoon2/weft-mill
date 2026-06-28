@@ -1,0 +1,98 @@
+{
+  "id": "terraform-skill",
+  "displayName": "Terraform Skill",
+  "description": "Terraform & OpenTofu agent skill — module design, testing, CI/CD, drift diagnosis, and schema validation best practices.",
+  "homepage": "https://github.com/antonbabenko/terraform-skill",
+  "keywords": [
+    "skill",
+    "terraform",
+    "opentofu",
+    "infrastructure",
+    "iac"
+  ],
+  "latest": "1.17.1",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "1.17.1",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/terraform-skill/1.17.1/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:74e18250d9da6dcd32c7c0c6fda560fb4a0a2f270cd7c7c2537546bd0bf43418",
+          "spoolJsonSha": "sha256:4eb78b17addc7ceb7602bb6664274848815a05018e9c58631fd630125aa49b9f"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/terraform-skill/1.17.1/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:349f868cd4927ab8968165a9eedf0803c484a31787af8bfb7e89edd283f791e5",
+          "spoolJsonSha": "sha256:46f85817f71bb87490713b130d7425405d89a5a69f3472517234f6de3df4f2bd"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/terraform-skill/1.17.1/codex.global.spool.tgz",
+          "spoolSha": "sha256:f2b066e0286bc6bb3dd6bb680294250c3b335c0bbe5e0bd93f6084316d92e134",
+          "spoolJsonSha": "sha256:4b5de4ff0b806b3d37d6b03d137b4a1a5705d47780e825661e45e0becf71feae"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/terraform-skill/1.17.1/codex.local.spool.tgz",
+          "spoolSha": "sha256:78b684d91ed3cbc392dac00448ca0338a1815cac94867a0f1651eb75da0da285",
+          "spoolJsonSha": "sha256:221f110c2854874b6184582f6522986aee9ed26363f056e9db5433e1af85acd8"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/terraform-skill/1.17.1/gemini.global.spool.tgz",
+          "spoolSha": "sha256:45c588c9677e9b86c244b4dc0173864f2637106f6d24c25c76caf5c5abb29285",
+          "spoolJsonSha": "sha256:205e44c7a57af87a1c0414985cd5228231e0d23472590d354151379fcffd1115"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/terraform-skill/1.17.1/gemini.local.spool.tgz",
+          "spoolSha": "sha256:8705db33d9cc9cd1391862f4eec33b7cd2a860ebf9b7e1b207d8d5d8ed11631b",
+          "spoolJsonSha": "sha256:4f5b327413968906277d90ca8455406c185036d5eac9c9f13d55113058e8aeaa"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/terraform-skill/1.17.1/opencode.global.spool.tgz",
+          "spoolSha": "sha256:83f481155e647cfdeec46b475f2f1d766f07dc8b29f74c6ca12e5a8625a17ba7",
+          "spoolJsonSha": "sha256:9037019678c2a09d74823e2e3780f4eaf339388329be4f21cf14b0b78597b26d"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/terraform-skill/1.17.1/opencode.local.spool.tgz",
+          "spoolSha": "sha256:287ed9ffb2408c7d314db3937b9486b8cd10ef175a548c6017efde9a071ed582",
+          "spoolJsonSha": "sha256:e6a1e3b5cb2718b94a0883013d47eb092e51b735dfbae81eab5ee8d371206efb"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/terraform-skill/1.17.1/cursor.global.spool.tgz",
+          "spoolSha": "sha256:f6ab5cd1cfc5b41b45c43993522ab896efa5015dfb3be6bf6e283bf2522c78c8",
+          "spoolJsonSha": "sha256:54df4f9fb73454b9c029b11296e5f8aadaaafc2b4f805678c18f51c6530820db"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/terraform-skill/1.17.1/cursor.local.spool.tgz",
+          "spoolSha": "sha256:11f0c027b9bf9adee122d146508cc27ed4c524c17c994f4ef2f5894fca6c0a2f",
+          "spoolJsonSha": "sha256:4cd9bccab09210cf07efa0df891ce870d6b1a8e160b0b1b706adb31432c71f26"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "anthropic-cybersecurity-skills",
+  "displayName": "Anthropic Cybersecurity Skills",
+  "description": "800+ structured cybersecurity skills for AI agents — detection engineering, exploitation, threat hunting, IAM, cloud and network security, mapped to common frameworks.",
+  "homepage": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+  "keywords": [
+    "skills",
+    "security",
+    "cybersecurity",
+    "detection",
+    "threat-hunting"
+  ],
+  "latest": "1.3.0",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "1.3.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:63568357d160a2c3a0cdb593c0666c800aba0e1f9ca6195c07fe96bea7a050f6",
+          "spoolJsonSha": "sha256:868b485f1997b9cdb63d8e79fc39d8df0946108ab868ff6f962d212b3b951eb4"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:34024d70b6798a3c3121c9f3763f16368febb4c89d33faf0db33600149ea9f52",
+          "spoolJsonSha": "sha256:8c373a53cd4d1176a99403cfb5d93f494306e4d10965418d31af27976ebcc81d"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:aaea9c21b89c42a6cdee12a19cde75ffc392f7e144b84296c0b5c8771271d451",
+          "spoolJsonSha": "sha256:7f1c636b7fc98396b4869ad273c8f6dbbee9027391ee1512c8e772a04c97f552"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:c9244ba1faee0e37481659451e7ef14f5821c81ccc47725f831750f88febff34",
+          "spoolJsonSha": "sha256:504cbb5a0bb2f7838dfed4d489fb69c58acfe98e638a4e12e7ad960b4bd33dc3"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:eaad425f9a32ab9f34a502448931113ff07626363b88c5e277b9e4599e316572",
+          "spoolJsonSha": "sha256:6227b3540624255ddcb73e3c76202ff35ed700cf54b7e4aeaa4c53c8eb629d6c"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:1e502c92fb6522e609ffe284fb6147904200db42bf707ad2cf733dc49a746007",
+          "spoolJsonSha": "sha256:54035537049342f009e95a266c90065bf86723e81549066360babf1b8a723619"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:1673f1a6274b56d168399c54d9c98eb7e4342b0fab423200096dd279f365cada",
+          "spoolJsonSha": "sha256:c8ca08ab02e0fddb56de5bf1bb7ad24c1ab653edc967d4a268da04980f302052"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:fb34027792c29bec3c9c4fa0b1b0308cf735df7f95a07815ed64166a1bf44a6a",
+          "spoolJsonSha": "sha256:645e48f3b2cf367eae965d5ad0a6fbff41a1f3fd194701c2720105905b64c8ee"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:6dcfca504ef9fd4cbaa77051d9e46082ae9509743e82593de718d5840db236bd",
+          "spoolJsonSha": "sha256:73f9aea6bf8a3633dd7ffa1316992744c14510591aa6a3fbf8bc656d4a7bb737"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/anthropic-cybersecurity-skills/1.3.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:06bfffb7bad5e8246f8f387b3fe04600188f465e8544acdbd0e5e90921f0ba19",
+          "spoolJsonSha": "sha256:8cdafb51de842813ae85b815d84fffe1b8213221af87f8f94177af60be8b00d4"
+        }
+      ]
+    }
+  ]
+}

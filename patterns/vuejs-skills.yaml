@@ -1,0 +1,41 @@
+schema: 1
+id: vuejs-skills
+displayName: Vue.js Skills
+description: Vue 3 development agent skills — best practices, testing, Vue Router and Pinia guides, composables, JSX, and the Options API.
+homepage: https://github.com/vuejs-ai/skills
+keywords:
+  - skills
+  - vue
+  - pinia
+  - vue-router
+  - testing
+
+# Archetype B (plain git skills repo). Verified by real clone: 8 flat `skills/*/SKILL.md`. The
+# `.claude-plugin/marketplace.json` is a catalog manifest only (registers skills, no host-side
+# activation) → declarative glob copy is faithful.
+source:
+  type: git
+  url: https://github.com/vuejs-ai/skills
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+# Skill names are already `vue-`-prefixed / self-namespaced; keep as authored.
+namespace:
+  mode: as-is
+
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills

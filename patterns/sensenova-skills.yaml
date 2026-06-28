@@ -1,0 +1,46 @@
+schema: 1
+id: sensenova-skills
+displayName: SenseNova Skills
+description: SenseNova's modular agent skills for office work — PPT generation, infographics, image editing, data-analysis workflows, deep research, and Markdown-to-HTML reports.
+homepage: https://github.com/OpenSenseNova/SenseNova-Skills
+keywords:
+  - skills
+  - office
+  - ppt
+  - data-analysis
+  - research
+
+# Archetype B (plain git skills repo). Verified by real clone: 26 top-level `skills/*/SKILL.md` (some
+# carry deeper `capability/**/SKILL.md` sub-files — those are bundled as the parent skill's payload by
+# the skill-dir capture, NOT separate weft skills). Skills call the host's `web_search` tool and free
+# public APIs (ArXiv/PubMed/Wikipedia); image skills use an OPTIONAL SenseNova API key — none
+# hard-require an MCP server, so this is a faithful declarative onboard, not an MCP-coupled decline.
+source:
+  type: git
+  url: https://github.com/OpenSenseNova/SenseNova-Skills
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+# Skills self-namespace as `sn-*`; keep as authored.
+namespace:
+  mode: as-is
+
+# `skills/*/SKILL.md` maps the 26 top-level skill dirs (first wildcard = `${name}`); each bundles its
+# whole directory (scripts + nested capability files). INSTALL.md targets other agent runtimes but the
+# artifacts are standard SKILL.md (agentskills.io spec) → one map via anchor serves all five CLIs.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills
