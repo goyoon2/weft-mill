@@ -1,0 +1,52 @@
+schema: 1
+id: ui-ux-pro-max
+displayName: UI/UX Pro Max
+description: Design-intelligence skills for building professional UI/UX across platforms — a BM25-searchable design knowledge base plus banner/brand/slides/design-system skills.
+homepage: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+keywords:
+  - skills
+  - design
+  - ui
+  - ux
+  - frontend
+  - design-system
+
+# Archetype B (plain git skills repo). Verified by real clone: fully-formed `SKILL.md` artifacts live
+# as plain files under `.claude/skills/`, directly copyable into any CLI's skills dir. A `.claude-plugin/`
+# marketplace + an `ui-ux-pro-max-cli` npm installer exist, but both are alternative delivery shells
+# over the SAME static skill files (plugin.json registers `skills: ./.claude/skills/`); weft bypasses
+# them. No host-side activation, no required per-machine build → declarative, not captured.
+#
+# Runtime note (NOT an install concern): the flagship `ui-ux-pro-max` skill runs a bundled python BM25
+# search (stdlib only) at AGENT-USE time; the 6 vendored sibling skills (design, banner-design, …) may
+# call pip/Gemini-API at use time. All install fine — the whole skill dir (scripts/ + data/) is bundled
+# so the relative `scripts/search.py` paths in SKILL.md resolve.
+
+source:
+  type: git
+  url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+  # Clean `vMAJOR.MINOR.PATCH` git tags (semantic-release) → derived `git-tags` livecheck. NOTE: the
+  # in-tree manifests (skill.json/plugin.json) LAG the tags — weft tracks the tag (correct), not them.
+
+versioning:
+  strategy: semver
+  track: latest
+
+namespace:
+  mode: as-is
+
+# One declarative map across all five CLIs (anchor). Skills live under `.claude/skills/` (not `skills/`),
+# so the glob is `.claude/skills/*/SKILL.md` → the 7 skill dirs plugin.json registers. `from` ending in
+# SKILL.md bundles each whole dir (the flagship's scripts/ + ~1.6MB data/ come along — preserve the
+# relative layout so `skills/ui-ux-pro-max/scripts/search.py` resolves).
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: ".claude/skills/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skills
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills

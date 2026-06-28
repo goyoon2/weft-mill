@@ -1,0 +1,58 @@
+schema: 1
+id: scientific-agent-skills
+displayName: Scientific Agent Skills
+description: K-Dense AI's library of 140+ science skills — bioinformatics, statistics, ML, data wrangling, paper search & writing, plus scientific-database access — for any agent CLI.
+homepage: https://github.com/K-Dense-AI/scientific-agent-skills
+keywords:
+  - skills
+  - science
+  - research
+  - bioinformatics
+  - data-analysis
+  - machine-learning
+
+# Archetype B (plain git skills repo). Verified by real clone: a flat `skills/<name>/` collection
+# (SKILL.md + references/ scripts/ assets/ examples/), no installer, no plugin host, no host-side
+# activation. (The repo's pyproject.toml is its own dev/scanner tooling, NOT an install vector.) Every
+# SKILL.md is portable Claude-style markdown → one map, five CLIs.
+#
+# Runtime note (NOT an install concern): many skills run bundled python via `uv`/pip and some declare
+# `required_environment_variables` / API keys at AGENT-USE time. They install fine (weft just copies
+# the files); deps resolve lazily when the agent runs them, exactly as upstream intends.
+
+source:
+  type: git
+  url: https://github.com/K-Dense-AI/scientific-agent-skills
+  # Has clean `vMAJOR.MINOR.PATCH` git tags auto-cut on each version bump → no `ref`, no livecheck
+  # block: the derived `git-tags` strategy resolves the highest tag for both the build checkout and
+  # drift detection.
+
+versioning:
+  strategy: semver
+  track: latest
+
+# Generic names collide with other harnesses (docx/pdf/pptx/xlsx clash with Anthropic's doc skills;
+# matplotlib, literature-review, generate-image, …). Keep them as authored — weft namespaces a
+# colliding skill (its whole dir) only on a genuine clash at install time, the don't-over-namespace
+# stance ([[weft-profiles-verify-not-guess]]).
+namespace:
+  mode: as-is
+
+# One declarative map across all five CLIs (anchor). `skills/*/SKILL.md` matches the ~147 single-level
+# skill dirs (the `*` is at the skill-dir position → `${name}` = that dir). `from` ending in SKILL.md
+# bundles each skill's whole dir (references/ scripts/ assets/ examples/), so the scripts the SKILL.md
+# calls resolve after install. New skills under `skills/` are picked up automatically.
+#
+# Scale note: this is a LARGE collection (~147 skills). That's faithful to "install the library", but
+# it's a lot of standing context; users wanting a subset should pick skills individually at install.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skills
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills

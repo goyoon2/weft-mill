@@ -1,0 +1,58 @@
+schema: 1
+id: guizang-ppt-skill
+displayName: Guizang PPT Skill
+description: Generate polished single-file HTML slide decks (editorial-magazine & Swiss-international styles) with WebGL backgrounds, image prompts, and social covers.
+homepage: https://github.com/op7418/guizang-ppt-skill
+keywords:
+  - skills
+  - presentation
+  - slides
+  - html
+  - design
+
+# Archetype B, ROOT-SKILL sub-case. Verified by real clone: the repo IS a single skill — `SKILL.md`
+# sits at the REPO ROOT (not under `skills/<name>/`), with its `references/`, `scripts/`, and `assets/`
+# alongside. No installer, no plugin host; the documented install (`npx skills add … --skill
+# guizang-ppt-skill`) just copies the skill. So a declarative copy of the root skill (minus repo
+# chrome) is faithful and complete.
+#
+# Runtime note (NOT an install concern): the bundled scripts (a WebGL/low-power presentation runtime)
+# run at AGENT-USE time; they ship as static files inside the skill.
+
+source:
+  type: git
+  url: https://github.com/op7418/guizang-ppt-skill
+  # Has a `vMAJOR.MINOR.PATCH` git tag (v1.1.0) → derived `git-tags` livecheck resolves the highest.
+
+versioning:
+  strategy: semver
+  track: latest
+
+namespace:
+  mode: as-is
+
+# Root-skill mapping: `from: "SKILL.md"` selects the single root SKILL.md; `as` hard-codes the skill
+# name (no `${name}` — the glob has no wildcard to capture). A `skill` whose `from` is a SKILL.md
+# bundles that file's WHOLE directory, which here is the repo root — so `exclude` prunes the repo
+# chrome (README/LICENSE/CONTRIBUTING/.github/CI) that would otherwise be shipped inside the skill.
+# (`.git/` is skipped by the builder automatically.) What remains — SKILL.md + references/ + scripts/
+# + assets/ — is exactly the skill, with its relative paths intact. One map, five CLIs (anchor).
+targets:
+  claude-code: &skill
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "SKILL.md"
+        as: "skill:guizang-ppt-skill"
+        exclude:
+          - ".github/**"
+          - ".gitignore"
+          - "LICENSE"
+          - "CONTRIBUTING.md"
+          - "SPONSORS.md"
+          - "README.md"
+          - "README.en.md"
+  codex: *skill
+  gemini: *skill
+  cursor: *skill
+  opencode: *skill

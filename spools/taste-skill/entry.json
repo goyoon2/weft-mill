@@ -1,0 +1,99 @@
+{
+  "id": "taste-skill",
+  "displayName": "Taste Skill",
+  "description": "Leon's design-taste skills — frontend aesthetics, brutalist/minimalist/soft styles, image-to-code, redesign, brandkit, and image-gen helpers that stop AI from producing generic slop.",
+  "homepage": "https://github.com/Leonxlnx/taste-skill",
+  "keywords": [
+    "skills",
+    "design",
+    "frontend",
+    "ui",
+    "taste",
+    "image-to-code"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/taste-skill/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:dbd6c17ef22b608c8556852d9327e100234837d2905d95840a7a1298609d841f",
+          "spoolJsonSha": "sha256:144b5463a22845d7c462c3d9d7de1a51ace0650a1bcf7aca84614dac718b083c"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/taste-skill/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:dde90bd3e5e41f0b49b63e5e2ca5e8497517b02a5a57d8234167b32b68733866",
+          "spoolJsonSha": "sha256:68667f7fa3fcc6a0b64863c52ede01cd4ecae1b1374841f2460fec4300dda2a4"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/taste-skill/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:14f1f1e3ec989486d209f661b9608d5752ccab2145d09d4878df308b57ef1b9a",
+          "spoolJsonSha": "sha256:88d025ee533e1f05f60fcd73a08659d20d597a7816679f66ec4b9d66d68d2d3f"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/taste-skill/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:225c895cf1a150b6cf4e054351c897fe1431eff3bfdf131e99404b97914da0d3",
+          "spoolJsonSha": "sha256:12d67c4eb5a454ac04b6417be2b0bc5c2d1795b7481194c7d0036ce54c02631a"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/taste-skill/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:34343c43ad923e5de2888d44bb9d271d036091d52ca0b9a21ea7e1439b1b5520",
+          "spoolJsonSha": "sha256:7073962746360209cda27e6bbd7ae243c7a7cd4b93f42bbaf00f55863f307980"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/taste-skill/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:464f6202f2a6fad0847323d14de015ac58edff40b34de8c25f3bcdd7d4f26d6a",
+          "spoolJsonSha": "sha256:1a51435ca55b6815032be9366825e0ba6436fa179a0b110e399252fc163f6f0e"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/taste-skill/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:46d6b483c7ca216eb5004b3411cd0254a970563f5cf7e2ea1693e4e75d3cc592",
+          "spoolJsonSha": "sha256:0416bd8d13f15949af4ecbff9557abacce5eb0d983e7fda710293acf9e638f0e"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/taste-skill/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:bd63d110d132bf18c82f536c895bab6e80e093b6bb3a629c322a014192cfdbcc",
+          "spoolJsonSha": "sha256:4a108996ab465a5499431cd04e1b96958a73c850d453ea31a3286f922d8eb69f"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/taste-skill/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:df35bacd786054b10f0831c48bea615c69c50ff5d26f22e7c1e967ba84dca878",
+          "spoolJsonSha": "sha256:6948a0af6c96376ae8c7e543185933e709f04b9ccbe9bb95d032df5e1d632ed1"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/taste-skill/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:cac2142ea5baa727f49150f307e7620a3cb27ae3f4ac9072904c3f48a950a9c2",
+          "spoolJsonSha": "sha256:fff9de7038dc9bbdd8c7fc620756bdb42ca1e4c39989098af194bf2c1b1d2a39"
+        }
+      ]
+    }
+  ]
+}

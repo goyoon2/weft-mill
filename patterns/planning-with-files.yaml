@@ -1,0 +1,66 @@
+schema: 1
+id: planning-with-files
+displayName: Planning with Files
+description: "Manus-style persistent file-based planning for coding agents — crash-proof task_plan.md/findings.md/progress.md that survive context loss and /clear, with slash commands (EN + 5 locales)."
+homepage: https://github.com/OthmanAdi/planning-with-files
+keywords:
+  - skills
+  - commands
+  - planning
+  - workflow
+  - context-engineering
+
+# Archetype B (plain git skills + commands repo). Verified by real clone: the product is the
+# `planning-with-files` SKILL (+ 5 localized variants) plus slash commands in `commands/`. The Claude
+# `/plugin install` auto-discovers `skills/` and `commands/` — `.claude-plugin/plugin.json` registers
+# NO hooks/commands keys and wires NO hook — so the default install is skills + commands, which the
+# declarative slots reproduce faithfully.
+#
+# The "completion gate" (Stop-hook scripts under `.codex/hooks`, `.cursor/hooks.json`, etc.) is an
+# OPT-IN, per-other-CLI feature the user enables manually — it is NOT part of the default plugin
+# install, so leaving it unmodelled is faithful (the same status as andrej-karpathy's always-apply
+# alt-forms). The other CLIs' native installs are skills-only (e.g. `.opencode/` ships only skills,
+# `.gemini/` only skills), so shipping skills to them is complete.
+
+source:
+  type: git
+  url: https://github.com/OthmanAdi/planning-with-files
+  # `vMAJOR.MINOR.PATCH` git tags → derived `git-tags` livecheck (default branch is `master`, but tags
+  # exist so no `ref` is needed — the build checks out the highest tag).
+
+versioning:
+  strategy: semver
+  track: latest
+
+namespace:
+  mode: as-is
+
+# Skills → all 5 CLIs (the defining behavior; `skills/*/SKILL.md` = 6 single-level dirs incl. i18n
+# variants). Commands → CLAUDE ONLY: commands are markdown (`commands/*.md`, 11 incl. localized), and
+# only claude auto-discovers a markdown `commands/` dir in BOTH scopes cleanly. gemini commands are
+# TOML (no weft slot); codex prompts are global-only and cursor commands local-only (scope-restricted
+# slots → would error in the other scope); and the non-claude native installs don't ship these
+# commands anyway — so mapping them only for claude keeps every install clean and faithful.
+#
+# Known weft limitation surfaced by these commands: their bodies invoke skills via the upstream
+# `name:name` namespace (e.g. `planning-with-files:planning-with-files`), which weft's flat `/<name>`
+# install doesn't auto-resolve (the install plan already notes this for any command harness).
+targets:
+  claude-code:
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+      - kind: command
+        from: "commands/*.md"
+        as: "command:${name}"
+  codex: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills

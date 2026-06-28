@@ -1,0 +1,65 @@
+schema: 1
+id: voltagent-subagents
+displayName: VoltAgent Subagents
+description: A collection of 150+ specialized subagents — core dev, language specialists, infra, quality/security, data/AI, DX, domains, business/product, orchestration, and research.
+homepage: https://github.com/VoltAgent/awesome-claude-code-subagents
+keywords:
+  - agents
+  - subagents
+  - engineering
+  - specialists
+  - orchestration
+
+# Archetype B (plain git AGENTS repo). Verified by real clone: ~154 real subagent `.md` files (each
+# with `name`/`description`/`tools`[/`model`] frontmatter) under `categories/<category>/`. Both the
+# bash installer and the `.claude-plugin` marketplace are mere delivery vehicles for the SAME plain
+# `.md` (the plugin registers nothing beyond agent placement — no hooks/mcp/commands/bootstrap), so a
+# declarative glob copy is faithful. (The per-category `README.md` index files — the "awesome"
+# curation layer — are NOT agents and are excluded; the real installer skips them too.)
+
+source:
+  type: git
+  url: https://github.com/VoltAgent/awesome-claude-code-subagents
+  # No git tags (verified); version lives only in `.claude-plugin/marketplace.json` metadata, which
+  # weft doesn't read for declarative sources. Pin to `main`; built spool version is the literal "main".
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest # ignored — `source.ref` pins the checkout — but the field is required.
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; agents repo tracked at main, not auto-bumped"
+
+# Agent names are generic (code-reviewer, frontend-developer, typescript-pro, …) and several duplicate
+# built-in or other-harness agents. Keep them as authored — weft namespaces a colliding agent at
+# install time (renaming the file AND its frontmatter `name:`), the don't-over-namespace stance.
+namespace:
+  mode: as-is
+
+# Agents are nested one level under `categories/<category>/`. weft captures `${name}` from the FIRST
+# wildcard segment of `from`, so a single nested glob `categories/*/*.md` would name every agent after
+# its CATEGORY (collision). Use ONE rule per category, with the `*` at the FILE position, so `${name}`
+# is the agent file stem. `exclude: ["**/README.md"]` drops the per-category index files (the only
+# non-agent `.md` in those dirs; `readme-generator.md` is a real agent and is kept).
+#
+# Codex is omitted: weft has no codex agent slot. The four remaining CLIs all read Claude-style agent
+# markdown from their agents dir; one shared spec serves them via a YAML anchor.
+targets:
+  claude-code: &agents
+    strategy: declarative
+    map:
+      - { kind: agent, from: "categories/01-core-development/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/02-language-specialists/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/03-infrastructure/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/04-quality-security/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/05-data-ai/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/06-developer-experience/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/07-specialized-domains/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/08-business-product/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/09-meta-orchestration/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "categories/10-research-analysis/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+  gemini: *agents
+  cursor: *agents
+  opencode: *agents

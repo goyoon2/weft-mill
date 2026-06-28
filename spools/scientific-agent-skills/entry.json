@@ -1,0 +1,99 @@
+{
+  "id": "scientific-agent-skills",
+  "displayName": "Scientific Agent Skills",
+  "description": "K-Dense AI's library of 140+ science skills — bioinformatics, statistics, ML, data wrangling, paper search & writing, plus scientific-database access — for any agent CLI.",
+  "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
+  "keywords": [
+    "skills",
+    "science",
+    "research",
+    "bioinformatics",
+    "data-analysis",
+    "machine-learning"
+  ],
+  "latest": "2.53.0",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "2.53.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/scientific-agent-skills/2.53.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:e2a76ca0f62c56ba5efed21986bce651d73ea64a09572d4d28befabb2b95d90a",
+          "spoolJsonSha": "sha256:f19035416f9f20ae9c2f0a208f2716c4c5c441c1aac5a35422f1533be7c5e146"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/scientific-agent-skills/2.53.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:6a47a0e39547a5fc53430150de9758433faf6ba927a0ed58582e8332698cc434",
+          "spoolJsonSha": "sha256:c105e9465a77f35a999d6b6fc0ef72539c1317f0bbd365b23243ab58d7b0a900"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/scientific-agent-skills/2.53.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:15eff4bb0d763632c6c815158682ee7343da65275f111079ea0c1d1b0c452d50",
+          "spoolJsonSha": "sha256:76339067a004e238f5dfe566efa2524eaa79917ccf5adcb2d21b94327c93c0ab"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/scientific-agent-skills/2.53.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:ba25e8152d1ed4126ff6e340bee4346206369713ab054cf67a95e570c262e8fe",
+          "spoolJsonSha": "sha256:a6f857a1b5d33efcab2a43f80379c00f322a3786ab1e33cc37a9e3bac24fb879"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/scientific-agent-skills/2.53.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:e6456c566b611565821a97c7d3a95f9b17c03ca325c4e87273c588161f8cb706",
+          "spoolJsonSha": "sha256:aa74e1f87c7a39a8b1bd74ff5f6dd465a089121a3e3ea91a403cc2479bfe9ed6"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/scientific-agent-skills/2.53.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:29074af9cc8af942cfe77bbff1dcfd51067bbe4e9947ebd47911c588c9efdbd3",
+          "spoolJsonSha": "sha256:e987b84c4976ae36fa2e1917839cafc11b922c73b4e8a19572ad26047651acba"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/scientific-agent-skills/2.53.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:b17ed7335f746188a8b3c706af2ce15e19970ff8f0bfec9d33b1ca7a8d4f3702",
+          "spoolJsonSha": "sha256:a95e48bf2daceb9085186ed9b1bcf57d389b1bdcccd2b3cee621277df8f4cab3"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/scientific-agent-skills/2.53.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:3ea00e2a2d6e3f6ca08337cf1115bcc0646bc407a4265eb7c37d98f9caf7f342",
+          "spoolJsonSha": "sha256:483b8636f1bff9180c716ccee506a62c858b6b4d3c5fee5c2f4f29e0391cf30b"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/scientific-agent-skills/2.53.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:ecfc9b2a12a18e7623d857ad84ee30a3673d89cb11680f26a12b0fbb03463977",
+          "spoolJsonSha": "sha256:330d5b572a29a58279d46d8c07a5155f2b688446696b8bcfec352c117c25499a"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/scientific-agent-skills/2.53.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:3b24fe6b171daa6ba998ce396628ee2ecd444d0356bb7a5455d4bf9c16b634bc",
+          "spoolJsonSha": "sha256:e2aa0cc7d509b0100b69ed678fc8fdbf1fe0fa97e852fe3efa4028b3e7806c36"
+        }
+      ]
+    }
+  ]
+}

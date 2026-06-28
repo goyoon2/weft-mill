@@ -1,0 +1,58 @@
+schema: 1
+id: obsidian-skills
+displayName: Obsidian Skills
+description: Steph Ango (kepano)'s agent skills for Obsidian — author & edit Markdown, Bases, and JSON Canvas, drive the Obsidian CLI, and clean web content with Defuddle.
+homepage: https://github.com/kepano/obsidian-skills
+keywords:
+  - skills
+  - obsidian
+  - markdown
+  - canvas
+  - notes
+  - pkm
+
+# Archetype B (plain git skills repo). Verified by real clone: 5 `skills/<name>/` dirs (SKILL.md +
+# references/), pure markdown — zero scripts, no installer. A `.claude-plugin/` marketplace exists but
+# its plugin's ONLY payload is `skills` (no hooks/commands/mcp/bootstrap), so there is no host-side
+# activation to reproduce — the Claude-plugin install is precisely "register these skills", which the
+# declarative `skill` slot reproduces faithfully. Hence declarative, not captured (and not Archetype C).
+#
+# Runtime note (NOT an install concern): the `obsidian-cli`/`defuddle` skills instruct the agent to
+# use external binaries (the Obsidian CLI + a running app; `npm i -g defuddle`) at USE time — a skill
+# prerequisite the user installs, not weft install-time payload. The bundle stays pure markdown.
+
+source:
+  type: git
+  url: https://github.com/kepano/obsidian-skills
+  # No git tags (verified) and not on npm — the only version signal is `.claude-plugin/plugin.json`'s
+  # `1.0.1`, which weft doesn't read for declarative sources. Pin to `main` (else the tag resolver
+  # throws); built spool version is the literal "main".
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest # ignored — `source.ref` pins the checkout — but the field is required.
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+# Skill names are descriptive (defuddle, json-canvas, obsidian-bases, obsidian-cli, obsidian-markdown);
+# the generic `defuddle`/`json-canvas` could collide, but weft namespaces a colliding skill at install
+# time, so keep them as authored.
+namespace:
+  mode: as-is
+
+# One declarative map across all five CLIs (anchor). `skills/*/SKILL.md` = the 5 skill dirs
+# (single-level). `from` ending in SKILL.md bundles each skill's whole dir (incl. `references/`).
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+  codex: *skills
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills
