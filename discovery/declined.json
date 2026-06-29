@@ -76,5 +76,11 @@
     "stars": 1001,
     "reason": "Host-native multi-component \u2014 ships axiom-mcp (an MCP server) + hooks.json across codex/pi plugins; the defining behavior includes the MCP server (declarative mcp-server is not buildable in weft) and a `pi` plugin (pi is not a weft CLI). Shipping skills alone would be a degraded subset.",
     "date": "2026-06-29"
+  },
+  {
+    "repo": "gsd-build/get-shit-done",
+    "stars": 64570,
+    "reason": "Rebranded/superseded \u2014 this repo is ARCHIVED and its npm package `get-shit-done-cc` is DEPRECATED (\"no longer supported\"). The project was renamed to open-gsd/gsd-core (npm `@opengsd/gsd-core`), which is ALREADY in the catalog as `gsd-core`. Onboarding get-shit-done would duplicate gsd-core with a dead upstream. Do not re-recon.",
+    "date": "2026-06-29"
   }
 ]
