@@ -1,0 +1,43 @@
+schema: 1
+id: ccplugins
+displayName: CCPlugins
+description: A framework of 24 production-ready slash commands for Claude Code — cleanup, commit, refactor, security scan, test, docs, and todo workflows that cut repetitive prompting.
+homepage: https://github.com/brennercruvinel/CCPlugins
+keywords:
+  - commands
+  - slash-commands
+  - workflow
+  - refactor
+  - automation
+
+# Archetype B (plain git commands repo). Verified by real clone: the upstream install.sh simply curls
+# `commands/*.md` into `~/.claude/commands` — i.e. plain command markdown, no rewrites, no runtime. So
+# we map the same files declaratively rather than capturing the trivial curl installer. 24 flat
+# commands (each filename is the command name; bodies are the prompt).
+source:
+  type: git
+  url: https://github.com/brennercruvinel/CCPlugins
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; commands repo tracked at main, not auto-bumped"
+
+# Generic command names (commit, format, docs, …) may collide; keep as authored — weft namespaces a
+# colliding command at install time.
+namespace:
+  mode: as-is
+
+# `command` slot reality: NOT gemini (TOML); codex is global-only and cursor is local-only, so a
+# declarative command map errors in the unsupported scope on those two. Map commands only where BOTH
+# scopes work — claude-code and opencode (the same stance as wshobson-commands).
+targets:
+  claude-code: &commands
+    strategy: declarative
+    map:
+      - { kind: command, from: "commands/*.md", as: "command:${name}" }
+  opencode: *commands

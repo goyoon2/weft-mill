@@ -1,10 +1,80 @@
 [
-  { "repo": "addyosmani/agent-skills", "stars": 67564, "reason": "Archetype C — plugin-host-native: ships a SessionStart bootstrap + sdd-cache/simplify-ignore hooks that activate host-side via ${CLAUDE_PLUGIN_ROOT} shell scripts (not __dirname). Shipping skills+agents+commands only would drop that activation = degraded subset (all-or-nothing). Onboardable only if weft models the hooks faithfully.", "date": "2026-06-29" },
-  { "repo": "mvanhorn/last30days-skill", "stars": 47356, "reason": "Archetype C — plugin-host-native (.claude-plugin/.codex-plugin/gemini-extension.json) with a SessionStart hook + a bundled Go MCP server; SKILL.md itself states a skills-only load yields a degraded WebSearch-only result. Host-side activation weft can't reproduce.", "date": "2026-06-29" },
-  { "repo": "google-labs-code/stitch-skills", "stars": 6231, "reason": "Requires the Stitch MCP server to function (allowed-tools: stitch*:*; skills call get_screen/get_design via the MCP). Declarative mcp-server is not buildable in weft → skills are non-functional without the hosted MCP.", "date": "2026-06-29" },
-  { "repo": "SamurAIGPT/Generative-Media-Skills", "stars": 3651, "reason": "Coupled runtime — every skill wraps the muapi CLI / muapi.ai hosted API (requires MUAPI_API_KEY, pushes `muapi mcp serve`). A skills-only subset would be non-functional.", "date": "2026-06-29" },
-  { "repo": "VoltAgent/awesome-codex-subagents", "stars": 5353, "reason": "Artifacts are 172 Codex `.toml` subagent files (developer_instructions/model/sandbox_mode), not the `*.md` weft maps — and weft has no agent slot for codex. Awesome-list/catalog with non-onboardable artifacts.", "date": "2026-06-29" },
-  { "repo": "nowork-studio/NotFair", "stars": 3007, "reason": "All 18 ad/SEO skills are wired to NotFair's hosted HTTP MCP servers (.mcp.json -> notfair.co/api/mcp/*) and write ~/.toprank config state. Requires the hosted MCP to function; declarative mcp-server not buildable in weft.", "date": "2026-06-29" },
-  { "repo": "blader/humanizer", "stars": 26558, "reason": "build defect (dropped after verify) — ROOT-level single skill on a tagless `ref: main` git fetch bundles the entire repo root into the skill, sweeping in the whole `.git/` dir + repo chrome (LICENSE/README/AGENTS.md); the pattern's `exclude` globs and the documented `.git` auto-skip are NOT applied to the bundled skill-dir on the git-clone fetch path (tag-fetched root skills like guizang stay clean). Onboardable once the engine applies exclude + .git-skip to the bundled root-skill walk on tagless fetches.", "date": "2026-06-29" },
-  { "repo": "lackeyjb/playwright-skill", "stars": 2837, "reason": "Skill bundles run.js/lib + requires `npm install && npx playwright install chromium` (downloads a per-machine Chromium binary). Not snapshottable to portable files (captured) and non-functional as static markdown (declarative); would need delegated-install verification not done this run.", "date": "2026-06-29" }
+  {
+    "repo": "addyosmani/agent-skills",
+    "stars": 67564,
+    "reason": "Archetype C \u2014 plugin-host-native: ships a SessionStart bootstrap + sdd-cache/simplify-ignore hooks that activate host-side via ${CLAUDE_PLUGIN_ROOT} shell scripts (not __dirname). Shipping skills+agents+commands only would drop that activation = degraded subset (all-or-nothing). Onboardable only if weft models the hooks faithfully.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "mvanhorn/last30days-skill",
+    "stars": 47356,
+    "reason": "Archetype C \u2014 plugin-host-native (.claude-plugin/.codex-plugin/gemini-extension.json) with a SessionStart hook + a bundled Go MCP server; SKILL.md itself states a skills-only load yields a degraded WebSearch-only result. Host-side activation weft can't reproduce.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "google-labs-code/stitch-skills",
+    "stars": 6231,
+    "reason": "Requires the Stitch MCP server to function (allowed-tools: stitch*:*; skills call get_screen/get_design via the MCP). Declarative mcp-server is not buildable in weft \u2192 skills are non-functional without the hosted MCP.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "SamurAIGPT/Generative-Media-Skills",
+    "stars": 3651,
+    "reason": "Coupled runtime \u2014 every skill wraps the muapi CLI / muapi.ai hosted API (requires MUAPI_API_KEY, pushes `muapi mcp serve`). A skills-only subset would be non-functional.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "VoltAgent/awesome-codex-subagents",
+    "stars": 5353,
+    "reason": "Artifacts are 172 Codex `.toml` subagent files (developer_instructions/model/sandbox_mode), not the `*.md` weft maps \u2014 and weft has no agent slot for codex. Awesome-list/catalog with non-onboardable artifacts.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "nowork-studio/NotFair",
+    "stars": 3007,
+    "reason": "All 18 ad/SEO skills are wired to NotFair's hosted HTTP MCP servers (.mcp.json -> notfair.co/api/mcp/*) and write ~/.toprank config state. Requires the hosted MCP to function; declarative mcp-server not buildable in weft.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "blader/humanizer",
+    "stars": 26558,
+    "reason": "build defect (dropped after verify) \u2014 ROOT-level single skill on a tagless `ref: main` git fetch bundles the entire repo root into the skill, sweeping in the whole `.git/` dir + repo chrome (LICENSE/README/AGENTS.md); the pattern's `exclude` globs and the documented `.git` auto-skip are NOT applied to the bundled skill-dir on the git-clone fetch path (tag-fetched root skills like guizang stay clean). Onboardable once the engine applies exclude + .git-skip to the bundled root-skill walk on tagless fetches.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "lackeyjb/playwright-skill",
+    "stars": 2837,
+    "reason": "Skill bundles run.js/lib + requires `npm install && npx playwright install chromium` (downloads a per-machine Chromium binary). Not snapshottable to portable files (captured) and non-functional as static markdown (declarative); would need delegated-install verification not done this run.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "safishamsi/graphify",
+    "stars": 73842,
+    "reason": "Coupled runtime \u2014 install is `uv tool install graphifyy` (PyPI) then `graphify install`, which generates a SKILL.md that shells out to the installed `graphify` CLI at runtime. The skill is a non-functional wrapper without the per-machine Python tool on PATH; not snapshottable to portable files (captured) nor functional as static markdown (declarative).",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "catlog22/Claude-Code-Workflow",
+    "stars": 2131,
+    "reason": "Runtime \u2014 npm `claude-code-workflow` ships a `ccw` CLI + `ccw-mcp` MCP server + a web frontend (docs-site) + postinstall; the harness IS the running `ccw`/MCP process, not static onboardable files. Agent-runtime/MCP, excluded.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "peterkrueck/Claude-Code-Development-Kit",
+    "stars": 1356,
+    "reason": "Archetype D \u2014 project scaffolder: setup.sh copies skills/hooks/templates/settings into a TARGET PROJECT root (defaults to cwd) with interactive per-file overwrite prompts (clobbers existing settings/CLAUDE.md). Multi-location project-root geometry + config-clobber that weft's single-base-dir payload model can't reproduce as static files.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "tradermonty/claude-trading-skills",
+    "stars": 2085,
+    "reason": "Coupled runtime \u2014 Python project (pyproject.toml/uv.lock) with launchd daemon plists (launchd/) and persistent state/ dir; the trading skills drive a scheduled Python runtime. A skills-only subset is non-functional without the per-machine env + daemons.",
+    "date": "2026-06-29"
+  },
+  {
+    "repo": "CharlesWiltgen/Axiom",
+    "stars": 1001,
+    "reason": "Host-native multi-component \u2014 ships axiom-mcp (an MCP server) + hooks.json across codex/pi plugins; the defining behavior includes the MCP server (declarative mcp-server is not buildable in weft) and a `pi` plugin (pi is not a weft CLI). Shipping skills alone would be a degraded subset.",
+    "date": "2026-06-29"
+  }
 ]

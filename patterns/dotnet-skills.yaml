@@ -1,0 +1,42 @@
+schema: 1
+id: dotnet-skills
+displayName: .NET Skills
+description: Aaron Stannard's Claude Code skills and sub-agents for .NET developers — Akka.NET, async/concurrency, OpenTelemetry, benchmarking, DocFX, and more.
+homepage: https://github.com/Aaronontheweb/dotnet-skills
+keywords:
+  - dotnet
+  - csharp
+  - akka-net
+  - agents
+  - skills
+
+# Archetype B (plain git skills + agents repo). Verified by real clone: flat `skills/*/SKILL.md`
+# (each bundles its own dir) and flat `agents/*.md`. `.claude-plugin/plugin.json` registers ONLY
+# skills/agents (no hooks/mcp/commands), so there is no host-side activation → plain declarative.
+source:
+  type: git
+  url: https://github.com/Aaronontheweb/dotnet-skills
+
+versioning:
+  strategy: semver
+  track: latest # repo carries `v*` git tags (e.g. v1.4.0) → derived git-tags livecheck resolves them.
+
+namespace:
+  mode: as-is
+
+# `skill` is supported by all five CLIs; `agent` by all EXCEPT codex (no codex agent slot). So codex
+# gets the skills only; the other four get skills + agents. Two anchors, no codex degradation (skills
+# are complete on their own — the agents are an additive layer codex simply can't host).
+targets:
+  claude-code: &full
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+      - { kind: agent, from: "agents/*.md", as: "agent:${name}" }
+  gemini: *full
+  cursor: *full
+  opencode: *full
+  codex:
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }

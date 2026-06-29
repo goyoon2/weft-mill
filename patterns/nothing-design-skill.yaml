@@ -1,0 +1,44 @@
+schema: 1
+id: nothing-design-skill
+displayName: Nothing Design Skill
+description: A single skill for generating UI in the Nothing design language — monochrome, dot-matrix typography, glyph-style minimalism.
+homepage: https://github.com/dominikmartn/nothing-design-skill
+keywords:
+  - nothing
+  - design
+  - ui
+  - monochrome
+  - skill
+
+# Archetype B (single skill in a sub-dir). Verified by real clone: the repo is one skill living at
+# `nothing-design/SKILL.md` with a `references/` sidecar; no plugin host, no installer. The skill rule
+# bundles the `nothing-design/` dir (SKILL.md + references) intact — and because the skill is in its
+# OWN sub-dir (not the repo root), repo chrome (README/LICENSE/preview.gif) sits OUTSIDE it and is
+# never swept in, so no `exclude` is needed.
+source:
+  type: git
+  url: https://github.com/dominikmartn/nothing-design-skill
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; single-skill repo tracked at main, not auto-bumped"
+
+namespace:
+  mode: as-is
+
+# One hard-coded skill id (no wildcard in `from` → no `${name}` to capture). Shared across all five
+# CLIs via an anchor.
+targets:
+  claude-code: &skill
+    strategy: declarative
+    map:
+      - { kind: skill, from: "nothing-design/SKILL.md", as: "skill:nothing-design" }
+  codex: *skill
+  gemini: *skill
+  opencode: *skill
+  cursor: *skill

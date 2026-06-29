@@ -1,0 +1,98 @@
+{
+  "id": "dotnet-skills",
+  "displayName": ".NET Skills",
+  "description": "Aaron Stannard's Claude Code skills and sub-agents for .NET developers — Akka.NET, async/concurrency, OpenTelemetry, benchmarking, DocFX, and more.",
+  "homepage": "https://github.com/Aaronontheweb/dotnet-skills",
+  "keywords": [
+    "dotnet",
+    "csharp",
+    "akka-net",
+    "agents",
+    "skills"
+  ],
+  "latest": "1.4.0",
+  "clis": [
+    "claude-code",
+    "gemini",
+    "cursor",
+    "opencode",
+    "codex"
+  ],
+  "versions": [
+    {
+      "version": "1.4.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/dotnet-skills/1.4.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:70b13077eea5e747b9bb943847b0b2993384766b3301a8091703acf8b55c4fbf",
+          "spoolJsonSha": "sha256:d759a5fa23bee3f6e78785952f1fc784e52198df9538250c75b1761f0029cf17"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/dotnet-skills/1.4.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:269222da0cdc72df3e331a22b119e44b76dc8b66bc053a7706c80d02b4d1e750",
+          "spoolJsonSha": "sha256:16af33843f0bc3c6d5b2d4d4893e3810f67288656be3a2dc35208fdef240d537"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/dotnet-skills/1.4.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:a276b7265cf6bb00b8c659243c9ecce72b50505d7354ba1d846128c42964ace9",
+          "spoolJsonSha": "sha256:6a10ddc27960ef6367695ae8b2a55fbce8d1a6d5dcb30bb8cbb868284537d706"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/dotnet-skills/1.4.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:2deac4b02a98894dd2a1e36720a8abe100ba16d69a563b260e2f5962ab1d561f",
+          "spoolJsonSha": "sha256:a12299885226b0a8522cc832c061bb7895144aca9c851127a14b7ecd81ec3752"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/dotnet-skills/1.4.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:2ba7d14206ef4cb31d2c869496e90bd315664dbcca0ee058af7c5a1e18126522",
+          "spoolJsonSha": "sha256:bf70ef051b4daab437566b57c8b44ab47c30001e64fed37482316278fd56f420"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/dotnet-skills/1.4.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:f4a4f1117783ad858358abfde1613d9ce5a418110497be7f672f3fd9814fa41c",
+          "spoolJsonSha": "sha256:98e40955d6f6d1ce0a4fafcf0149d5de62535a5449bf703031f64f6f2aaa8060"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/dotnet-skills/1.4.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:f2674e1c6a3e3a18b8950cc15018f62853ae74801f83890c056a1bf58682d0b9",
+          "spoolJsonSha": "sha256:bc0899c534a3a0f954c64b6cfcd3a4c048f3b05468dbc4c7ffa00b7029aa9ad2"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/dotnet-skills/1.4.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:2e0520f1e76da85fe727a44276ceb81a8ff08608bae606fefdf087e00336cdf9",
+          "spoolJsonSha": "sha256:d26ba8972659333fc8227623c1f219e7557313917166ea82eca23df2b09b3a74"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/dotnet-skills/1.4.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:4ceb3210010a43f5833c9b66764887721f6a169c367817a1961ef034d1e8e5fe",
+          "spoolJsonSha": "sha256:efd256c0e0217ba8b729167b3ca49a27fef5a475509f01f846ae0bd607865d10"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/dotnet-skills/1.4.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:7fee423e982deae17fff9571f089efaf380056d66eab190e3e44ce567c664974",
+          "spoolJsonSha": "sha256:62e32e5086a14adf0f6668105c6f385e3af4a942fa804d5003cc8bb00330f6db"
+        }
+      ]
+    }
+  ]
+}

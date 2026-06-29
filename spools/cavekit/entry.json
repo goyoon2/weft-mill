@@ -1,0 +1,99 @@
+{
+  "id": "cavekit",
+  "displayName": "Cavekit",
+  "description": "Compressed spec-driven dev — the full grill → spec → research → review → build loop over one SPEC.md file, with caveman token-encoding and bug-to-spec backprop. Ships as skills + slash commands.",
+  "homepage": "https://github.com/JuliusBrussee/cavekit",
+  "keywords": [
+    "cavekit",
+    "spec-driven",
+    "caveman",
+    "workflow",
+    "skills",
+    "commands"
+  ],
+  "latest": "4.1.0",
+  "clis": [
+    "claude-code",
+    "opencode",
+    "gemini",
+    "codex",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "4.1.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/cavekit/4.1.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:c87dbd1a8fe3bca61a223883c82ba2aafdd595d703fbaa54efe59a01a379cb2e",
+          "spoolJsonSha": "sha256:9a382b0a1725344b9239a36d19f9a06a12f1cc476fe59d443b16e9a7ce010925"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/cavekit/4.1.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:ea78046981e803a071a2b98af36253c8eb8390158b92432a927fa24d77468932",
+          "spoolJsonSha": "sha256:a9e71b2f7c5a0b8a65b64052ad5f0112417e245cbcdca80be80ae393a997dac2"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/cavekit/4.1.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:7867bc7c5705e6012b4fddc35060e1d7628b81efd268915c392ad3b9715daa44",
+          "spoolJsonSha": "sha256:862098a34e1e5484860a4e96d0cf8a25ca758e291116a94b106bcc9787b2cd0d"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/cavekit/4.1.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:87f5288f90b5f7f348ebe708e22416e18694ed71e6f79061cf6563782d2b1e65",
+          "spoolJsonSha": "sha256:748919df09263e9bef0db2d13ee62b026d6d5d2c0c5fe63133b81c9d84243546"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/cavekit/4.1.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:577092fa438daf321c4eaf1fb7e8191168dd63c95b18d37ddf434ec3b63889af",
+          "spoolJsonSha": "sha256:a2269aaece817012141e59c00f5588e94a5e7ae0e806adf001a81ac6c71f7922"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/cavekit/4.1.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:db6ef3ec3e812d275fe734ff0018194999a5da7121244ecbe5aec0941d9e3319",
+          "spoolJsonSha": "sha256:10e2207b16f9d56ed778262a4037f139c9118db2d648910e573d206f2b4b9a1b"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/cavekit/4.1.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:852faaafa2275d25e867c50549e77e5c6b5c69be3155cb2ab253527a039086ca",
+          "spoolJsonSha": "sha256:403dd70b08a4ea1c8912669658804bf05ff19b1a84e8fb6758994cba79fdaf79"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/cavekit/4.1.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:93648dd48ace594462a17dd5258220396b238ee4e4f8c54d4318ecb23f23b270",
+          "spoolJsonSha": "sha256:47baa45fb93255b62fd102fcda83bc175101a2765188e1fbd2c78708acbad7fc"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/cavekit/4.1.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:5ab76516ccc189e5b1ae5ec84248a6a7ded266e5cf16a422c9093eb3b4fcb350",
+          "spoolJsonSha": "sha256:693ffafa5c811bef7fb771125857cc02b5d48988769f66a2c7dc30d1bc445a09"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/cavekit/4.1.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:b0bcb88a6d2ef68e9dd366d662e49acafb00df139dc783beee8069abb9fc7d25",
+          "spoolJsonSha": "sha256:f732b6255d0399b8a2c5712519372544502f772be16d220cfed810d7d5c92688"
+        }
+      ]
+    }
+  ]
+}
