@@ -1,0 +1,44 @@
+schema: 1
+id: wshobson-commands
+displayName: wshobson Commands
+description: A collection of production-ready slash commands for Claude Code — 42 single-purpose tools and 15 multi-step workflows spanning review, testing, deployment, and refactoring.
+homepage: https://github.com/wshobson/commands
+keywords:
+  - commands
+  - slash-commands
+  - workflows
+  - automation
+
+# Archetype B (plain git commands repo). Verified by real clone: flat command markdown in two dirs —
+# `tools/*.md` (42 single-purpose) and `workflows/*.md` (15 multi-step). Each has a minimal `model:`
+# frontmatter + a command body (the filename is the command name). The `examples/` dir is not a
+# command slot and is left unmapped.
+source:
+  type: git
+  url: https://github.com/wshobson/commands
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; commands repo tracked at main, not auto-bumped"
+
+# Command names are generic (ai-review, git-workflow, …) and may collide; keep as authored — weft
+# namespaces a colliding command at install time. (don't-over-namespace stance.)
+namespace:
+  mode: as-is
+
+# `command` slot reality: NOT gemini (TOML); codex is global-only and cursor is local-only, so a
+# declarative command map errors in the unsupported scope on those two. Map commands only where BOTH
+# scopes work — claude-code and opencode — and omit codex/cursor/gemini. One spec per CLI via anchor;
+# `${name}` = the command file stem (one wildcard at the file position in each dir).
+targets:
+  claude-code: &commands
+    strategy: declarative
+    map:
+      - { kind: command, from: "tools/*.md", as: "command:${name}" }
+      - { kind: command, from: "workflows/*.md", as: "command:${name}" }
+  opencode: *commands

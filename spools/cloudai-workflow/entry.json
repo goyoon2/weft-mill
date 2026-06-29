@@ -1,0 +1,39 @@
+{
+  "id": "cloudai-workflow",
+  "displayName": "CloudAI Workflow (project-starter)",
+  "description": "A universal Claude Code workflow: 14 skills, 7 specialized agents (orchestrator, code-reviewer, debugger, security-auditor, …), 26 commands, plus guardrail hooks (file protection, security/pre-commit checks, format-on-edit, metrics) wired across every tool event.",
+  "homepage": "https://github.com/CloudAI-X/claude-workflow-v2",
+  "keywords": [
+    "workflow",
+    "agents",
+    "hooks",
+    "code-review",
+    "security",
+    "automation"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/cloudai-workflow/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:b94fcc59b331a4251ef378cbb82a85e4a774588c38297b1116ab8c7f82d9e3c1",
+          "spoolJsonSha": "sha256:c2f0aa4098aa1e36388127b68ff15a788059fcf9d60359d0f0ced1ff4112daac"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/cloudai-workflow/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:013d67d275d9f77307a24c2d377410ed2960884b3c29757e4bbbebba1c640356",
+          "spoolJsonSha": "sha256:ba787096383e7c9cf5b05d0206c68fb884ab1152edaf7a668dffda9349994162"
+        }
+      ]
+    }
+  ]
+}

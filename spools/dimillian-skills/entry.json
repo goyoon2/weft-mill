@@ -1,0 +1,98 @@
+{
+  "id": "dimillian-skills",
+  "displayName": "Dimillian Skills",
+  "description": "Thomas Ricouard's agent skills for Swift/SwiftUI and macOS/iOS app development — concurrency, performance audits, UI patterns, packaging, plus review/refactor swarms.",
+  "homepage": "https://github.com/Dimillian/Skills",
+  "keywords": [
+    "skills",
+    "swift",
+    "swiftui",
+    "ios",
+    "macos"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/dimillian-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:c6f0f49019e8906b667891e81c73238e17eb909a7784d9d715face756516842b",
+          "spoolJsonSha": "sha256:99505b53ab9a1ac6d11f2660371d959bfcf35001961c91bc666be7844ccc8681"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/dimillian-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:9185cdb90b13034c571aadfe9df9f0755e10e2b3e22269a7aee73ebc44147af4",
+          "spoolJsonSha": "sha256:4dd44d7013a5fb219d0cd687315c0f83d3de3bf9230b55ad4ac4c9c934fe7406"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/dimillian-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:b480059c5bb88818cde108f623bf048594e3353374484f75b623bc125c4b59b3",
+          "spoolJsonSha": "sha256:f575a6a7b2606c2f6419c8b1c811957df499ddca7f5a759cbf62b79f338dabc2"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/dimillian-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:a577afae970caa21f7d5a277b9bf91206828d459c98886ce27b0e40b4d3d3577",
+          "spoolJsonSha": "sha256:02b7a964db5342328626f5565b49864fbe6b35d3371f8e81ea6c3343fe52c406"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/dimillian-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:d3d8e3f8f58fe18bed475e01b80fa94da2ad16a8f5181729cd0220039c8df093",
+          "spoolJsonSha": "sha256:858ab5fec3de8563efdbedc8e9470bd4b2f7cc13ea19547c0fcdcb07831d83b9"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/dimillian-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:4a87943619a7dde186f71c188ad522ca2de0febe45336b4aea4ede05e4a1882c",
+          "spoolJsonSha": "sha256:c4b63a2b85930c4c308bb430eea0e5be5cf8cd92929f9613c54147d5671d41b1"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/dimillian-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:5217818fb8ffc2c02e07644b6dcfe9f19b6b49120ea17c69433ff133a152e768",
+          "spoolJsonSha": "sha256:56b271c2a98ddf824c4cd0d5e3527a4c3fca93f01f1433b4326884ace009ef24"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/dimillian-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:357a16f3f2f27414c0660ce61bf799b489213df2c91fca6c837fa2e8005f049d",
+          "spoolJsonSha": "sha256:82ecaf9813ec7d8f41a4e753e2b07a3ef0937f0732943830032efd02144b16c9"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/dimillian-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:3eb736be9db918c15d5b71b54ef7f0b73cdc3a855c5f0eb873c948ba108989ac",
+          "spoolJsonSha": "sha256:a678ad19a7d794539e87a3e93bfd2d8da93edacf5939fc0d18e3f9932808b30b"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/dimillian-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:66f7fdead81071d3b75fdcc1694b0eb8c65484fce1b5d5845014fef411db68c7",
+          "spoolJsonSha": "sha256:295a705b8fae23026283b37e899ee1e007a58755694436d4c3c6da944ce6f6aa"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+schema: 1
+id: terraform-skill
+displayName: Terraform Skill
+description: Terraform & OpenTofu agent skill — module design, testing, CI/CD, drift diagnosis, and schema validation best practices.
+homepage: https://github.com/antonbabenko/terraform-skill
+keywords:
+  - skill
+  - terraform
+  - opentofu
+  - infrastructure
+  - iac
+
+# Archetype B (plain git skills repo). Verified by real clone: one skill at
+# `skills/terraform-skill/SKILL.md` (+ `references/`). The repo ships `mcp.json` wiring the optional
+# HashiCorp terraform-mcp-server (Docker), but the MCP is an ENHANCEMENT, not required — the
+# diagnose-first workflow stands alone — so this is a faithful declarative skill, not an MCP-coupled
+# decline. The `skills/*/SKILL.md` glob ships only the skill dir; `mcp.json` is never bundled.
+source:
+  type: git
+  url: https://github.com/antonbabenko/terraform-skill
+
+versioning:
+  strategy: semver
+  track: latest
+
+# Real `v*` tags (v1.7.0 … v1.9.0), single tag family → derived `git-tags` livecheck (omit block).
+# Note: `version.json`/frontmatter (1.17.x) runs ahead of the git tags; the build tracks the highest
+# tag, which is the honest released version surface.
+
+namespace:
+  mode: as-is
+
+targets:
+  claude-code: &skill
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skill
+  gemini: *skill
+  opencode: *skill
+  cursor: *skill

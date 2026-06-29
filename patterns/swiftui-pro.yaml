@@ -1,0 +1,40 @@
+schema: 1
+id: swiftui-pro
+displayName: SwiftUI Pro
+description: Paul Hudson's SwiftUI agent skill — comprehensively reviews SwiftUI code for modern-API best practices, maintainability, and performance.
+homepage: https://github.com/twostraws/SwiftUI-Agent-Skill
+keywords:
+  - swiftui
+  - swift
+  - ios
+  - code-review
+  - skill
+
+# Archetype B (single-skill plugin). Verified by real clone: the `swiftui-pro/` plugin dir holds the
+# real skill at `swiftui-pro/skills/swiftui-pro/SKILL.md` (`.claude-plugin/plugin.json` registers only
+# skills — no hooks/mcp → plain declarative). The duplicate `swiftui-pro/SKILL.md` at the plugin root
+# is the marketplace card, so we map only the `skills/` copy.
+source:
+  type: git
+  url: https://github.com/twostraws/SwiftUI-Agent-Skill
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  tagPattern: "*" # repo tags without a `v` prefix (e.g. 1.1.0) → match all tags rather than `v*`.
+
+namespace:
+  mode: as-is
+
+# Single skill, all five CLIs read SKILL.md as-is. `${name}` = the skill dir (one `*` at that position).
+targets:
+  claude-code: &skill
+    strategy: declarative
+    map:
+      - { kind: skill, from: "swiftui-pro/skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skill
+  gemini: *skill
+  opencode: *skill
+  cursor: *skill

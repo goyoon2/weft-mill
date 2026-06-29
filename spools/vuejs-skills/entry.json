@@ -1,0 +1,98 @@
+{
+  "id": "vuejs-skills",
+  "displayName": "Vue.js Skills",
+  "description": "Vue 3 development agent skills — best practices, testing, Vue Router and Pinia guides, composables, JSX, and the Options API.",
+  "homepage": "https://github.com/vuejs-ai/skills",
+  "keywords": [
+    "skills",
+    "vue",
+    "pinia",
+    "vue-router",
+    "testing"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/vuejs-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:fa6fa4c4c4c329596d7821e406d5fbce8a791080b18a8cb9bd48474b803accca",
+          "spoolJsonSha": "sha256:f6f67891bd6d8e0fe79272c712eb007e2adea5f77ce707eb05ca2b7dc66111e9"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/vuejs-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:acb87dc23ba622d20f008250d5c77ea9ff503c2674a216107df9ab5fdbad80f0",
+          "spoolJsonSha": "sha256:1daff721ae698013ca77a80f5e9d483fdf7ba338a176540897bdb2bc961e5ff0"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/vuejs-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:a15a06aa0ce3417120154c2e9c9b1d0ff9d8f33474568c218e685213d4269f1b",
+          "spoolJsonSha": "sha256:d9c0a25e814649118fff6776b8f4aa4e673be3e2d5d3f87d7202ae6ac0edff52"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/vuejs-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:c294c5229771b5e8d8569410d1ad383432506b7b9551262ddfb2594487d848a9",
+          "spoolJsonSha": "sha256:5cc7d5dd3fe47c4b631d044e753397b25e0009bb1eed9d1799f4512d81318afa"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/vuejs-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:21ae537104dc007506c7e08d279801969eed9d9dbb047cf03a63692b518b87a9",
+          "spoolJsonSha": "sha256:a803ef6ea3554334955a335dccb60a4d2d7b09a956903eb3097381c2e851bbcb"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/vuejs-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:86c263145f175b131418382d08ff1bfdd2008b49af7241a00725f0c82d04f32c",
+          "spoolJsonSha": "sha256:b8027c2826acdaec4eee3c4caeec29201f59fe40a98e35a2cba307ec07cca1b2"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/vuejs-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:5ff6501d33dc2ac67af275ab9559ada7dbe1e3cbc31c7307f8fb7374fb5f999b",
+          "spoolJsonSha": "sha256:936e78c3443476367d56e9a63d72e3d10b416c0673319bce96c5272b80c15585"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/vuejs-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:0b3828cec34201fbb607855f3a760207859b55236d28a01478263dfa7b14b53d",
+          "spoolJsonSha": "sha256:ae981d467561278a4d1ea3b108c36e6d69d33036282b58a75897c2f9c16ec24e"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/vuejs-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:2c14075c6fb9fef1af522bfdef002e89416a8e724247b695f5113d3b38446d48",
+          "spoolJsonSha": "sha256:8aac8fd7b90280fc22f8cefd2a09a431bbb725e9b60280b45e6e449ab9ac0e5c"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/vuejs-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:f6c8fc577e08b4159c4cfbe9db1e394105480a386d042f81c53dbb738d48f7a0",
+          "spoolJsonSha": "sha256:02bf6d725ada24100d97f9cdf618c41661b775dc1c6c9ea5be51fd72d0ffd7b8"
+        }
+      ]
+    }
+  ]
+}

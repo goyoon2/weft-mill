@@ -1,0 +1,44 @@
+schema: 1
+id: dimillian-skills
+displayName: Dimillian Skills
+description: Thomas Ricouard's agent skills for Swift/SwiftUI and macOS/iOS app development — concurrency, performance audits, UI patterns, packaging, plus review/refactor swarms.
+homepage: https://github.com/Dimillian/Skills
+keywords:
+  - skills
+  - swift
+  - swiftui
+  - ios
+  - macos
+
+# Archetype B (plain git skills repo). Verified by real clone: 16 skills, each a top-level dir with
+# `<skill>/SKILL.md` (valid name/description frontmatter). Skills sit at the REPO ROOT (no `skills/`
+# parent) → `from: */SKILL.md` captures each skill dir. Non-skill top dirs (`docs/`, `scripts/`) have
+# no SKILL.md so the glob skips them. Each skill bundles its `references/` and an `agents/openai.yaml`
+# Codex display-config sidecar (a harmless bundled asset, not a weft agent slot).
+source:
+  type: git
+  url: https://github.com/Dimillian/Skills
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+namespace:
+  mode: as-is
+
+# Plain SKILL.md read by all five CLIs. README suggests `$CODEX_HOME/skills`, but the artifacts are
+# standard SKILL.md that every CLI reads — one declarative map via anchor serves all five.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - { kind: skill, from: "*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills

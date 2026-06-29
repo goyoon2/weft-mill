@@ -1,0 +1,52 @@
+{
+  "id": "wshobson-commands",
+  "displayName": "wshobson Commands",
+  "description": "A collection of production-ready slash commands for Claude Code — 42 single-purpose tools and 15 multi-step workflows spanning review, testing, deployment, and refactoring.",
+  "homepage": "https://github.com/wshobson/commands",
+  "keywords": [
+    "commands",
+    "slash-commands",
+    "workflows",
+    "automation"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/wshobson-commands/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:466376cd4e36e0f10aef3e52550a360b2802d9426f3374b49ca4285ffb974fea",
+          "spoolJsonSha": "sha256:59a304cb5737ee2a2c14b58bbc90f43442006ba8ad8d3b1376cf3a7f231570b9"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/wshobson-commands/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:c2335107e2dabc5e8659806bf53b46287a34cdbfa568f65a656a0b6badd5da7e",
+          "spoolJsonSha": "sha256:672f68ad78b36f119fa88c028b317df031def73aff6200619c26c7ae1aced3aa"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/wshobson-commands/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:df331628a7eaec8a322392f2df41e1be86da1be0124a9036192ddaedb6536f05",
+          "spoolJsonSha": "sha256:0376f94c4471a9da358da875a9ffe0731ac7143fb83e9e03f709ba107adef87e"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/wshobson-commands/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:9d94a88fc59a2543a47d515743b143bfbd7866c9c7652c69952134f57bcf57e6",
+          "spoolJsonSha": "sha256:e03c060aaa98d9c1791f1803f68fc272c4881cf0346b91f37c6815e5595cdcab"
+        }
+      ]
+    }
+  ]
+}

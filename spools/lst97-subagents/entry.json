@@ -1,0 +1,82 @@
+{
+  "id": "lst97-subagents",
+  "displayName": "lst97 Subagents",
+  "description": "A collection of specialized Claude Code subagents — business, data/AI, development, infrastructure, quality/testing, security, and domain specialists, plus an agent-organizer.",
+  "homepage": "https://github.com/lst97/claude-code-sub-agents",
+  "keywords": [
+    "agents",
+    "subagents",
+    "specialists",
+    "orchestration"
+  ],
+  "latest": "1.1.0",
+  "clis": [
+    "claude-code",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "1.1.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/lst97-subagents/1.1.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:b0cce42fdc8eee3d503a7f32f69aa017fb62a414129b543c03f376d2c4a32704",
+          "spoolJsonSha": "sha256:7c23ab380f265de244fbf1e81c8f957ee373bbdc56a4dbecab068cef73f48dd0"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/lst97-subagents/1.1.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:034480154a7c51dfbf21a11a6263d75daa78eccd149077f4875e0c31175aea3b",
+          "spoolJsonSha": "sha256:c0e8a00e1fb54911aa81678415789b2fb6ddd083eed635f27140184899101367"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/lst97-subagents/1.1.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:25f16494702d5c0bf663f8761b6e6c4159c12d0d16ad0fff0ad5f04f0fd34b10",
+          "spoolJsonSha": "sha256:91eb435847c9e44782ce959dc7858bdefdfdf8f02c9a128ae84edabadaf351ac"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/lst97-subagents/1.1.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:a8d1a9ab8d3a48ec46a05c62bccf48b7f582d9524293a173447391db1e0b26ce",
+          "spoolJsonSha": "sha256:12fa86fb5b10ee1c403e03233147216136f1920308e01da51f0a5f13ba7670ea"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/lst97-subagents/1.1.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:e3e384c4db558128bd49cf4cf7647bc8113a3ff62eaa810a26b02cee7faeb516",
+          "spoolJsonSha": "sha256:f6453a8a6896d64181523a455b52cc3c21d0e868ef238a7bc30d1d6709d8ee6b"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/lst97-subagents/1.1.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:ecd0d5286ff86950405b692d7eb2c0045e13370eb43c65b90add0358a287cb78",
+          "spoolJsonSha": "sha256:8b0a40ac49692c53a164f4effe17586bcc93129f9056d5ed971765a3cd212f77"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/lst97-subagents/1.1.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:fc62cf69dff2a49b015f90236c73c9305ad06bf6076c587810c6d3bdb4bd57cc",
+          "spoolJsonSha": "sha256:0f9fbd177dffa9042d9fcdb06b2d9fb51a451d5c9178ee5f2bccb161a5b24e87"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/lst97-subagents/1.1.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:6c91ffb96d9c9656c04c8230bc047df9d00b2f17e688f307786aba6507461440",
+          "spoolJsonSha": "sha256:d12a76ba1d67f23d9d992d4392d525a4706606e1fb1f131c94e4a49598cc08ff"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+schema: 1
+id: google-skills
+displayName: Google Skills
+description: Google's official Agent Skills for Google products — Ads (Google Ads API, Mobile Ads, IMA, Data Manager), Analytics, and Cloud (GKE, Vertex/Agent platform).
+homepage: https://github.com/google/skills
+keywords:
+  - google
+  - ads
+  - analytics
+  - cloud
+  - gke
+  - skills
+
+# Archetype B (plain git skills repo). Verified by real clone: plain `SKILL.md`s under `skills/`, no
+# installer, no plugin host, no hooks/mcp. NESTED layout — skills live under category (and for `ads`,
+# sub-category) dirs, so a bare `skills/**/SKILL.md` glob would collide `${name}` on the parent. One
+# rule per parent dir keeps the single `*` at the skill-dir position (mattpocock/voltagent mechanics).
+source:
+  type: git
+  url: https://github.com/google/skills
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+namespace:
+  mode: as-is
+
+# Same declarative spec across all five CLIs (every CLI reads `SKILL.md` as-is). `ads` only has
+# sub-categories (no skills directly under it); `analytics` and `cloud` hold their skills directly.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/ads/data-manager-api/*/SKILL.md", as: "skill:${name}" }
+      - { kind: skill, from: "skills/ads/google-ads-api/*/SKILL.md", as: "skill:${name}" }
+      - { kind: skill, from: "skills/ads/google-mobile-ads/*/SKILL.md", as: "skill:${name}" }
+      - { kind: skill, from: "skills/ads/interactive-media-ads/*/SKILL.md", as: "skill:${name}" }
+      - { kind: skill, from: "skills/analytics/*/SKILL.md", as: "skill:${name}" }
+      - { kind: skill, from: "skills/cloud/*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills

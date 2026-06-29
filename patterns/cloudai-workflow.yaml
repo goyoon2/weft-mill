@@ -1,0 +1,61 @@
+schema: 1
+id: cloudai-workflow
+displayName: CloudAI Workflow (project-starter)
+description: "A universal Claude Code workflow: 14 skills, 7 specialized agents (orchestrator, code-reviewer, debugger, security-auditor, …), 26 commands, plus guardrail hooks (file protection, security/pre-commit checks, format-on-edit, metrics) wired across every tool event."
+homepage: https://github.com/CloudAI-X/claude-workflow-v2
+keywords:
+  - workflow
+  - agents
+  - hooks
+  - code-review
+  - security
+  - automation
+
+# Archetype: DECLARATIVE PLUGIN WITH HOOKS (claude-code only). Verified by real clone: the defining
+# layer is a set of guardrail hooks fired on PreToolUse/PostToolUse/Stop/SessionStart/UserPromptSubmit/
+# Notification. They are reproducible WITHOUT a plugin host because each hook command is just
+# `python3|bash ${CLAUDE_PLUGIN_ROOT}/hooks/<script>` and the scripts themselves use ONLY stdlib +
+# stdin (no `CLAUDE_PLUGIN_ROOT` / plugin-host env read internally — grep-verified). So baking the
+# absolute install path into the command (transform below) and shipping the hooks tree as a payload
+# faithfully reproduces what `/plugin install` does (same shape as `ponytail`).
+#
+# CLAUDE-ONLY on purpose (all-or-nothing per CLI): the hooks.json is Claude-shaped and the guardrail
+# hooks ARE the plugin's defining behavior. On the other CLIs a weft install could only ship the
+# skills/agents/commands WITHOUT those always-on hooks — a degraded subset — so we don't claim support
+# there. For claude the activation IS the hook, fully reproduced. (The repo also carries a
+# `.codex-plugin/`, but onboarding codex would drop the hook layer → omitted.)
+source:
+  type: git
+  url: https://github.com/CloudAI-X/claude-workflow-v2
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; plugin tracked at main, not auto-bumped"
+
+namespace:
+  mode: as-is
+
+targets:
+  claude-code:
+    strategy: declarative
+    map:
+      # User-facing surfaces.
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+      - { kind: agent, from: "agents/*.md", as: "agent:${name}" }
+      - { kind: command, from: "commands/*.md", as: "command:${name}" }
+      # The whole hooks tree as ONE payload at .claude/cloudai-workflow/ — so {{WEFT_PAYLOAD_DIR}}
+      # resolves to it and each hook command's `…/hooks/<script>` path points at a placed file.
+      - { kind: payload, from: "hooks/**", as: "payload:cloudai-workflow" }
+      # Register the hooks into settings.json (exploded into one merge fragment per command, folded
+      # into the user's settings.json without overwriting it).
+      - { kind: hook, from: "hooks/hooks.json", as: "hook" }
+    transforms:
+      # The hook commands reference the plugin-host var weft never sets — rewrite it (POSIX +
+      # PowerShell spellings) to the resolved payload dir BEFORE the hooks.json is exploded.
+      - { type: substitute-var, appliesTo: "hooks/hooks.json", from: "${CLAUDE_PLUGIN_ROOT}", to: "{{WEFT_PAYLOAD_DIR}}" }
+      - { type: substitute-var, appliesTo: "hooks/hooks.json", from: "$env:CLAUDE_PLUGIN_ROOT", to: "{{WEFT_PAYLOAD_DIR}}" }

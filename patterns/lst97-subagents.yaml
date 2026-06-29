@@ -1,0 +1,50 @@
+schema: 1
+id: lst97-subagents
+displayName: lst97 Subagents
+description: A collection of specialized Claude Code subagents — business, data/AI, development, infrastructure, quality/testing, security, and domain specialists, plus an agent-organizer.
+homepage: https://github.com/lst97/claude-code-sub-agents
+keywords:
+  - agents
+  - subagents
+  - specialists
+  - orchestration
+
+# Archetype B (plain git AGENTS repo). Verified by real clone: agent `.md` (name/description/tools/
+# model frontmatter) under `agents/` — one root `agent-organizer.md` plus 7 category subdirs.
+source:
+  type: git
+  url: https://github.com/lst97/claude-code-sub-agents
+
+versioning:
+  strategy: semver
+  track: latest
+
+# Real `v*` tags (v1.0.0, v1.1.0), single tag family → derived `git-tags` livecheck (omit block).
+
+# Agent names are generic (ml-engineer, database-optimizer, …) and may duplicate built-in/other-pack
+# agents; keep as authored — weft namespaces a colliding agent at install time.
+namespace:
+  mode: as-is
+
+# Agents are nested one level under `agents/<category>/`. weft captures `${name}` from the FIRST
+# wildcard of `from`, so a single `agents/*/*.md` would name every agent after its CATEGORY
+# (collision). Use ONE rule per category dir (the `*` at the FILE position) + a no-wildcard rule for
+# the root `agent-organizer.md`. `exclude: ["**/README.md"]` drops any per-dir index files.
+#
+# `agent` slot is supported on every CLI EXCEPT codex (no codex agent slot) → omit codex; the other
+# four read Claude-style agent markdown from their agents dir. One shared spec via a YAML anchor.
+targets:
+  claude-code: &agents
+    strategy: declarative
+    map:
+      - { kind: agent, from: "agents/agent-organizer.md", as: "agent:agent-organizer" }
+      - { kind: agent, from: "agents/business/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "agents/data-ai/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "agents/development/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "agents/infrastructure/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "agents/quality-testing/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "agents/security/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+      - { kind: agent, from: "agents/specialization/*.md", as: "agent:${name}", exclude: ["**/README.md"] }
+  gemini: *agents
+  cursor: *agents
+  opencode: *agents

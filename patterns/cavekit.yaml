@@ -1,0 +1,50 @@
+schema: 1
+id: cavekit
+displayName: Cavekit
+description: Compressed spec-driven dev — the full grill → spec → research → review → build loop over one SPEC.md file, with caveman token-encoding and bug-to-spec backprop. Ships as skills + slash commands.
+homepage: https://github.com/JuliusBrussee/cavekit
+keywords:
+  - cavekit
+  - spec-driven
+  - caveman
+  - workflow
+  - skills
+  - commands
+
+# Archetype B (plain git plugin). Verified by real clone: `plugin.json` registers only skills +
+# commands (no hooks/mcp/runtime bootstrap), so there's no host-side activation → plain declarative.
+# 9 `skills/*/SKILL.md` (each bundles its dir) and 7 `commands/*.md`.
+source:
+  type: git
+  url: https://github.com/JuliusBrussee/cavekit
+
+versioning:
+  strategy: semver
+  track: latest # repo carries `v*` git tags (e.g. v4.1.0) → derived git-tags livecheck resolves them.
+
+namespace:
+  mode: as-is
+
+# `skill` works on all five CLIs; `command` does NOT on gemini (TOML), and codex is global-only /
+# cursor is local-only (a declarative command map errors in the unsupported scope there). So skills go
+# everywhere; commands are mapped only where BOTH scopes work — claude-code and opencode. (The skill
+# and command names overlap — grill/spec/review/etc. — but they're distinct slots, intended by upstream.)
+targets:
+  claude-code: &full
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+      - { kind: command, from: "commands/*.md", as: "command:${name}" }
+  opencode: *full
+  gemini:
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex:
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  cursor:
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
