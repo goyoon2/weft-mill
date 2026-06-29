@@ -1,0 +1,98 @@
+{
+  "id": "nothing-design-skill",
+  "displayName": "Nothing Design Skill",
+  "description": "A single skill for generating UI in the Nothing design language — monochrome, dot-matrix typography, glyph-style minimalism.",
+  "homepage": "https://github.com/dominikmartn/nothing-design-skill",
+  "keywords": [
+    "nothing",
+    "design",
+    "ui",
+    "monochrome",
+    "skill"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/nothing-design-skill/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:710f94e4b0133289bed14a6068547586977e6fff65504f71196ee6e592bb467c",
+          "spoolJsonSha": "sha256:0c58d158831155be45d22b4487c462b76b754758e7014b4bea01ca26500068aa"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/nothing-design-skill/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:b2b8915abc048cd7f3ad069795a4728a626d2433ce5a1a7ce51cf6e2275cd80a",
+          "spoolJsonSha": "sha256:875189fbdaf961d1d5ce1d1553adcc1fbb3aaac0ec08fc20d7cb6dc346be04dd"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/nothing-design-skill/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:ef20590e826f4bbbd9ff8b3ebcd3823d354a792c00ca902f58ac2b8f9a3e3509",
+          "spoolJsonSha": "sha256:8769cb569b59a2249f54a3155496cfc47cb0f8b9e6e664cec557b37806b7c71f"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/nothing-design-skill/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:bffaa85a26149f049beb10747fc146ae78a8bac67428b5f00a573aee6370e0ae",
+          "spoolJsonSha": "sha256:f06b33016c289295fa3a54857d89216df55e6b307c5ea00887b35fc81c3c8aaa"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/nothing-design-skill/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:3afccc7389e4ab1b01ec703fef2f292216b51203ecc3d646afe5f08ddeeecd63",
+          "spoolJsonSha": "sha256:c505208ae5ea3fb1e3f7a8e7148c8f4156168e5abfb16fa4722d07640c93c9bd"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/nothing-design-skill/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:3c2f133b87d1963b60f1af7ce6143202b4b26eb95b4702eb05d1d243e1beb708",
+          "spoolJsonSha": "sha256:8cec2f2bae94db45f2736135526aa2d579c915f3a203783c02192f3aea92317c"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/nothing-design-skill/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:7d92ec17872c3a5406e211d3e3793715092dfa3424c6e9d9fb9fdecd7a5c1858",
+          "spoolJsonSha": "sha256:ae4c9702ce97dc2e6de68066e2eb4b6bf658da367d8f3fc40887a784613ad24c"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/nothing-design-skill/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:6a52903f1de83b0e8ca18459d2221205ae48e137f31895868dec0d987bae0d3a",
+          "spoolJsonSha": "sha256:0d1acfe72a3b4d90516f32235378435c924c867cb5f05ba21d9958503fc43e69"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/nothing-design-skill/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:ba943bbbd254ddb0d71cde7048de75621e57c5f71be7b379754870a630e51c97",
+          "spoolJsonSha": "sha256:33d5f942018086b20e73921028eebaf31362ab5eefa338b146d384f33872ba8f"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/nothing-design-skill/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:949ac850dd817b03d0bf57bc2bc7409d144661ee6f8873705562912ee4758d85",
+          "spoolJsonSha": "sha256:65a10e1e125c1a9116c02fdfeec04c7bd3bafe59dcce87de07949f3aac6f97bf"
+        }
+      ]
+    }
+  ]
+}

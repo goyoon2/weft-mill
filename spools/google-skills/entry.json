@@ -1,0 +1,99 @@
+{
+  "id": "google-skills",
+  "displayName": "Google Skills",
+  "description": "Google's official Agent Skills for Google products — Ads (Google Ads API, Mobile Ads, IMA, Data Manager), Analytics, and Cloud (GKE, Vertex/Agent platform).",
+  "homepage": "https://github.com/google/skills",
+  "keywords": [
+    "google",
+    "ads",
+    "analytics",
+    "cloud",
+    "gke",
+    "skills"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/google-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:ef378d43a1d03fd1027e020f1a01be9bcd8092dff11d9ce7bb1a4f86ef49d9e5",
+          "spoolJsonSha": "sha256:c8e2c8671eb1e552e934afe7c190e8143dde109dc16913725eeb111e2c634520"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/google-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:d54203afc637e26b1a8dcd73e1498a343ed91f416c6e81788a5e2096abcf76d7",
+          "spoolJsonSha": "sha256:6071d653cd7a49ab2b4edba24e5bdfb9acc1810249461ef264c23ffbf0d16708"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/google-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:9ea32f65f6bd7d7275f8ac7b048921f74afe94dc04b8569705daf24a98e2e7b9",
+          "spoolJsonSha": "sha256:ab8e9f5dffc9de940a364aaaa465cfdee5a71726822f965db244cc4f534b70e1"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/google-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:bbfe8b99fdbfaf1e6a70820dbf5abb2749796039d5988a9a27458486da5d71ba",
+          "spoolJsonSha": "sha256:27c51cb96afd217c967256101c0c871078948985dee86aa4893640958679d90d"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/google-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:41c92d1622e86479a6162451e939672b1b9d6fbdc1aa7730653d46be53cc86ab",
+          "spoolJsonSha": "sha256:e96c13a00676c7001395a6790aa912a9524b3f37c9a67507cc0d605d448b5245"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/google-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:cf8f779f3af29cefa29f4b475952bfa41d078b31917a7a87c12cd44bfa427bf6",
+          "spoolJsonSha": "sha256:253076f7665a00959a4b26f27dd35a199337ca2d579b293c45d3b223b87f49b7"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/google-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:767c56d58b2ca95f229f7d3fb7751c92068b12b030133961771d766fee305d60",
+          "spoolJsonSha": "sha256:5308d5451067249f850006e8426164c6a81ef1922267bb066d22934babdb3333"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/google-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:2ec13b4586735a8065d2b88d516db2b4c6699903792f85daffe1dcbdcda8cbe0",
+          "spoolJsonSha": "sha256:4982daeac0b650d5223b4fdf6925e4f4402194bc5631745f3e1d3a38d3b6b180"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/google-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:1f799a8ff806e3c4c5e918ba54b3b872786ed72285a3fe58267486d458699f57",
+          "spoolJsonSha": "sha256:70f31c830e5ced6535994aa0191ed01b3a197ea26d18f6d958af469faf843656"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/google-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:79db637e182723fbbc5d912681ec9b9d7f1233176b6a72622e814e3958a82b46",
+          "spoolJsonSha": "sha256:3ac01438e888728670773749d8c008b6c5ae5cc9fe9a10c96ebe4dfcd070ed40"
+        }
+      ]
+    }
+  ]
+}

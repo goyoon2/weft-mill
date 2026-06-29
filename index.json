@@ -494,6 +494,197 @@
       ]
     },
     {
+      "id": "cavekit",
+      "displayName": "Cavekit",
+      "description": "Compressed spec-driven dev — the full grill → spec → research → review → build loop over one SPEC.md file, with caveman token-encoding and bug-to-spec backprop. Ships as skills + slash commands.",
+      "homepage": "https://github.com/JuliusBrussee/cavekit",
+      "keywords": [
+        "cavekit",
+        "spec-driven",
+        "caveman",
+        "workflow",
+        "skills",
+        "commands"
+      ],
+      "latest": "4.1.0",
+      "clis": [
+        "claude-code",
+        "opencode",
+        "gemini",
+        "codex",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "4.1.0",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/cavekit/4.1.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:c87dbd1a8fe3bca61a223883c82ba2aafdd595d703fbaa54efe59a01a379cb2e",
+              "spoolJsonSha": "sha256:9a382b0a1725344b9239a36d19f9a06a12f1cc476fe59d443b16e9a7ce010925"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/cavekit/4.1.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:ea78046981e803a071a2b98af36253c8eb8390158b92432a927fa24d77468932",
+              "spoolJsonSha": "sha256:a9e71b2f7c5a0b8a65b64052ad5f0112417e245cbcdca80be80ae393a997dac2"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/cavekit/4.1.0/opencode.global.spool.tgz",
+              "spoolSha": "sha256:7867bc7c5705e6012b4fddc35060e1d7628b81efd268915c392ad3b9715daa44",
+              "spoolJsonSha": "sha256:862098a34e1e5484860a4e96d0cf8a25ca758e291116a94b106bcc9787b2cd0d"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/cavekit/4.1.0/opencode.local.spool.tgz",
+              "spoolSha": "sha256:87f5288f90b5f7f348ebe708e22416e18694ed71e6f79061cf6563782d2b1e65",
+              "spoolJsonSha": "sha256:748919df09263e9bef0db2d13ee62b026d6d5d2c0c5fe63133b81c9d84243546"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/cavekit/4.1.0/gemini.global.spool.tgz",
+              "spoolSha": "sha256:577092fa438daf321c4eaf1fb7e8191168dd63c95b18d37ddf434ec3b63889af",
+              "spoolJsonSha": "sha256:a2269aaece817012141e59c00f5588e94a5e7ae0e806adf001a81ac6c71f7922"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/cavekit/4.1.0/gemini.local.spool.tgz",
+              "spoolSha": "sha256:db6ef3ec3e812d275fe734ff0018194999a5da7121244ecbe5aec0941d9e3319",
+              "spoolJsonSha": "sha256:10e2207b16f9d56ed778262a4037f139c9118db2d648910e573d206f2b4b9a1b"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/cavekit/4.1.0/codex.global.spool.tgz",
+              "spoolSha": "sha256:852faaafa2275d25e867c50549e77e5c6b5c69be3155cb2ab253527a039086ca",
+              "spoolJsonSha": "sha256:403dd70b08a4ea1c8912669658804bf05ff19b1a84e8fb6758994cba79fdaf79"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/cavekit/4.1.0/codex.local.spool.tgz",
+              "spoolSha": "sha256:93648dd48ace594462a17dd5258220396b238ee4e4f8c54d4318ecb23f23b270",
+              "spoolJsonSha": "sha256:47baa45fb93255b62fd102fcda83bc175101a2765188e1fbd2c78708acbad7fc"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/cavekit/4.1.0/cursor.global.spool.tgz",
+              "spoolSha": "sha256:5ab76516ccc189e5b1ae5ec84248a6a7ded266e5cf16a422c9093eb3b4fcb350",
+              "spoolJsonSha": "sha256:693ffafa5c811bef7fb771125857cc02b5d48988769f66a2c7dc30d1bc445a09"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/cavekit/4.1.0/cursor.local.spool.tgz",
+              "spoolSha": "sha256:b0bcb88a6d2ef68e9dd366d662e49acafb00df139dc783beee8069abb9fc7d25",
+              "spoolJsonSha": "sha256:f732b6255d0399b8a2c5712519372544502f772be16d220cfed810d7d5c92688"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ccplugins",
+      "displayName": "CCPlugins",
+      "description": "A framework of 24 production-ready slash commands for Claude Code — cleanup, commit, refactor, security scan, test, docs, and todo workflows that cut repetitive prompting.",
+      "homepage": "https://github.com/brennercruvinel/CCPlugins",
+      "keywords": [
+        "commands",
+        "slash-commands",
+        "workflow",
+        "refactor",
+        "automation"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "opencode"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/ccplugins/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:da83818dd7ac6cae4f394eed1b4a7aa8a130584f2605a8b87854b004126c78c0",
+              "spoolJsonSha": "sha256:8dc5e1c762ab176c5c95e13e38e6cf1a2ba76d048f3a1067dfd71216d54fccd0"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/ccplugins/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:e4e87d8180225a12234535aaab94aa5bb2bdd017ebbc32ce29d93c397b463187",
+              "spoolJsonSha": "sha256:21203e2c7ae43aeeb7339ad69bda03d37fb3ba74cded30f9d30910490aa5a41b"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/ccplugins/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:f53f314d37001141712b8aeade4e1f2f2198a0c443e1e3425874057fc3eafd24",
+              "spoolJsonSha": "sha256:441c2618bce0da5fca9d106014b7c510bc32605460f6a67b14cd227237164f97"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/ccplugins/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:2d2ea64e6887f13df707ea386e3837054c9767b84d6b6baf26560cb520f4a019",
+              "spoolJsonSha": "sha256:6574996eccf58bf6460aa7f30e2ad69643679d5c03fe5a51712d164b693da3a8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloudai-workflow",
+      "displayName": "CloudAI Workflow (project-starter)",
+      "description": "A universal Claude Code workflow: 14 skills, 7 specialized agents (orchestrator, code-reviewer, debugger, security-auditor, …), 26 commands, plus guardrail hooks (file protection, security/pre-commit checks, format-on-edit, metrics) wired across every tool event.",
+      "homepage": "https://github.com/CloudAI-X/claude-workflow-v2",
+      "keywords": [
+        "workflow",
+        "agents",
+        "hooks",
+        "code-review",
+        "security",
+        "automation"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/cloudai-workflow/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:b94fcc59b331a4251ef378cbb82a85e4a774588c38297b1116ab8c7f82d9e3c1",
+              "spoolJsonSha": "sha256:c2f0aa4098aa1e36388127b68ff15a788059fcf9d60359d0f0ced1ff4112daac"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/cloudai-workflow/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:013d67d275d9f77307a24c2d377410ed2960884b3c29757e4bbbebba1c640356",
+              "spoolJsonSha": "sha256:ba787096383e7c9cf5b05d0206c68fb884ab1152edaf7a668dffda9349994162"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "context-engineering-skills",
       "displayName": "Context Engineering Skills",
       "description": "Muratcan Koylan's context- & harness-engineering skills — context fundamentals, compression, degradation, multi-agent coordination, memory systems, tool design, evaluation, and more.",
@@ -789,6 +980,104 @@
       ]
     },
     {
+      "id": "dotnet-skills",
+      "displayName": ".NET Skills",
+      "description": "Aaron Stannard's Claude Code skills and sub-agents for .NET developers — Akka.NET, async/concurrency, OpenTelemetry, benchmarking, DocFX, and more.",
+      "homepage": "https://github.com/Aaronontheweb/dotnet-skills",
+      "keywords": [
+        "dotnet",
+        "csharp",
+        "akka-net",
+        "agents",
+        "skills"
+      ],
+      "latest": "1.4.0",
+      "clis": [
+        "claude-code",
+        "gemini",
+        "cursor",
+        "opencode",
+        "codex"
+      ],
+      "versions": [
+        {
+          "version": "1.4.0",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/dotnet-skills/1.4.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:70b13077eea5e747b9bb943847b0b2993384766b3301a8091703acf8b55c4fbf",
+              "spoolJsonSha": "sha256:d759a5fa23bee3f6e78785952f1fc784e52198df9538250c75b1761f0029cf17"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/dotnet-skills/1.4.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:269222da0cdc72df3e331a22b119e44b76dc8b66bc053a7706c80d02b4d1e750",
+              "spoolJsonSha": "sha256:16af33843f0bc3c6d5b2d4d4893e3810f67288656be3a2dc35208fdef240d537"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/dotnet-skills/1.4.0/gemini.global.spool.tgz",
+              "spoolSha": "sha256:a276b7265cf6bb00b8c659243c9ecce72b50505d7354ba1d846128c42964ace9",
+              "spoolJsonSha": "sha256:6a10ddc27960ef6367695ae8b2a55fbce8d1a6d5dcb30bb8cbb868284537d706"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/dotnet-skills/1.4.0/gemini.local.spool.tgz",
+              "spoolSha": "sha256:2deac4b02a98894dd2a1e36720a8abe100ba16d69a563b260e2f5962ab1d561f",
+              "spoolJsonSha": "sha256:a12299885226b0a8522cc832c061bb7895144aca9c851127a14b7ecd81ec3752"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/dotnet-skills/1.4.0/cursor.global.spool.tgz",
+              "spoolSha": "sha256:2ba7d14206ef4cb31d2c869496e90bd315664dbcca0ee058af7c5a1e18126522",
+              "spoolJsonSha": "sha256:bf70ef051b4daab437566b57c8b44ab47c30001e64fed37482316278fd56f420"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/dotnet-skills/1.4.0/cursor.local.spool.tgz",
+              "spoolSha": "sha256:f4a4f1117783ad858358abfde1613d9ce5a418110497be7f672f3fd9814fa41c",
+              "spoolJsonSha": "sha256:98e40955d6f6d1ce0a4fafcf0149d5de62535a5449bf703031f64f6f2aaa8060"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/dotnet-skills/1.4.0/opencode.global.spool.tgz",
+              "spoolSha": "sha256:f2674e1c6a3e3a18b8950cc15018f62853ae74801f83890c056a1bf58682d0b9",
+              "spoolJsonSha": "sha256:bc0899c534a3a0f954c64b6cfcd3a4c048f3b05468dbc4c7ffa00b7029aa9ad2"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/dotnet-skills/1.4.0/opencode.local.spool.tgz",
+              "spoolSha": "sha256:2e0520f1e76da85fe727a44276ceb81a8ff08608bae606fefdf087e00336cdf9",
+              "spoolJsonSha": "sha256:d26ba8972659333fc8227623c1f219e7557313917166ea82eca23df2b09b3a74"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/dotnet-skills/1.4.0/codex.global.spool.tgz",
+              "spoolSha": "sha256:4ceb3210010a43f5833c9b66764887721f6a169c367817a1961ef034d1e8e5fe",
+              "spoolJsonSha": "sha256:efd256c0e0217ba8b729167b3ca49a27fef5a475509f01f846ae0bd607865d10"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/dotnet-skills/1.4.0/codex.local.spool.tgz",
+              "spoolSha": "sha256:7fee423e982deae17fff9571f089efaf380056d66eab190e3e44ce567c664974",
+              "spoolJsonSha": "sha256:62e32e5086a14adf0f6668105c6f385e3af4a942fa804d5003cc8bb00330f6db"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "ecc",
       "displayName": "Everything Claude Code (ECC)",
       "description": "Harness-native agent operating system — agents, skills, command shims, hooks, rules, and MCP conventions for Claude Code, Codex, Cursor, Gemini, and OpenCode.",
@@ -884,6 +1173,105 @@
               "url": "spools/ecc/2.0.0/opencode.local.spool.tgz",
               "spoolSha": "sha256:c8bfd5a0c34a9049b6b5d3ade41e83bcab8eb81bd9d0670190d09a483c066d75",
               "spoolJsonSha": "sha256:2f757f47bcdb1cedee3d890c50dbbec3a381b1a3cfb73f784d956caf336f4a86"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "google-skills",
+      "displayName": "Google Skills",
+      "description": "Google's official Agent Skills for Google products — Ads (Google Ads API, Mobile Ads, IMA, Data Manager), Analytics, and Cloud (GKE, Vertex/Agent platform).",
+      "homepage": "https://github.com/google/skills",
+      "keywords": [
+        "google",
+        "ads",
+        "analytics",
+        "cloud",
+        "gke",
+        "skills"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/google-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:ef378d43a1d03fd1027e020f1a01be9bcd8092dff11d9ce7bb1a4f86ef49d9e5",
+              "spoolJsonSha": "sha256:c8e2c8671eb1e552e934afe7c190e8143dde109dc16913725eeb111e2c634520"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/google-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:d54203afc637e26b1a8dcd73e1498a343ed91f416c6e81788a5e2096abcf76d7",
+              "spoolJsonSha": "sha256:6071d653cd7a49ab2b4edba24e5bdfb9acc1810249461ef264c23ffbf0d16708"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/google-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:9ea32f65f6bd7d7275f8ac7b048921f74afe94dc04b8569705daf24a98e2e7b9",
+              "spoolJsonSha": "sha256:ab8e9f5dffc9de940a364aaaa465cfdee5a71726822f965db244cc4f534b70e1"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/google-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:bbfe8b99fdbfaf1e6a70820dbf5abb2749796039d5988a9a27458486da5d71ba",
+              "spoolJsonSha": "sha256:27c51cb96afd217c967256101c0c871078948985dee86aa4893640958679d90d"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/google-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:41c92d1622e86479a6162451e939672b1b9d6fbdc1aa7730653d46be53cc86ab",
+              "spoolJsonSha": "sha256:e96c13a00676c7001395a6790aa912a9524b3f37c9a67507cc0d605d448b5245"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/google-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:cf8f779f3af29cefa29f4b475952bfa41d078b31917a7a87c12cd44bfa427bf6",
+              "spoolJsonSha": "sha256:253076f7665a00959a4b26f27dd35a199337ca2d579b293c45d3b223b87f49b7"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/google-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:767c56d58b2ca95f229f7d3fb7751c92068b12b030133961771d766fee305d60",
+              "spoolJsonSha": "sha256:5308d5451067249f850006e8426164c6a81ef1922267bb066d22934babdb3333"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/google-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:2ec13b4586735a8065d2b88d516db2b4c6699903792f85daffe1dcbdcda8cbe0",
+              "spoolJsonSha": "sha256:4982daeac0b650d5223b4fdf6925e4f4402194bc5631745f3e1d3a38d3b6b180"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/google-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:1f799a8ff806e3c4c5e918ba54b3b872786ed72285a3fe58267486d458699f57",
+              "spoolJsonSha": "sha256:70f31c830e5ced6535994aa0191ed01b3a197ea26d18f6d958af469faf843656"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/google-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:79db637e182723fbbc5d912681ec9b9d7f1233176b6a72622e814e3958a82b46",
+              "spoolJsonSha": "sha256:3ac01438e888728670773749d8c008b6c5ae5cc9fe9a10c96ebe4dfcd070ed40"
             }
           ]
         }
@@ -1294,6 +1682,104 @@
               "url": "spools/mattpocock-skills/1.0.1/cursor.local.spool.tgz",
               "spoolSha": "sha256:c7f75e764a8081c9afb5b11e63d9d4c2ef254797d56fdc72cc30df725e41a2fb",
               "spoolJsonSha": "sha256:57e52e2ef8d2ee746234a4cecf2bf20c51450b6c38ecaf779e75f26f7fbb4f81"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nothing-design-skill",
+      "displayName": "Nothing Design Skill",
+      "description": "A single skill for generating UI in the Nothing design language — monochrome, dot-matrix typography, glyph-style minimalism.",
+      "homepage": "https://github.com/dominikmartn/nothing-design-skill",
+      "keywords": [
+        "nothing",
+        "design",
+        "ui",
+        "monochrome",
+        "skill"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/nothing-design-skill/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:710f94e4b0133289bed14a6068547586977e6fff65504f71196ee6e592bb467c",
+              "spoolJsonSha": "sha256:0c58d158831155be45d22b4487c462b76b754758e7014b4bea01ca26500068aa"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/nothing-design-skill/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:b2b8915abc048cd7f3ad069795a4728a626d2433ce5a1a7ce51cf6e2275cd80a",
+              "spoolJsonSha": "sha256:875189fbdaf961d1d5ce1d1553adcc1fbb3aaac0ec08fc20d7cb6dc346be04dd"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/nothing-design-skill/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:ef20590e826f4bbbd9ff8b3ebcd3823d354a792c00ca902f58ac2b8f9a3e3509",
+              "spoolJsonSha": "sha256:8769cb569b59a2249f54a3155496cfc47cb0f8b9e6e664cec557b37806b7c71f"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/nothing-design-skill/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:bffaa85a26149f049beb10747fc146ae78a8bac67428b5f00a573aee6370e0ae",
+              "spoolJsonSha": "sha256:f06b33016c289295fa3a54857d89216df55e6b307c5ea00887b35fc81c3c8aaa"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/nothing-design-skill/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:3afccc7389e4ab1b01ec703fef2f292216b51203ecc3d646afe5f08ddeeecd63",
+              "spoolJsonSha": "sha256:c505208ae5ea3fb1e3f7a8e7148c8f4156168e5abfb16fa4722d07640c93c9bd"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/nothing-design-skill/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:3c2f133b87d1963b60f1af7ce6143202b4b26eb95b4702eb05d1d243e1beb708",
+              "spoolJsonSha": "sha256:8cec2f2bae94db45f2736135526aa2d579c915f3a203783c02192f3aea92317c"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/nothing-design-skill/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:7d92ec17872c3a5406e211d3e3793715092dfa3424c6e9d9fb9fdecd7a5c1858",
+              "spoolJsonSha": "sha256:ae4c9702ce97dc2e6de68066e2eb4b6bf658da367d8f3fc40887a784613ad24c"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/nothing-design-skill/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:6a52903f1de83b0e8ca18459d2221205ae48e137f31895868dec0d987bae0d3a",
+              "spoolJsonSha": "sha256:0d1acfe72a3b4d90516f32235378435c924c867cb5f05ba21d9958503fc43e69"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/nothing-design-skill/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:ba943bbbd254ddb0d71cde7048de75621e57c5f71be7b379754870a630e51c97",
+              "spoolJsonSha": "sha256:33d5f942018086b20e73921028eebaf31362ab5eefa338b146d384f33872ba8f"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/nothing-design-skill/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:949ac850dd817b03d0bf57bc2bc7409d144661ee6f8873705562912ee4758d85",
+              "spoolJsonSha": "sha256:65a10e1e125c1a9116c02fdfeec04c7bd3bafe59dcce87de07949f3aac6f97bf"
             }
           ]
         }
@@ -1823,6 +2309,104 @@
               "url": "spools/sensenova-skills/main/cursor.local.spool.tgz",
               "spoolSha": "sha256:70254811392101872a9b3cb9bff96cf50d1a8bd9a6159057e975e0e89a82da0e",
               "spoolJsonSha": "sha256:00748c9c62f49188d4b0f4ac54245c8f7418905530b4ec51f2a9be53430b819f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swiftui-pro",
+      "displayName": "SwiftUI Pro",
+      "description": "Paul Hudson's SwiftUI agent skill — comprehensively reviews SwiftUI code for modern-API best practices, maintainability, and performance.",
+      "homepage": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+      "keywords": [
+        "swiftui",
+        "swift",
+        "ios",
+        "code-review",
+        "skill"
+      ],
+      "latest": "1.1.0",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "1.1.0",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/swiftui-pro/1.1.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:ccb96926614ceffb69cf3d5977e49e9f993e6281bb40882dbd90a41b37c43e49",
+              "spoolJsonSha": "sha256:604c3d9b5e7ebb6d91ed733cdae9dcfb3b1c60d9e1ae42477cc3b7a783b91d2b"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/swiftui-pro/1.1.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:bbaea5c5f2be7e473f89bf1fca27c7e43e6c58329ca6b099524f0fb1f1fab709",
+              "spoolJsonSha": "sha256:4d47a442c52f1aa0fcf6a222a8c40b244e425dfddd0ff8e5f20ead79752cc81e"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/swiftui-pro/1.1.0/codex.global.spool.tgz",
+              "spoolSha": "sha256:167abdd286b59c150e66b541708807352679e476b727e6c3ecde507af9a8dee2",
+              "spoolJsonSha": "sha256:315da94ff4129486a10428256a9ff6d814dfe1643909bb882918e9cce6aced00"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/swiftui-pro/1.1.0/codex.local.spool.tgz",
+              "spoolSha": "sha256:d8ec772f0283dcf5cbda3a9b192aad63664d5ab1c4a5e1b191181b72e77095da",
+              "spoolJsonSha": "sha256:7d13092e8e3c0727f1d508943f01e64080b2ba82198f7c39c4401f768bb2348d"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/swiftui-pro/1.1.0/gemini.global.spool.tgz",
+              "spoolSha": "sha256:f6a4813a3a222615e6f52a8edb5e9f21fe92a44abe369de4105398ba44db3975",
+              "spoolJsonSha": "sha256:a731edda2eb6439c8df930879057fde92b84c9ab95a15b6690a409d6e77b36ed"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/swiftui-pro/1.1.0/gemini.local.spool.tgz",
+              "spoolSha": "sha256:41d2989be5a0226d34d2043c30e0620abf8b80fc11a13608a3a39f718e9c9796",
+              "spoolJsonSha": "sha256:d6f4a503860112171f1f3fdd81dbb94701a86c2cf7ed4aae12968cde4cb56fcb"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/swiftui-pro/1.1.0/opencode.global.spool.tgz",
+              "spoolSha": "sha256:d912f8cf6cf29cee9c5a0150833db2ae0389a48ef2a0668f8de862a04347bee0",
+              "spoolJsonSha": "sha256:6e6c162b6c97146a3dc2cd5f6b04df8d24d0b0b6c64516e88fcff81483801663"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/swiftui-pro/1.1.0/opencode.local.spool.tgz",
+              "spoolSha": "sha256:60c54505e6025707a52d3638fe62d312ae8d95d3f1ef43c6c5bceabdea9959a3",
+              "spoolJsonSha": "sha256:f78f5efd079c6875820d060c52a99537b03f2bb5da56ffa60c4cd6d88760059a"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/swiftui-pro/1.1.0/cursor.global.spool.tgz",
+              "spoolSha": "sha256:82ed71c2579bc8ce6f53dc0fa469a80b4c22729f81235bf5223c15b7fed430a6",
+              "spoolJsonSha": "sha256:ecd3ead29b2df9151bf9e41fcfef6af06a8b2ff048a9ec47d4177e52f75fd3ea"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/swiftui-pro/1.1.0/cursor.local.spool.tgz",
+              "spoolSha": "sha256:d583152c4565f2302e04846f4e9ecb90df7ba73d8a43b1e0d05c3b7a58c443d1",
+              "spoolJsonSha": "sha256:94433e9f4b125698c511411629872a5c99db8b7c0e098eb0bf220d2d566c2c93"
             }
           ]
         }
