@@ -100,6 +100,203 @@
       ]
     },
     {
+      "id": "antfu-skills",
+      "displayName": "Anthony Fu Skills",
+      "description": "Anthony Fu's curated agent skills for the Vue/Nuxt/Vite/Vitest ecosystem — framework best practices, testing, and web design guidelines.",
+      "homepage": "https://github.com/antfu/skills",
+      "keywords": [
+        "skills",
+        "vue",
+        "nuxt",
+        "vite",
+        "vitest",
+        "frontend"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/antfu-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:a489a6323da9a7b95d3a75137fd4819753883b8489c347d83702143e0ccf97b5",
+              "spoolJsonSha": "sha256:99d049a405969d27b43526f10936f9ed91513bae9b800cbf3f3961d3040f7375"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/antfu-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:5931ca6230347bd52254cfd160d4fb9f70c12ae1c4d6450ef643c7ffb8bb1d6c",
+              "spoolJsonSha": "sha256:450538a73158c491322dae9fdad5b4907fc0a401ecf494b359da6c7d1506c519"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/antfu-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:3d5b00fa695b646abf768b47ec39c4ff77051fcb0689463c1efec983c93ff9fd",
+              "spoolJsonSha": "sha256:44dc37dc059b4b50d93147e21a560b8b5aec2352e299b7261db47629349959a7"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/antfu-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:192bc1eb3ba512cd0e47dc01feb71949155d39893e56b675514c899653f64511",
+              "spoolJsonSha": "sha256:5d765884f7c8325388c97fbb7f2a07b8bdb02db6230579a1b79fdc9fa3d82bb9"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/antfu-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:45e1726d1f82fd6d7dc0946f2d55d5d59708a5e25e1da2e8a477e6f88d0c1113",
+              "spoolJsonSha": "sha256:96c0fa94454b0607bb49e9dd1e4382b56e492653a1c714e6f2a2ff2fb5781b40"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/antfu-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:9a14c987d9e523d08b708f8069f02308cdc2d0d1781aa3008ef144f11ff658d4",
+              "spoolJsonSha": "sha256:6f19048137ac2c84e8db39311571cee258ec80db9244694c646bda48f656893a"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/antfu-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:004fc8690666fb85fb58f36f4a490994d84952df30b8cbc408dd673bc3d64275",
+              "spoolJsonSha": "sha256:9b72ac66d106c7b72a31e904a678feef2a0279cbff5b6524a58a38cdf99b2f40"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/antfu-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:893091585d9ff993b2ab8f7fafa6853b857bd9ee7d51649343e0c57365381bf9",
+              "spoolJsonSha": "sha256:19ee5fbc498ce7ce9a7a72c3b7a8b163269f6ca3ac6214f7c11d9740622e5e1b"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/antfu-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:70f8686304a5bc8a568c9c15d3e4001b1e428a414fbad9261a3e6efb822660e0",
+              "spoolJsonSha": "sha256:0fa23a791604ef4ae9eaba9382cf81b64d72679475d264fb8d1bdd7e78488885"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/antfu-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:9a18e0969128a5057bb4112a96a558f9f15ac8b584be4ac180a33cff422f4803",
+              "spoolJsonSha": "sha256:19e0a9f61f05c6146b7935d3f8a9cdab56aa5318e96e306bec850cdf0f919cd2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anthropic-cybersecurity-skills",
+      "displayName": "Anthropic Cybersecurity Skills",
+      "description": "800+ structured cybersecurity skills for AI agents — detection engineering, exploitation, threat hunting, IAM, cloud and network security, mapped to common frameworks.",
+      "homepage": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "keywords": [
+        "skills",
+        "security",
+        "cybersecurity",
+        "detection",
+        "threat-hunting"
+      ],
+      "latest": "1.3.0",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "1.3.0",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:63568357d160a2c3a0cdb593c0666c800aba0e1f9ca6195c07fe96bea7a050f6",
+              "spoolJsonSha": "sha256:868b485f1997b9cdb63d8e79fc39d8df0946108ab868ff6f962d212b3b951eb4"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:34024d70b6798a3c3121c9f3763f16368febb4c89d33faf0db33600149ea9f52",
+              "spoolJsonSha": "sha256:8c373a53cd4d1176a99403cfb5d93f494306e4d10965418d31af27976ebcc81d"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/codex.global.spool.tgz",
+              "spoolSha": "sha256:aaea9c21b89c42a6cdee12a19cde75ffc392f7e144b84296c0b5c8771271d451",
+              "spoolJsonSha": "sha256:7f1c636b7fc98396b4869ad273c8f6dbbee9027391ee1512c8e772a04c97f552"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/codex.local.spool.tgz",
+              "spoolSha": "sha256:c9244ba1faee0e37481659451e7ef14f5821c81ccc47725f831750f88febff34",
+              "spoolJsonSha": "sha256:504cbb5a0bb2f7838dfed4d489fb69c58acfe98e638a4e12e7ad960b4bd33dc3"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/gemini.global.spool.tgz",
+              "spoolSha": "sha256:eaad425f9a32ab9f34a502448931113ff07626363b88c5e277b9e4599e316572",
+              "spoolJsonSha": "sha256:6227b3540624255ddcb73e3c76202ff35ed700cf54b7e4aeaa4c53c8eb629d6c"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/gemini.local.spool.tgz",
+              "spoolSha": "sha256:1e502c92fb6522e609ffe284fb6147904200db42bf707ad2cf733dc49a746007",
+              "spoolJsonSha": "sha256:54035537049342f009e95a266c90065bf86723e81549066360babf1b8a723619"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/opencode.global.spool.tgz",
+              "spoolSha": "sha256:1673f1a6274b56d168399c54d9c98eb7e4342b0fab423200096dd279f365cada",
+              "spoolJsonSha": "sha256:c8ca08ab02e0fddb56de5bf1bb7ad24c1ab653edc967d4a268da04980f302052"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/opencode.local.spool.tgz",
+              "spoolSha": "sha256:fb34027792c29bec3c9c4fa0b1b0308cf735df7f95a07815ed64166a1bf44a6a",
+              "spoolJsonSha": "sha256:645e48f3b2cf367eae965d5ad0a6fbff41a1f3fd194701c2720105905b64c8ee"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/cursor.global.spool.tgz",
+              "spoolSha": "sha256:6dcfca504ef9fd4cbaa77051d9e46082ae9509743e82593de718d5840db236bd",
+              "spoolJsonSha": "sha256:73f9aea6bf8a3633dd7ffa1316992744c14510591aa6a3fbf8bc656d4a7bb737"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/anthropic-cybersecurity-skills/1.3.0/cursor.local.spool.tgz",
+              "spoolSha": "sha256:06bfffb7bad5e8246f8f387b3fe04600188f465e8544acdbd0e5e90921f0ba19",
+              "spoolJsonSha": "sha256:8cdafb51de842813ae85b815d84fffe1b8213221af87f8f94177af60be8b00d4"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "anthropic-skills",
       "displayName": "Anthropic Agent Skills",
       "description": "Anthropic's official example agent skills — document processing (Word/Excel/PowerPoint/PDF), MCP server building, skill authoring, visual & web design, algorithmic art, internal comms, and the Claude API guide.",
@@ -199,6 +396,104 @@
       ]
     },
     {
+      "id": "browserbase-skills",
+      "displayName": "Browserbase Skills",
+      "description": "Browserbase's official agent skills for browser automation — web navigation, scraping, UI testing, company research, and Stagehand/WebMCP generation.",
+      "homepage": "https://github.com/browserbase/skills",
+      "keywords": [
+        "skills",
+        "browser",
+        "automation",
+        "scraping",
+        "testing"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/browserbase-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:e530d6af4f9966fa46bb0dd4b817da9dafaf5e7e76b001c7d188ede442dc70df",
+              "spoolJsonSha": "sha256:b1e0cb08a87d554bda6eb027a97fa8eccfb734c4ed6c0d5489eb7b2f73d318fc"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/browserbase-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:3505bef24150423483002f16b7eb012582c424b77271326188827de3584d74f6",
+              "spoolJsonSha": "sha256:ea4fcb836ca2a623987dbe4f277a3a69796662d88a557814a0d49076f8a87ea6"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/browserbase-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:b7be0bc2fa208f9c074067be4b5fe9b7a7c14b15147639c3aa3ef7c03ffde649",
+              "spoolJsonSha": "sha256:11ec1ed84edd2d353b55c0db395dccd84bbb1d98811ebad666be7024457c1d22"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/browserbase-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:41a0ad1b67669c1ee904e1a7be4137e27e13584c27de21150a9cffcc086d8444",
+              "spoolJsonSha": "sha256:eafa182990d6fffe9677fe94232a39d4b79d5ab164b3fd97aabbf8478cf215d7"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/browserbase-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:5f8b4950bed96a7f80acfc6b5219fec23cdc0cb891b74a3d068aae0ed40f774a",
+              "spoolJsonSha": "sha256:8262c57fd538f87ad5287c2fc62eabaec4a21a21259a6af667a0fe800331737f"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/browserbase-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:34c10d583efbb055955d90fb49f74adbea124642f5b1c462ccfe573efeab1e0a",
+              "spoolJsonSha": "sha256:30fa74928c968a46643805eeab0ae3a1512b5a980244a6fde4a375eb2356e3a7"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/browserbase-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:30add0a04870087ebd0f5587b346327a279af1cfc34c413c0b6c03095f3046d3",
+              "spoolJsonSha": "sha256:7f1977636ee56113681682c0b690d95133813a582408c75186be40f55e2d1111"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/browserbase-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:15d45cc3f6e0b61e85ea552b0bbc489f161cf5f61a3d2b80596a95c7dba9febd",
+              "spoolJsonSha": "sha256:d68e25f1e4014cfb11d9f2bc6e62c0a29c6265d05fb5ef6540fdba3d16439f1e"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/browserbase-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:aa5325873ba304624f0b9f7ad892cc469fdc88b7914c5c09168c4d908c0250ec",
+              "spoolJsonSha": "sha256:5f181bf2d7c647acf0c2121e5d63bcef539b482e98185113f24d060af4c13a1f"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/browserbase-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:4449fc82181861a68af8f8dc2db3565e883652c351da982f4e82c76f6cd4df5c",
+              "spoolJsonSha": "sha256:9dfea74d0bc7b69abc19a67828378ae4f00aab3ecfe70a93a91b2ba76d853448"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "context-engineering-skills",
       "displayName": "Context Engineering Skills",
       "description": "Muratcan Koylan's context- & harness-engineering skills — context fundamentals, compression, degradation, multi-agent coordination, memory systems, tool design, evaluation, and more.",
@@ -292,6 +587,202 @@
               "url": "spools/context-engineering-skills/2.3.0/opencode.local.spool.tgz",
               "spoolSha": "sha256:8dc3d195d065cd487adcb1f5f9e08b735671feffff7cfc7dfeaf9e71b43bd050",
               "spoolJsonSha": "sha256:ade764481ac92e77250031d8ec84baae0e6d3b41138a852b6d72eca8fa119240"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ctf-skills",
+      "displayName": "CTF Skills",
+      "description": "Agent skills for solving Capture-The-Flag challenges — web exploitation, crypto, pwn, reverse engineering, forensics, malware, OSINT, AI/ML, and writeups.",
+      "homepage": "https://github.com/ljagiello/ctf-skills",
+      "keywords": [
+        "skills",
+        "ctf",
+        "security",
+        "exploitation",
+        "reverse-engineering"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/ctf-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:411c4d2ec6b5bba078b5e8f316d9521d826d6193ef68d845138ef7b58530308b",
+              "spoolJsonSha": "sha256:a51dbdc27fb9d7a315e97cc972b49555cc4233c22b7530a7310d7520a18ef9a7"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/ctf-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:5b23194e2bc7ab2d1789a2b5e5b9cf7cef8d9fc15d46daac03e73351f49f21bd",
+              "spoolJsonSha": "sha256:d64a26cf583cb3d54f6a38de3835ff00ff1a638f07c0cffc67a62fbf179a40da"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/ctf-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:84d534a621b4d02d929cd9343b10a5bab5cc019efc4038a83fddd9dbb64ff147",
+              "spoolJsonSha": "sha256:84149b22e2cef9ba746db33c308840f6d32b71366116f90361596f9d60fad9e4"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/ctf-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:59bedb379ee2f98751fe6a9fba11ef4f5eacdee31fb1d295829e1225abe20561",
+              "spoolJsonSha": "sha256:df9dcfaa3eaac89978694a16d9f2be2d12d796ba7825197c7b84cb196f914d65"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/ctf-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:325ce167b8229b7523bdb2ceebad92f6c1bb6b93fc06e1b4ed9326c56c3a630f",
+              "spoolJsonSha": "sha256:f307423a2a4eed896ba0258150838c57cb0d10cab5c2131594d1fff402732a30"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/ctf-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:6f9954d9162a85b7a507b61c731b2098463546746a681f0c323c3c62da712965",
+              "spoolJsonSha": "sha256:18321e33ac2fe7047fdbab20f003c3deed0af611ae5f09ed7599bdd6c6a97a83"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/ctf-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:85b00fd9691ff6ef84cfc321a4a799124e7d266566475629c59993cf563188e4",
+              "spoolJsonSha": "sha256:ad9a38caf9ce02e22512f4c2e950383e82ae48dfbb7e95e1624b18789caa0379"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/ctf-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:b7b02a574e130ae0c67d19d38dd46c602e107052b18567dee475bdacebc51d47",
+              "spoolJsonSha": "sha256:6c77179018e1e4728b0f583f4ccb07421106bf5cc9841c275c3c44e7b57b2732"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/ctf-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:45e96d2f86aaba6cae4dc48fbc8cc5fe94134e15ae383f026646f6d96843597e",
+              "spoolJsonSha": "sha256:b0913ca200fbfd6003c2e6ba06c01e70a19466cfd2d5850b28061c5f2af540f3"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/ctf-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:f997a70933bc74c32f7a5038f9b57837c4bbc2b21221d2e51c9fac83276dad96",
+              "spoolJsonSha": "sha256:998a0144c1021a0163795558dead9504759ec0a8e7d09e692597ed0e5a5664b7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dimillian-skills",
+      "displayName": "Dimillian Skills",
+      "description": "Thomas Ricouard's agent skills for Swift/SwiftUI and macOS/iOS app development — concurrency, performance audits, UI patterns, packaging, plus review/refactor swarms.",
+      "homepage": "https://github.com/Dimillian/Skills",
+      "keywords": [
+        "skills",
+        "swift",
+        "swiftui",
+        "ios",
+        "macos"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/dimillian-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:c6f0f49019e8906b667891e81c73238e17eb909a7784d9d715face756516842b",
+              "spoolJsonSha": "sha256:99505b53ab9a1ac6d11f2660371d959bfcf35001961c91bc666be7844ccc8681"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/dimillian-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:9185cdb90b13034c571aadfe9df9f0755e10e2b3e22269a7aee73ebc44147af4",
+              "spoolJsonSha": "sha256:4dd44d7013a5fb219d0cd687315c0f83d3de3bf9230b55ad4ac4c9c934fe7406"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/dimillian-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:b480059c5bb88818cde108f623bf048594e3353374484f75b623bc125c4b59b3",
+              "spoolJsonSha": "sha256:f575a6a7b2606c2f6419c8b1c811957df499ddca7f5a759cbf62b79f338dabc2"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/dimillian-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:a577afae970caa21f7d5a277b9bf91206828d459c98886ce27b0e40b4d3d3577",
+              "spoolJsonSha": "sha256:02b7a964db5342328626f5565b49864fbe6b35d3371f8e81ea6c3343fe52c406"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/dimillian-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:d3d8e3f8f58fe18bed475e01b80fa94da2ad16a8f5181729cd0220039c8df093",
+              "spoolJsonSha": "sha256:858ab5fec3de8563efdbedc8e9470bd4b2f7cc13ea19547c0fcdcb07831d83b9"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/dimillian-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:4a87943619a7dde186f71c188ad522ca2de0febe45336b4aea4ede05e4a1882c",
+              "spoolJsonSha": "sha256:c4b63a2b85930c4c308bb430eea0e5be5cf8cd92929f9613c54147d5671d41b1"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/dimillian-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:5217818fb8ffc2c02e07644b6dcfe9f19b6b49120ea17c69433ff133a152e768",
+              "spoolJsonSha": "sha256:56b271c2a98ddf824c4cd0d5e3527a4c3fca93f01f1433b4326884ace009ef24"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/dimillian-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:357a16f3f2f27414c0660ce61bf799b489213df2c91fca6c837fa2e8005f049d",
+              "spoolJsonSha": "sha256:82ecaf9813ec7d8f41a4e753e2b07a3ef0937f0732943830032efd02144b16c9"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/dimillian-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:3eb736be9db918c15d5b71b54ef7f0b73cdc3a855c5f0eb873c948ba108989ac",
+              "spoolJsonSha": "sha256:a678ad19a7d794539e87a3e93bfd2d8da93edacf5939fc0d18e3f9932808b30b"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/dimillian-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:66f7fdead81071d3b75fdcc1694b0eb8c65484fce1b5d5845014fef411db68c7",
+              "spoolJsonSha": "sha256:295a705b8fae23026283b37e899ee1e007a58755694436d4c3c6da944ce6f6aa"
             }
           ]
         }
@@ -622,6 +1113,88 @@
               "url": "spools/guizang-ppt-skill/1.1.0/opencode.local.spool.tgz",
               "spoolSha": "sha256:d7967a23470681acba3d032b872784d4ea140cde3551be5d88aa6a1acbba0950",
               "spoolJsonSha": "sha256:4f898ebff05f6347a021e4411dfe498a500ba97b6085a933403b6c0bf5859a3a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lst97-subagents",
+      "displayName": "lst97 Subagents",
+      "description": "A collection of specialized Claude Code subagents — business, data/AI, development, infrastructure, quality/testing, security, and domain specialists, plus an agent-organizer.",
+      "homepage": "https://github.com/lst97/claude-code-sub-agents",
+      "keywords": [
+        "agents",
+        "subagents",
+        "specialists",
+        "orchestration"
+      ],
+      "latest": "1.1.0",
+      "clis": [
+        "claude-code",
+        "gemini",
+        "cursor",
+        "opencode"
+      ],
+      "versions": [
+        {
+          "version": "1.1.0",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/lst97-subagents/1.1.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:b0cce42fdc8eee3d503a7f32f69aa017fb62a414129b543c03f376d2c4a32704",
+              "spoolJsonSha": "sha256:7c23ab380f265de244fbf1e81c8f957ee373bbdc56a4dbecab068cef73f48dd0"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/lst97-subagents/1.1.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:034480154a7c51dfbf21a11a6263d75daa78eccd149077f4875e0c31175aea3b",
+              "spoolJsonSha": "sha256:c0e8a00e1fb54911aa81678415789b2fb6ddd083eed635f27140184899101367"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/lst97-subagents/1.1.0/gemini.global.spool.tgz",
+              "spoolSha": "sha256:25f16494702d5c0bf663f8761b6e6c4159c12d0d16ad0fff0ad5f04f0fd34b10",
+              "spoolJsonSha": "sha256:91eb435847c9e44782ce959dc7858bdefdfdf8f02c9a128ae84edabadaf351ac"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/lst97-subagents/1.1.0/gemini.local.spool.tgz",
+              "spoolSha": "sha256:a8d1a9ab8d3a48ec46a05c62bccf48b7f582d9524293a173447391db1e0b26ce",
+              "spoolJsonSha": "sha256:12fa86fb5b10ee1c403e03233147216136f1920308e01da51f0a5f13ba7670ea"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/lst97-subagents/1.1.0/cursor.global.spool.tgz",
+              "spoolSha": "sha256:e3e384c4db558128bd49cf4cf7647bc8113a3ff62eaa810a26b02cee7faeb516",
+              "spoolJsonSha": "sha256:f6453a8a6896d64181523a455b52cc3c21d0e868ef238a7bc30d1d6709d8ee6b"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/lst97-subagents/1.1.0/cursor.local.spool.tgz",
+              "spoolSha": "sha256:ecd0d5286ff86950405b692d7eb2c0045e13370eb43c65b90add0358a287cb78",
+              "spoolJsonSha": "sha256:8b0a40ac49692c53a164f4effe17586bcc93129f9056d5ed971765a3cd212f77"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/lst97-subagents/1.1.0/opencode.global.spool.tgz",
+              "spoolSha": "sha256:fc62cf69dff2a49b015f90236c73c9305ad06bf6076c587810c6d3bdb4bd57cc",
+              "spoolJsonSha": "sha256:0f9fbd177dffa9042d9fcdb06b2d9fb51a451d5c9178ee5f2bccb161a5b24e87"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/lst97-subagents/1.1.0/opencode.local.spool.tgz",
+              "spoolSha": "sha256:6c91ffb96d9c9656c04c8230bc047df9d00b2f17e688f307786aba6507461440",
+              "spoolJsonSha": "sha256:d12a76ba1d67f23d9d992d4392d525a4706606e1fb1f131c94e4a49598cc08ff"
             }
           ]
         }
@@ -962,6 +1535,103 @@
       ]
     },
     {
+      "id": "remotion-skills",
+      "displayName": "Remotion Skills",
+      "description": "Remotion's official agent skill for building videos in React — best-practice rules covering composition, animation, rendering, and the Remotion API.",
+      "homepage": "https://github.com/remotion-dev/skills",
+      "keywords": [
+        "skill",
+        "remotion",
+        "react",
+        "video"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/remotion-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:7bd5207344556409ed16baa52efd132c1246c403eb8072a2c84fa1245e72fadc",
+              "spoolJsonSha": "sha256:f39507a9f701ef15f9e703cfbecc693fe6d63255ca471b90b688573dba9d1578"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/remotion-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:ccdfe3025691cbc77aafe4a59e65ea60cc2a9523e4558896916d3c685293bd94",
+              "spoolJsonSha": "sha256:705e4015e7f2ff40133ba5fe99b9eeb4f3a11e1f46fe60b022e1e11ecc74c116"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/remotion-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:38681aa886f6e6bc18f10927d007408fb3478ff6b8838f7e66213906655f035e",
+              "spoolJsonSha": "sha256:704587091c93ee92edd526cb9238a282b7b3904f2fafe1ca85b0cf5b769f84c4"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/remotion-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:5514bfb6bea4b85e218c55417364f37266bc46fbbf7dea8844f607e92e7e5dad",
+              "spoolJsonSha": "sha256:a762d91f2ce4c746fa1adca2e5f4c64d6fd39cc4d89e86cf4be88b98d6a6a48a"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/remotion-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:620e4140462e4344efee4bf2a6fe9876295356bf0c00676ba1ece942448d7991",
+              "spoolJsonSha": "sha256:ab459258f314148d3bc0ff75c0d450109215079980ba134bf86247af8440a400"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/remotion-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:8f610301bc5265504e78d5da3131910bdce35b0e6e8285dbb8b17fd62cdcdd7f",
+              "spoolJsonSha": "sha256:40a47972c8d09dc3bc5917a203348673ae02cf52458108146e387d7b80900d38"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/remotion-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:de61b66b93617b2fb1c27d359b409782b82c597e00e041bc509fe595672174c0",
+              "spoolJsonSha": "sha256:e4602208062044c5e1985ccbfb28cba239c89c509007eb05d32ce14b5ea20f63"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/remotion-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:18c03289bc8a38c895364a2df69b112cdffe63aec370e19bc2cdb0168adeab27",
+              "spoolJsonSha": "sha256:0b40f17a2952cd58520f0e873f993a8873e2de13e10d4e3ead14a7f34d5d7dcf"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/remotion-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:88467b6438feea86d056fd98d0b409664187c86cd0c5e5703f7fb584b268e12e",
+              "spoolJsonSha": "sha256:a7d529b71e49fd7eabb440a9b7cd866abc79f89e4f059be981143c9a99a3c449"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/remotion-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:bba550f83d11c6c2955dee93216712421f8a742ec026e72df4171ac72ff473b7",
+              "spoolJsonSha": "sha256:0034b8cc976cf0763df5c559b70479ce1780c55d0cff9c01cfc8742f914af8a9"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "scientific-agent-skills",
       "displayName": "Scientific Agent Skills",
       "description": "K-Dense AI's library of 140+ science skills — bioinformatics, statistics, ML, data wrangling, paper search & writing, plus scientific-database access — for any agent CLI.",
@@ -1061,6 +1731,104 @@
       ]
     },
     {
+      "id": "sensenova-skills",
+      "displayName": "SenseNova Skills",
+      "description": "SenseNova's modular agent skills for office work — PPT generation, infographics, image editing, data-analysis workflows, deep research, and Markdown-to-HTML reports.",
+      "homepage": "https://github.com/OpenSenseNova/SenseNova-Skills",
+      "keywords": [
+        "skills",
+        "office",
+        "ppt",
+        "data-analysis",
+        "research"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/sensenova-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:ad402c1374e86a9422fa0189fccf7d74564ef19b0f9e73bc7b5703214e2e2acc",
+              "spoolJsonSha": "sha256:de8073cd723b0648ffd835c2533dba7ffce53992d25d509870c429f285f6d6d5"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/sensenova-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:8a5eb59feb033d5984487f3d7364d3839a3d0625f7ab7f6d84adcd6444ed0459",
+              "spoolJsonSha": "sha256:ce94798b1c889a1e0e3befb2bb3d3c8f4218042dd351e331f0960392313e4e82"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/sensenova-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:7c87ad1843fb4a8d35bcffac59cf8ddfd3233285a67619bb04c24f2f836a0de2",
+              "spoolJsonSha": "sha256:a367e1bb48e129ef60de31c03937c92bb4da9685ae3dbdf23af94bbd27e2707f"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/sensenova-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:726eb19863ddff85771d128ef743f078005098e1bc5b4346bb4e2f89dfaec073",
+              "spoolJsonSha": "sha256:ca2a2cab0b55aef11d6c7554f1775affbfb46c961052df5d3aceb74c80bc5d18"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/sensenova-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:e6ec2ee26a0dda944762331447dc5f4ec7052adb4dfe9a774db3cf22b00e1010",
+              "spoolJsonSha": "sha256:e1d961d83c96a20404212cde84851f8a6ef860c40d8437b81846c6cad3030dad"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/sensenova-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:f31cd3f549a99674d8d3a989c3509ae07ed4b43d1978e579eb16bcc36f87defe",
+              "spoolJsonSha": "sha256:04c9a477804550bc50e4bcad71d2147e736cf2b7800c317bded11b04b9c69a92"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/sensenova-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:9c07220394f406fb5fb71e7e2894c972988695fbf0418f04cf73bcb90a3ce2a0",
+              "spoolJsonSha": "sha256:0192ba8a6af31b967c9e2df9b8d15af210039b9d74bf09c0acb21f95a7ded565"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/sensenova-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:8e51e65fa3a82ed40297403b64269086e76c2f622960d173a9c4b79ff37c5c23",
+              "spoolJsonSha": "sha256:b3e4b86002fe2b92256eb914c831c685aa870cd791758b13397c672f566daccb"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/sensenova-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:3918bfd503dd9b4246bd836bf05ce1dbf2706ee824f27c09181c0cb3f0b0b060",
+              "spoolJsonSha": "sha256:e740c16a449991811f83157a9dc8c99a46e98d59bf630b06a55cd54aabf23e19"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/sensenova-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:70254811392101872a9b3cb9bff96cf50d1a8bd9a6159057e975e0e89a82da0e",
+              "spoolJsonSha": "sha256:00748c9c62f49188d4b0f4ac54245c8f7418905530b4ec51f2a9be53430b819f"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "taste-skill",
       "displayName": "Taste Skill",
       "description": "Leon's design-taste skills — frontend aesthetics, brutalist/minimalist/soft styles, image-to-code, redesign, brandkit, and image-gen helpers that stop AI from producing generic slop.",
@@ -1154,6 +1922,104 @@
               "url": "spools/taste-skill/main/opencode.local.spool.tgz",
               "spoolSha": "sha256:cac2142ea5baa727f49150f307e7620a3cb27ae3f4ac9072904c3f48a950a9c2",
               "spoolJsonSha": "sha256:fff9de7038dc9bbdd8c7fc620756bdb42ca1e4c39989098af194bf2c1b1d2a39"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "terraform-skill",
+      "displayName": "Terraform Skill",
+      "description": "Terraform & OpenTofu agent skill — module design, testing, CI/CD, drift diagnosis, and schema validation best practices.",
+      "homepage": "https://github.com/antonbabenko/terraform-skill",
+      "keywords": [
+        "skill",
+        "terraform",
+        "opentofu",
+        "infrastructure",
+        "iac"
+      ],
+      "latest": "1.17.1",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "1.17.1",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/terraform-skill/1.17.1/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:74e18250d9da6dcd32c7c0c6fda560fb4a0a2f270cd7c7c2537546bd0bf43418",
+              "spoolJsonSha": "sha256:4eb78b17addc7ceb7602bb6664274848815a05018e9c58631fd630125aa49b9f"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/terraform-skill/1.17.1/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:349f868cd4927ab8968165a9eedf0803c484a31787af8bfb7e89edd283f791e5",
+              "spoolJsonSha": "sha256:46f85817f71bb87490713b130d7425405d89a5a69f3472517234f6de3df4f2bd"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/terraform-skill/1.17.1/codex.global.spool.tgz",
+              "spoolSha": "sha256:f2b066e0286bc6bb3dd6bb680294250c3b335c0bbe5e0bd93f6084316d92e134",
+              "spoolJsonSha": "sha256:4b5de4ff0b806b3d37d6b03d137b4a1a5705d47780e825661e45e0becf71feae"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/terraform-skill/1.17.1/codex.local.spool.tgz",
+              "spoolSha": "sha256:78b684d91ed3cbc392dac00448ca0338a1815cac94867a0f1651eb75da0da285",
+              "spoolJsonSha": "sha256:221f110c2854874b6184582f6522986aee9ed26363f056e9db5433e1af85acd8"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/terraform-skill/1.17.1/gemini.global.spool.tgz",
+              "spoolSha": "sha256:45c588c9677e9b86c244b4dc0173864f2637106f6d24c25c76caf5c5abb29285",
+              "spoolJsonSha": "sha256:205e44c7a57af87a1c0414985cd5228231e0d23472590d354151379fcffd1115"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/terraform-skill/1.17.1/gemini.local.spool.tgz",
+              "spoolSha": "sha256:8705db33d9cc9cd1391862f4eec33b7cd2a860ebf9b7e1b207d8d5d8ed11631b",
+              "spoolJsonSha": "sha256:4f5b327413968906277d90ca8455406c185036d5eac9c9f13d55113058e8aeaa"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/terraform-skill/1.17.1/opencode.global.spool.tgz",
+              "spoolSha": "sha256:83f481155e647cfdeec46b475f2f1d766f07dc8b29f74c6ca12e5a8625a17ba7",
+              "spoolJsonSha": "sha256:9037019678c2a09d74823e2e3780f4eaf339388329be4f21cf14b0b78597b26d"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/terraform-skill/1.17.1/opencode.local.spool.tgz",
+              "spoolSha": "sha256:287ed9ffb2408c7d314db3937b9486b8cd10ef175a548c6017efde9a071ed582",
+              "spoolJsonSha": "sha256:e6a1e3b5cb2718b94a0883013d47eb092e51b735dfbae81eab5ee8d371206efb"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/terraform-skill/1.17.1/cursor.global.spool.tgz",
+              "spoolSha": "sha256:f6ab5cd1cfc5b41b45c43993522ab896efa5015dfb3be6bf6e283bf2522c78c8",
+              "spoolJsonSha": "sha256:54df4f9fb73454b9c029b11296e5f8aadaaafc2b4f805678c18f51c6530820db"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/terraform-skill/1.17.1/cursor.local.spool.tgz",
+              "spoolSha": "sha256:11f0c027b9bf9adee122d146508cc27ed4c524c17c994f4ef2f5894fca6c0a2f",
+              "spoolJsonSha": "sha256:4cd9bccab09210cf07efa0df891ce870d6b1a8e160b0b1b706adb31432c71f26"
             }
           ]
         }
@@ -1435,6 +2301,156 @@
               "url": "spools/voltagent-subagents/main/opencode.local.spool.tgz",
               "spoolSha": "sha256:8b10b7edac688a02918adf7da0e06dd00fabad9822aa11ebf6344aca0dc974f6",
               "spoolJsonSha": "sha256:42a764fbc65a2d8df4572d6419e58be6454d3ce47ad72f98ee9aec2ad79e6c1b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vuejs-skills",
+      "displayName": "Vue.js Skills",
+      "description": "Vue 3 development agent skills — best practices, testing, Vue Router and Pinia guides, composables, JSX, and the Options API.",
+      "homepage": "https://github.com/vuejs-ai/skills",
+      "keywords": [
+        "skills",
+        "vue",
+        "pinia",
+        "vue-router",
+        "testing"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "opencode",
+        "cursor"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/vuejs-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:fa6fa4c4c4c329596d7821e406d5fbce8a791080b18a8cb9bd48474b803accca",
+              "spoolJsonSha": "sha256:f6f67891bd6d8e0fe79272c712eb007e2adea5f77ce707eb05ca2b7dc66111e9"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/vuejs-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:acb87dc23ba622d20f008250d5c77ea9ff503c2674a216107df9ab5fdbad80f0",
+              "spoolJsonSha": "sha256:1daff721ae698013ca77a80f5e9d483fdf7ba338a176540897bdb2bc961e5ff0"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/vuejs-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:a15a06aa0ce3417120154c2e9c9b1d0ff9d8f33474568c218e685213d4269f1b",
+              "spoolJsonSha": "sha256:d9c0a25e814649118fff6776b8f4aa4e673be3e2d5d3f87d7202ae6ac0edff52"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/vuejs-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:c294c5229771b5e8d8569410d1ad383432506b7b9551262ddfb2594487d848a9",
+              "spoolJsonSha": "sha256:5cc7d5dd3fe47c4b631d044e753397b25e0009bb1eed9d1799f4512d81318afa"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/vuejs-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:21ae537104dc007506c7e08d279801969eed9d9dbb047cf03a63692b518b87a9",
+              "spoolJsonSha": "sha256:a803ef6ea3554334955a335dccb60a4d2d7b09a956903eb3097381c2e851bbcb"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/vuejs-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:86c263145f175b131418382d08ff1bfdd2008b49af7241a00725f0c82d04f32c",
+              "spoolJsonSha": "sha256:b8027c2826acdaec4eee3c4caeec29201f59fe40a98e35a2cba307ec07cca1b2"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/vuejs-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:5ff6501d33dc2ac67af275ab9559ada7dbe1e3cbc31c7307f8fb7374fb5f999b",
+              "spoolJsonSha": "sha256:936e78c3443476367d56e9a63d72e3d10b416c0673319bce96c5272b80c15585"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/vuejs-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:0b3828cec34201fbb607855f3a760207859b55236d28a01478263dfa7b14b53d",
+              "spoolJsonSha": "sha256:ae981d467561278a4d1ea3b108c36e6d69d33036282b58a75897c2f9c16ec24e"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/vuejs-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:2c14075c6fb9fef1af522bfdef002e89416a8e724247b695f5113d3b38446d48",
+              "spoolJsonSha": "sha256:8aac8fd7b90280fc22f8cefd2a09a431bbb725e9b60280b45e6e449ab9ac0e5c"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/vuejs-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:f6c8fc577e08b4159c4cfbe9db1e394105480a386d042f81c53dbb738d48f7a0",
+              "spoolJsonSha": "sha256:02bf6d725ada24100d97f9cdf618c41661b775dc1c6c9ea5be51fd72d0ffd7b8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wshobson-commands",
+      "displayName": "wshobson Commands",
+      "description": "A collection of production-ready slash commands for Claude Code — 42 single-purpose tools and 15 multi-step workflows spanning review, testing, deployment, and refactoring.",
+      "homepage": "https://github.com/wshobson/commands",
+      "keywords": [
+        "commands",
+        "slash-commands",
+        "workflows",
+        "automation"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "opencode"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/wshobson-commands/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:466376cd4e36e0f10aef3e52550a360b2802d9426f3374b49ca4285ffb974fea",
+              "spoolJsonSha": "sha256:59a304cb5737ee2a2c14b58bbc90f43442006ba8ad8d3b1376cf3a7f231570b9"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/wshobson-commands/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:c2335107e2dabc5e8659806bf53b46287a34cdbfa568f65a656a0b6badd5da7e",
+              "spoolJsonSha": "sha256:672f68ad78b36f119fa88c028b317df031def73aff6200619c26c7ae1aced3aa"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/wshobson-commands/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:df331628a7eaec8a322392f2df41e1be86da1be0124a9036192ddaedb6536f05",
+              "spoolJsonSha": "sha256:0376f94c4471a9da358da875a9ffe0731ac7143fb83e9e03f709ba107adef87e"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/wshobson-commands/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:9d94a88fc59a2543a47d515743b143bfbd7866c9c7652c69952134f57bcf57e6",
+              "spoolJsonSha": "sha256:e03c060aaa98d9c1791f1803f68fc272c4881cf0346b91f37c6815e5595cdcab"
             }
           ]
         }

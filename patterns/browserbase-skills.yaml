@@ -1,0 +1,44 @@
+schema: 1
+id: browserbase-skills
+displayName: Browserbase Skills
+description: Browserbase's official agent skills for browser automation — web navigation, scraping, UI testing, company research, and Stagehand/WebMCP generation.
+homepage: https://github.com/browserbase/skills
+keywords:
+  - skills
+  - browser
+  - automation
+  - scraping
+  - testing
+
+# Archetype B (plain git skills repo). Verified by real clone: 17 flat `skills/*/SKILL.md` (each with
+# EXAMPLES.md/REFERENCE.md payload). The skills shell out to the external `browse` CLI via Bash; that
+# CLI is self-bootstrapped (`npm install -g browse`) and runs Chrome LOCALLY with NO Browserbase
+# account/MCP — `BROWSERBASE_API_KEY` is an optional remote enhancement, so the skills are NOT
+# MCP-server-dependent (not a decline). The repo's own `package.json` bin (`browser`, a separate
+# in-repo tsc build) is unrelated to the skills — ship the SKILL.md declaratively, skip the npm bin.
+source:
+  type: git
+  url: https://github.com/browserbase/skills
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+namespace:
+  mode: as-is
+
+# Plain SKILL.md read by all five CLIs; one declarative map via anchor. Each skill bundles its dir.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills

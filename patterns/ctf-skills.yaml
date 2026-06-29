@@ -1,0 +1,47 @@
+schema: 1
+id: ctf-skills
+displayName: CTF Skills
+description: Agent skills for solving Capture-The-Flag challenges — web exploitation, crypto, pwn, reverse engineering, forensics, malware, OSINT, AI/ML, and writeups.
+homepage: https://github.com/ljagiello/ctf-skills
+keywords:
+  - skills
+  - ctf
+  - security
+  - exploitation
+  - reverse-engineering
+
+# Archetype B (plain git skills repo). Verified by real clone: 11 skills, each a top-level dir with
+# its own `<category>/SKILL.md` + sibling reference `.md` (ctf-web, ctf-crypto, ctf-pwn, ctf-reverse,
+# ctf-forensics, ctf-malware, ctf-misc, ctf-osint, ctf-ai-ml, ctf-writeup, solve-challenge). Skills
+# are at the REPO ROOT (no `skills/` parent), so `from: */SKILL.md` captures each category dir.
+source:
+  type: git
+  url: https://github.com/ljagiello/ctf-skills
+  ref: main # no git tags (verified) → pin main; built spool version is the literal "main".
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+# Skills self-namespace as `ctf-*`; keep as authored.
+namespace:
+  mode: as-is
+
+# `*/SKILL.md` maps each root-level skill dir (the first wildcard = `${name}` = the category dir) and
+# bundles its reference files. Non-skill dirs (`scripts/`, `tests/`, `.github/`) have no SKILL.md so
+# the glob skips them automatically. NOTE: the `solve-challenge` dispatcher references
+# `../scripts/install_ctf_tools.sh` (a sibling top-level dir) — that relative path is inherent to the
+# repo's layout and isn't bundled per-skill; the other 10 skills are self-contained.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - { kind: skill, from: "*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills

@@ -1,0 +1,98 @@
+{
+  "id": "browserbase-skills",
+  "displayName": "Browserbase Skills",
+  "description": "Browserbase's official agent skills for browser automation — web navigation, scraping, UI testing, company research, and Stagehand/WebMCP generation.",
+  "homepage": "https://github.com/browserbase/skills",
+  "keywords": [
+    "skills",
+    "browser",
+    "automation",
+    "scraping",
+    "testing"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/browserbase-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:e530d6af4f9966fa46bb0dd4b817da9dafaf5e7e76b001c7d188ede442dc70df",
+          "spoolJsonSha": "sha256:b1e0cb08a87d554bda6eb027a97fa8eccfb734c4ed6c0d5489eb7b2f73d318fc"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/browserbase-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:3505bef24150423483002f16b7eb012582c424b77271326188827de3584d74f6",
+          "spoolJsonSha": "sha256:ea4fcb836ca2a623987dbe4f277a3a69796662d88a557814a0d49076f8a87ea6"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/browserbase-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:b7be0bc2fa208f9c074067be4b5fe9b7a7c14b15147639c3aa3ef7c03ffde649",
+          "spoolJsonSha": "sha256:11ec1ed84edd2d353b55c0db395dccd84bbb1d98811ebad666be7024457c1d22"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/browserbase-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:41a0ad1b67669c1ee904e1a7be4137e27e13584c27de21150a9cffcc086d8444",
+          "spoolJsonSha": "sha256:eafa182990d6fffe9677fe94232a39d4b79d5ab164b3fd97aabbf8478cf215d7"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/browserbase-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:5f8b4950bed96a7f80acfc6b5219fec23cdc0cb891b74a3d068aae0ed40f774a",
+          "spoolJsonSha": "sha256:8262c57fd538f87ad5287c2fc62eabaec4a21a21259a6af667a0fe800331737f"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/browserbase-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:34c10d583efbb055955d90fb49f74adbea124642f5b1c462ccfe573efeab1e0a",
+          "spoolJsonSha": "sha256:30fa74928c968a46643805eeab0ae3a1512b5a980244a6fde4a375eb2356e3a7"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/browserbase-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:30add0a04870087ebd0f5587b346327a279af1cfc34c413c0b6c03095f3046d3",
+          "spoolJsonSha": "sha256:7f1977636ee56113681682c0b690d95133813a582408c75186be40f55e2d1111"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/browserbase-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:15d45cc3f6e0b61e85ea552b0bbc489f161cf5f61a3d2b80596a95c7dba9febd",
+          "spoolJsonSha": "sha256:d68e25f1e4014cfb11d9f2bc6e62c0a29c6265d05fb5ef6540fdba3d16439f1e"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/browserbase-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:aa5325873ba304624f0b9f7ad892cc469fdc88b7914c5c09168c4d908c0250ec",
+          "spoolJsonSha": "sha256:5f181bf2d7c647acf0c2121e5d63bcef539b482e98185113f24d060af4c13a1f"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/browserbase-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:4449fc82181861a68af8f8dc2db3565e883652c351da982f4e82c76f6cd4df5c",
+          "spoolJsonSha": "sha256:9dfea74d0bc7b69abc19a67828378ae4f00aab3ecfe70a93a91b2ba76d853448"
+        }
+      ]
+    }
+  ]
+}

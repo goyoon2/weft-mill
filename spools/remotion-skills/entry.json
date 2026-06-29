@@ -1,0 +1,97 @@
+{
+  "id": "remotion-skills",
+  "displayName": "Remotion Skills",
+  "description": "Remotion's official agent skill for building videos in React — best-practice rules covering composition, animation, rendering, and the Remotion API.",
+  "homepage": "https://github.com/remotion-dev/skills",
+  "keywords": [
+    "skill",
+    "remotion",
+    "react",
+    "video"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/remotion-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:7bd5207344556409ed16baa52efd132c1246c403eb8072a2c84fa1245e72fadc",
+          "spoolJsonSha": "sha256:f39507a9f701ef15f9e703cfbecc693fe6d63255ca471b90b688573dba9d1578"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/remotion-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:ccdfe3025691cbc77aafe4a59e65ea60cc2a9523e4558896916d3c685293bd94",
+          "spoolJsonSha": "sha256:705e4015e7f2ff40133ba5fe99b9eeb4f3a11e1f46fe60b022e1e11ecc74c116"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/remotion-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:38681aa886f6e6bc18f10927d007408fb3478ff6b8838f7e66213906655f035e",
+          "spoolJsonSha": "sha256:704587091c93ee92edd526cb9238a282b7b3904f2fafe1ca85b0cf5b769f84c4"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/remotion-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:5514bfb6bea4b85e218c55417364f37266bc46fbbf7dea8844f607e92e7e5dad",
+          "spoolJsonSha": "sha256:a762d91f2ce4c746fa1adca2e5f4c64d6fd39cc4d89e86cf4be88b98d6a6a48a"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/remotion-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:620e4140462e4344efee4bf2a6fe9876295356bf0c00676ba1ece942448d7991",
+          "spoolJsonSha": "sha256:ab459258f314148d3bc0ff75c0d450109215079980ba134bf86247af8440a400"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/remotion-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:8f610301bc5265504e78d5da3131910bdce35b0e6e8285dbb8b17fd62cdcdd7f",
+          "spoolJsonSha": "sha256:40a47972c8d09dc3bc5917a203348673ae02cf52458108146e387d7b80900d38"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/remotion-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:de61b66b93617b2fb1c27d359b409782b82c597e00e041bc509fe595672174c0",
+          "spoolJsonSha": "sha256:e4602208062044c5e1985ccbfb28cba239c89c509007eb05d32ce14b5ea20f63"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/remotion-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:18c03289bc8a38c895364a2df69b112cdffe63aec370e19bc2cdb0168adeab27",
+          "spoolJsonSha": "sha256:0b40f17a2952cd58520f0e873f993a8873e2de13e10d4e3ead14a7f34d5d7dcf"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/remotion-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:88467b6438feea86d056fd98d0b409664187c86cd0c5e5703f7fb584b268e12e",
+          "spoolJsonSha": "sha256:a7d529b71e49fd7eabb440a9b7cd866abc79f89e4f059be981143c9a99a3c449"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/remotion-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:bba550f83d11c6c2955dee93216712421f8a742ec026e72df4171ac72ff473b7",
+          "spoolJsonSha": "sha256:0034b8cc976cf0763df5c559b70479ce1780c55d0cff9c01cfc8742f914af8a9"
+        }
+      ]
+    }
+  ]
+}

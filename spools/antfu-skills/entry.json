@@ -1,0 +1,99 @@
+{
+  "id": "antfu-skills",
+  "displayName": "Anthony Fu Skills",
+  "description": "Anthony Fu's curated agent skills for the Vue/Nuxt/Vite/Vitest ecosystem — framework best practices, testing, and web design guidelines.",
+  "homepage": "https://github.com/antfu/skills",
+  "keywords": [
+    "skills",
+    "vue",
+    "nuxt",
+    "vite",
+    "vitest",
+    "frontend"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/antfu-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:a489a6323da9a7b95d3a75137fd4819753883b8489c347d83702143e0ccf97b5",
+          "spoolJsonSha": "sha256:99d049a405969d27b43526f10936f9ed91513bae9b800cbf3f3961d3040f7375"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/antfu-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:5931ca6230347bd52254cfd160d4fb9f70c12ae1c4d6450ef643c7ffb8bb1d6c",
+          "spoolJsonSha": "sha256:450538a73158c491322dae9fdad5b4907fc0a401ecf494b359da6c7d1506c519"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/antfu-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:3d5b00fa695b646abf768b47ec39c4ff77051fcb0689463c1efec983c93ff9fd",
+          "spoolJsonSha": "sha256:44dc37dc059b4b50d93147e21a560b8b5aec2352e299b7261db47629349959a7"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/antfu-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:192bc1eb3ba512cd0e47dc01feb71949155d39893e56b675514c899653f64511",
+          "spoolJsonSha": "sha256:5d765884f7c8325388c97fbb7f2a07b8bdb02db6230579a1b79fdc9fa3d82bb9"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/antfu-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:45e1726d1f82fd6d7dc0946f2d55d5d59708a5e25e1da2e8a477e6f88d0c1113",
+          "spoolJsonSha": "sha256:96c0fa94454b0607bb49e9dd1e4382b56e492653a1c714e6f2a2ff2fb5781b40"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/antfu-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:9a14c987d9e523d08b708f8069f02308cdc2d0d1781aa3008ef144f11ff658d4",
+          "spoolJsonSha": "sha256:6f19048137ac2c84e8db39311571cee258ec80db9244694c646bda48f656893a"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/antfu-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:004fc8690666fb85fb58f36f4a490994d84952df30b8cbc408dd673bc3d64275",
+          "spoolJsonSha": "sha256:9b72ac66d106c7b72a31e904a678feef2a0279cbff5b6524a58a38cdf99b2f40"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/antfu-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:893091585d9ff993b2ab8f7fafa6853b857bd9ee7d51649343e0c57365381bf9",
+          "spoolJsonSha": "sha256:19ee5fbc498ce7ce9a7a72c3b7a8b163269f6ca3ac6214f7c11d9740622e5e1b"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/antfu-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:70f8686304a5bc8a568c9c15d3e4001b1e428a414fbad9261a3e6efb822660e0",
+          "spoolJsonSha": "sha256:0fa23a791604ef4ae9eaba9382cf81b64d72679475d264fb8d1bdd7e78488885"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/antfu-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:9a18e0969128a5057bb4112a96a558f9f15ac8b584be4ac180a33cff422f4803",
+          "spoolJsonSha": "sha256:19e0a9f61f05c6146b7935d3f8a9cdab56aa5318e96e306bec850cdf0f919cd2"
+        }
+      ]
+    }
+  ]
+}

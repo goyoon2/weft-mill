@@ -1,0 +1,98 @@
+{
+  "id": "ctf-skills",
+  "displayName": "CTF Skills",
+  "description": "Agent skills for solving Capture-The-Flag challenges — web exploitation, crypto, pwn, reverse engineering, forensics, malware, OSINT, AI/ML, and writeups.",
+  "homepage": "https://github.com/ljagiello/ctf-skills",
+  "keywords": [
+    "skills",
+    "ctf",
+    "security",
+    "exploitation",
+    "reverse-engineering"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/ctf-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:411c4d2ec6b5bba078b5e8f316d9521d826d6193ef68d845138ef7b58530308b",
+          "spoolJsonSha": "sha256:a51dbdc27fb9d7a315e97cc972b49555cc4233c22b7530a7310d7520a18ef9a7"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/ctf-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:5b23194e2bc7ab2d1789a2b5e5b9cf7cef8d9fc15d46daac03e73351f49f21bd",
+          "spoolJsonSha": "sha256:d64a26cf583cb3d54f6a38de3835ff00ff1a638f07c0cffc67a62fbf179a40da"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/ctf-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:84d534a621b4d02d929cd9343b10a5bab5cc019efc4038a83fddd9dbb64ff147",
+          "spoolJsonSha": "sha256:84149b22e2cef9ba746db33c308840f6d32b71366116f90361596f9d60fad9e4"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/ctf-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:59bedb379ee2f98751fe6a9fba11ef4f5eacdee31fb1d295829e1225abe20561",
+          "spoolJsonSha": "sha256:df9dcfaa3eaac89978694a16d9f2be2d12d796ba7825197c7b84cb196f914d65"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/ctf-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:325ce167b8229b7523bdb2ceebad92f6c1bb6b93fc06e1b4ed9326c56c3a630f",
+          "spoolJsonSha": "sha256:f307423a2a4eed896ba0258150838c57cb0d10cab5c2131594d1fff402732a30"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/ctf-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:6f9954d9162a85b7a507b61c731b2098463546746a681f0c323c3c62da712965",
+          "spoolJsonSha": "sha256:18321e33ac2fe7047fdbab20f003c3deed0af611ae5f09ed7599bdd6c6a97a83"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/ctf-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:85b00fd9691ff6ef84cfc321a4a799124e7d266566475629c59993cf563188e4",
+          "spoolJsonSha": "sha256:ad9a38caf9ce02e22512f4c2e950383e82ae48dfbb7e95e1624b18789caa0379"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/ctf-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:b7b02a574e130ae0c67d19d38dd46c602e107052b18567dee475bdacebc51d47",
+          "spoolJsonSha": "sha256:6c77179018e1e4728b0f583f4ccb07421106bf5cc9841c275c3c44e7b57b2732"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/ctf-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:45e96d2f86aaba6cae4dc48fbc8cc5fe94134e15ae383f026646f6d96843597e",
+          "spoolJsonSha": "sha256:b0913ca200fbfd6003c2e6ba06c01e70a19466cfd2d5850b28061c5f2af540f3"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/ctf-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:f997a70933bc74c32f7a5038f9b57837c4bbc2b21221d2e51c9fac83276dad96",
+          "spoolJsonSha": "sha256:998a0144c1021a0163795558dead9504759ec0a8e7d09e692597ed0e5a5664b7"
+        }
+      ]
+    }
+  ]
+}

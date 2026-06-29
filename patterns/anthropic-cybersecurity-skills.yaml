@@ -1,0 +1,46 @@
+schema: 1
+id: anthropic-cybersecurity-skills
+displayName: Anthropic Cybersecurity Skills
+description: 800+ structured cybersecurity skills for AI agents — detection engineering, exploitation, threat hunting, IAM, cloud and network security, mapped to common frameworks.
+homepage: https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+keywords:
+  - skills
+  - security
+  - cybersecurity
+  - detection
+  - threat-hunting
+
+# Archetype B (plain git skills repo). Verified by real clone: 817 self-contained
+# `skills/*/SKILL.md`, each with its own `assets/`/`references/`/`scripts/`. The `.claude-plugin/`
+# {plugin,marketplace}.json are catalog manifests only (register just skills — no hooks/runtime
+# bootstrap), so a declarative glob copy fully reproduces the install. One skill is ABOUT auditing
+# MCP servers (a topic) — it does not REQUIRE a live MCP server to function.
+source:
+  type: git
+  url: https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+
+versioning:
+  strategy: semver
+  track: latest
+
+# Real `v*` semver tags (v1.0.0 … v1.3.0), single tag family → derived `git-tags` livecheck (omit
+# the block). The build resolves the highest tag at build time.
+
+# Skill names are long and descriptive (exploiting-kerberoasting-with-impacket, …) — collision-safe;
+# keep as authored.
+namespace:
+  mode: as-is
+
+# Plain SKILL.md markdown read by all five CLIs from their skills dir. One declarative map (shared via
+# anchor) serves them all; each skill bundles its whole directory (SKILL.md + assets + references +
+# scripts). The glob deliberately excludes repo chrome at root (README, ATTACK_COVERAGE.md,
+# index.json, mappings/, tools/, docs/, assets/) — only `skills/*/SKILL.md` is mapped.
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills

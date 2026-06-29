@@ -1,0 +1,49 @@
+schema: 1
+id: antfu-skills
+displayName: Anthony Fu Skills
+description: Anthony Fu's curated agent skills for the Vue/Nuxt/Vite/Vitest ecosystem — framework best practices, testing, and web design guidelines.
+homepage: https://github.com/antfu/skills
+keywords:
+  - skills
+  - vue
+  - nuxt
+  - vite
+  - vitest
+  - frontend
+
+# Archetype B (plain git skills repo). Verified by real clone: 19 self-contained `skills/*/SKILL.md`
+# (each dir carries its own `references/`). The repo's package.json / `scripts/` / `meta.ts` /
+# `.gitmodules` (vue/nuxt/vite submodules) are the MAINTAINER's regeneration toolchain, NOT a
+# consumer installer — the committed `skills/` output is what installs, so declarative mapping is
+# faithful (clone WITHOUT --recurse-submodules; weft does a plain checkout).
+source:
+  type: git
+  url: https://github.com/antfu/skills
+  # No git tags (verified); per-skill `metadata.version` dates live only in frontmatter, which weft
+  # doesn't read for declarative sources. Pin to main; built spool version is the literal "main".
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest # ignored — source.ref pins the checkout — but required by schema.
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases; skills repo tracked at main, not auto-bumped"
+
+# Skill names are framework-scoped (vitest, nuxt, vueuse-functions, …) but bare — keep as authored;
+# weft namespaces a colliding skill at install time. (don't-over-namespace stance.)
+namespace:
+  mode: as-is
+
+# Plain SKILL.md markdown that every CLI reads from its skills dir → one declarative map serves all
+# five CLIs via a YAML anchor. Each skill bundles its whole directory (SKILL.md + references/).
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  opencode: *skills
+  cursor: *skills

@@ -1,0 +1,98 @@
+{
+  "id": "sensenova-skills",
+  "displayName": "SenseNova Skills",
+  "description": "SenseNova's modular agent skills for office work — PPT generation, infographics, image editing, data-analysis workflows, deep research, and Markdown-to-HTML reports.",
+  "homepage": "https://github.com/OpenSenseNova/SenseNova-Skills",
+  "keywords": [
+    "skills",
+    "office",
+    "ppt",
+    "data-analysis",
+    "research"
+  ],
+  "latest": "main",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "versions": [
+    {
+      "version": "main",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/sensenova-skills/main/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:ad402c1374e86a9422fa0189fccf7d74564ef19b0f9e73bc7b5703214e2e2acc",
+          "spoolJsonSha": "sha256:de8073cd723b0648ffd835c2533dba7ffce53992d25d509870c429f285f6d6d5"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/sensenova-skills/main/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:8a5eb59feb033d5984487f3d7364d3839a3d0625f7ab7f6d84adcd6444ed0459",
+          "spoolJsonSha": "sha256:ce94798b1c889a1e0e3befb2bb3d3c8f4218042dd351e331f0960392313e4e82"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/sensenova-skills/main/codex.global.spool.tgz",
+          "spoolSha": "sha256:7c87ad1843fb4a8d35bcffac59cf8ddfd3233285a67619bb04c24f2f836a0de2",
+          "spoolJsonSha": "sha256:a367e1bb48e129ef60de31c03937c92bb4da9685ae3dbdf23af94bbd27e2707f"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/sensenova-skills/main/codex.local.spool.tgz",
+          "spoolSha": "sha256:726eb19863ddff85771d128ef743f078005098e1bc5b4346bb4e2f89dfaec073",
+          "spoolJsonSha": "sha256:ca2a2cab0b55aef11d6c7554f1775affbfb46c961052df5d3aceb74c80bc5d18"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/sensenova-skills/main/gemini.global.spool.tgz",
+          "spoolSha": "sha256:e6ec2ee26a0dda944762331447dc5f4ec7052adb4dfe9a774db3cf22b00e1010",
+          "spoolJsonSha": "sha256:e1d961d83c96a20404212cde84851f8a6ef860c40d8437b81846c6cad3030dad"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/sensenova-skills/main/gemini.local.spool.tgz",
+          "spoolSha": "sha256:f31cd3f549a99674d8d3a989c3509ae07ed4b43d1978e579eb16bcc36f87defe",
+          "spoolJsonSha": "sha256:04c9a477804550bc50e4bcad71d2147e736cf2b7800c317bded11b04b9c69a92"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/sensenova-skills/main/opencode.global.spool.tgz",
+          "spoolSha": "sha256:9c07220394f406fb5fb71e7e2894c972988695fbf0418f04cf73bcb90a3ce2a0",
+          "spoolJsonSha": "sha256:0192ba8a6af31b967c9e2df9b8d15af210039b9d74bf09c0acb21f95a7ded565"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/sensenova-skills/main/opencode.local.spool.tgz",
+          "spoolSha": "sha256:8e51e65fa3a82ed40297403b64269086e76c2f622960d173a9c4b79ff37c5c23",
+          "spoolJsonSha": "sha256:b3e4b86002fe2b92256eb914c831c685aa870cd791758b13397c672f566daccb"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/sensenova-skills/main/cursor.global.spool.tgz",
+          "spoolSha": "sha256:3918bfd503dd9b4246bd836bf05ce1dbf2706ee824f27c09181c0cb3f0b0b060",
+          "spoolJsonSha": "sha256:e740c16a449991811f83157a9dc8c99a46e98d59bf630b06a55cd54aabf23e19"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/sensenova-skills/main/cursor.local.spool.tgz",
+          "spoolSha": "sha256:70254811392101872a9b3cb9bff96cf50d1a8bd9a6159057e975e0e89a82da0e",
+          "spoolJsonSha": "sha256:00748c9c62f49188d4b0f4ac54245c8f7418905530b4ec51f2a9be53430b819f"
+        }
+      ]
+    }
+  ]
+}

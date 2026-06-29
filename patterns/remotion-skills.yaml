@@ -1,0 +1,42 @@
+schema: 1
+id: remotion-skills
+displayName: Remotion Skills
+description: Remotion's official agent skill for building videos in React — best-practice rules covering composition, animation, rendering, and the Remotion API.
+homepage: https://github.com/remotion-dev/skills
+keywords:
+  - skill
+  - remotion
+  - react
+  - video
+
+# Archetype B (plain git skills repo). Verified by real clone: a single skill at
+# `skills/remotion/SKILL.md` with ~40 reference rule files under `skills/remotion/rules/`, bundled by
+# the skill-dir capture. The repo's `src/` (Root.tsx/index.ts) + package.json are Remotion-studio
+# authoring scaffolding — the `skills/*/SKILL.md` glob ignores them.
+source:
+  type: git
+  url: https://github.com/remotion-dev/skills
+  # No git tags on this published mirror (verified); the monorepo version lives in package.json which
+  # weft doesn't read for declarative sources. Pin to main; built spool version is the literal "main".
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest
+
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases on the skills mirror; tracked at main, not auto-bumped"
+
+namespace:
+  mode: as-is
+
+targets:
+  claude-code: &skill
+    strategy: declarative
+    map:
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skill
+  gemini: *skill
+  opencode: *skill
+  cursor: *skill
