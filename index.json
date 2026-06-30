@@ -1507,6 +1507,46 @@
       ]
     },
     {
+      "id": "insane-search",
+      "displayName": "Insane Search",
+      "description": "Adaptive access for blocked websites — when WebFetch hits 403/402 or a site has WAF/bot protection, an exhaustive curl_cffi TLS-impersonation fetch chain (plus yt-dlp, Jina Reader, public APIs, Playwright) tries every method until one works.",
+      "homepage": "https://github.com/fivetaku/insane-search",
+      "keywords": [
+        "web-access",
+        "webfetch",
+        "waf",
+        "tls-impersonation",
+        "curl-cffi",
+        "yt-dlp",
+        "playwright"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/insane-search/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:80b0d5db9a171b713a90199721b9d2ef5342852ef53d2839ada42e255283ad1c",
+              "spoolJsonSha": "sha256:543832916e914a18ec3699394bbd3af8536759c6df41b05b324b7193942c0b6d"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/insane-search/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:cb326db30413b077b35364da376eb5d1f2e9d289d794fab7383a4ee33ff1db54",
+              "spoolJsonSha": "sha256:27ce3a71d9007fca467ef86adbae3406ad4de26352863f10269e810fafbb116c"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "lst97-subagents",
       "displayName": "lst97 Subagents",
       "description": "A collection of specialized Claude Code subagents — business, data/AI, development, infrastructure, quality/testing, security, and domain specialists, plus an agent-organizer.",

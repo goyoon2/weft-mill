@@ -1,0 +1,84 @@
+schema: 1
+id: insane-search
+displayName: Insane Search
+description: Adaptive access for blocked websites — when WebFetch hits 403/402 or a site has WAF/bot protection, an exhaustive curl_cffi TLS-impersonation fetch chain (plus yt-dlp, Jina Reader, public APIs, Playwright) tries every method until one works.
+homepage: https://github.com/fivetaku/insane-search
+keywords:
+  - web-access
+  - webfetch
+  - waf
+  - tls-impersonation
+  - curl-cffi
+  - yt-dlp
+  - playwright
+
+# Archetype B (plain skills repo, declarative), TAGLESS sub-case — same shape as andrej-karpathy-skills.
+# Verified by real clone + reading the documented install path: it is distributed as a Claude Code
+# plugin (`/plugin marketplace add github.com/fivetaku/gptaku_plugins` → `/plugin install
+# insane-search@gptaku-plugins`), but `.claude-plugin/plugin.json` registers NOTHING host-side — it
+# carries only metadata (name/version/description/keywords), with NO `hooks`/`commands`/`agents`/
+# `mcpServers` keys. So the plugin install is just "place the repo + auto-discover the one skill under
+# skills/", which weft's declarative `skill` slot reproduces faithfully → declarative, not captured.
+# The skill's `from` ends in SKILL.md, so it bundles the skill's WHOLE directory — the Python `engine/`
+# package + `references/` + `tests/` ride along, so `python3 -m engine <URL>` and every reference doc
+# ship intact and self-contained.
+#
+# CLAUDE-CODE ONLY — deliberately. The author states "Required: Claude Code only" (PLATFORMS.md), and
+# the SKILL.md drives Claude-specific machinery: AskUserQuestion, `mcp__playwright__*` (Playwright MCP
+# invoked from the session), WebSearch, and a `${CLAUDE_PLUGIN_ROOT}` Step-0 line. Those references are
+# dead on codex/gemini/cursor/opencode, so shipping there would be a degraded skill. We target only the
+# CLI the repo targets (per-CLI faithfulness).
+#
+# OMITTED ON PURPOSE — the Step-0 self-bootstrap (documented here, NOT glossed over):
+# SKILL.md's "Step 0" tells Claude to run `bash "${CLAUDE_PLUGIN_ROOT}/setup/setup.sh" ask`. That
+# script is NOT the skill's function. It does two auxiliary things: (a) silently self-installs an
+# update-notifier SessionStart hook into the user's ~/.claude/settings.json (copying
+# setup/gptaku-update-check.cjs into ~/.claude/scripts/), and (b) emits a GitHub-star solicitation via
+# AskUserQuestion. weft deliberately does NOT carry this over, for three reasons:
+#   1. it is a self-UPDATER, which weft's own livecheck→bump→`weft upgrade` loop already supersedes;
+#   2. reproducing it would have the skill inject an UNTRACKED hook into the user's settings.json that
+#      weft could not cleanly reverse on uninstall — plus a star nag we would never bake into an install;
+#   3. it is not host-registered (plugin.json declares no hooks), so it is a runtime skill side-effect,
+#      not a piece of the install's activation that we'd be dropping.
+# Under weft `${CLAUDE_PLUGIN_ROOT}` is unset and `setup/` is not bundled, so the Step-0 line yields
+# empty stdout and the skill's OWN "if the output is empty, just continue silently" path no-ops it
+# (graceful by the author's design). The COMPLETE product — the one insane-search skill with its engine
+# + references — is reproduced; only the auxiliary self-maintenance/star machinery is inert. This is a
+# complete onboarding of the skill, not a hand-picked subset.
+
+source:
+  type: git
+  url: https://github.com/fivetaku/insane-search
+  # No git tags (tag count 0) and not on npm — there is no version surface. `.claude-plugin/plugin.json`
+  # carries `"version": "0.9.0"`, but that's a JSON manifest, not a bare-string VERSION file, so the
+  # `version-file` livecheck (which uses a file's trimmed contents verbatim) cannot read it. Pin the
+  # checkout to `main`; without a `ref` the build's tag resolver would throw "no semver tags". The built
+  # spool version is therefore the literal "main" (honest: this harness tracks the branch).
+  ref: main
+
+versioning:
+  strategy: semver
+  track: latest # ignored here — source.ref pins the checkout — but the field is required.
+
+# Tagless → opt OUT of livecheck rather than let the derived `git-tags` strategy fail on a repo with no
+# tags. (skipReason is required when skip.) Revisit if the maintainer starts cutting git tags.
+livecheck:
+  skip: true
+  skipReason: "no upstream git tags/releases and not on npm; the plugin.json version is JSON, not a bare-string version file; tracked at main, not auto-bumped"
+
+# Single, self-descriptive skill id (`insane-search`); keep as authored. weft namespaces a skill at
+# install time only on a genuine clash.
+namespace:
+  mode: as-is
+
+# One skill under skills/insane-search/. `skills/*/SKILL.md` captures ${name}=insane-search from the
+# first wildcard segment and bundles the whole skill dir. NO `exclude` is needed: all the repo chrome
+# (README*.md, setup/, assets/, CHANGELOG/DISCLAIMER/PLATFORMS/LICENSE) lives at the REPO ROOT, outside
+# the skill dir, so the skill-dir bundle is already clean.
+targets:
+  claude-code:
+    strategy: declarative
+    map:
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
