@@ -646,6 +646,87 @@
       ]
     },
     {
+      "id": "claude-code-game-studios",
+      "displayName": "Claude Code Game Studios",
+      "description": "49 agents + 73 skills for indie game development studio workflow (game design, programming, art, audio, QA, production)",
+      "homepage": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "keywords": [
+        "game-development",
+        "game-design",
+        "agents",
+        "skills",
+        "hooks",
+        "studio-workflow"
+      ],
+      "latest": "1.0.0",
+      "clis": [
+        "claude-code"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/claude-code-game-studios/1.0.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:5d7d49f1ee10b76f49b0fd6c24edbcff4f133321a8b683b287ac0d644a6e3ade",
+              "spoolJsonSha": "sha256:83f07113deeae4e34eb8da97bf4c63bebc041b55a419ce61b4717840f87d61ce"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/claude-code-game-studios/1.0.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:b213a49114b28c9c22ec2c6bad035eba3207b8b9281a3e4f0613402b856a63e8",
+              "spoolJsonSha": "sha256:ba2bcc1dcf474b05893a6165849acb4b869fe52d31d423d212bed6b7bfd185aa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "claude-skills",
+      "displayName": "Claude Skills",
+      "description": "66 specialized skills for full-stack developers: language/framework experts, infrastructure, DevOps, security, testing, ML + 9 project workflow commands",
+      "homepage": "https://github.com/Jeffallan/claude-skills",
+      "keywords": [
+        "claude-skill",
+        "fullstack",
+        "typescript",
+        "python",
+        "go",
+        "rust",
+        "frameworks",
+        "devops",
+        "security"
+      ],
+      "latest": "0.4.15",
+      "clis": [
+        "claude-code"
+      ],
+      "versions": [
+        {
+          "version": "0.4.15",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/claude-skills/0.4.15/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:9131c2e456a66ccd71cbbc2218e5465bc956c752a1adc4e5037c8390f117851b",
+              "spoolJsonSha": "sha256:55c69300d88dee2ff14b84249aa353c8f953b3f21000f023ce59820fad89c8cf"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/claude-skills/0.4.15/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:ba6faf233ce0ff16d3b3e772427c5d00c43260497c4373d2d825b37dc470b22a",
+              "spoolJsonSha": "sha256:ab979d85abcd3804ab83fb486cc79ea9e56449c72b8c65d096d818575736fca1"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "cloudai-workflow",
       "displayName": "CloudAI Workflow (project-starter)",
       "description": "A universal Claude Code workflow: 14 skills, 7 specialized agents (orchestrator, code-reviewer, debugger, security-auditor, …), 26 commands, plus guardrail hooks (file protection, security/pre-commit checks, format-on-edit, metrics) wired across every tool event.",
@@ -2152,6 +2233,106 @@
               "url": "spools/remotion-skills/main/cursor.local.spool.tgz",
               "spoolSha": "sha256:bba550f83d11c6c2955dee93216712421f8a742ec026e72df4171ac72ff473b7",
               "spoolJsonSha": "sha256:0034b8cc976cf0763df5c559b70479ce1780c55d0cff9c01cfc8742f914af8a9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reverse-skills",
+      "displayName": "Reverse Engineering Skills",
+      "description": "Reverse-engineering tools for Android/iOS/binary analysis: DEX dumping, symbol analysis, Frida scripts, Unicorn debugging, iOS decryption.",
+      "homepage": "https://github.com/P4nda0s/reverse-skills",
+      "keywords": [
+        "reverse-engineering",
+        "android",
+        "ios",
+        "dex",
+        "frida",
+        "ida",
+        "binary-analysis"
+      ],
+      "latest": "main",
+      "clis": [
+        "claude-code",
+        "codex",
+        "gemini",
+        "cursor",
+        "opencode"
+      ],
+      "versions": [
+        {
+          "version": "main",
+          "spools": [
+            {
+              "cli": "claude-code",
+              "scope": "global",
+              "url": "spools/reverse-skills/main/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:bc7feba48dcf8d03a08e873d37c30b9fe74a81e69f38027642ec7a9af63705fc",
+              "spoolJsonSha": "sha256:f0471518663388f29cbacb5d8f2d20c73b21df63f28e217f0f3cf2e23459d276"
+            },
+            {
+              "cli": "claude-code",
+              "scope": "local",
+              "url": "spools/reverse-skills/main/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:523ed8c6ee5379fc96c4d11653ef23dda3591f0ed833ab221e776067294bce23",
+              "spoolJsonSha": "sha256:a05d7cf882e92bbe891d7dea8a00a4a3402afea57cd4653b802f8b6f7105a62a"
+            },
+            {
+              "cli": "codex",
+              "scope": "global",
+              "url": "spools/reverse-skills/main/codex.global.spool.tgz",
+              "spoolSha": "sha256:ddbe97115a958bae971b2aacf13712b03a9c37391749dfb1069f367df660c0bb",
+              "spoolJsonSha": "sha256:881532a7ab8d99aa93de24753728c2dca83407b87b9f4199e18ec72915b84160"
+            },
+            {
+              "cli": "codex",
+              "scope": "local",
+              "url": "spools/reverse-skills/main/codex.local.spool.tgz",
+              "spoolSha": "sha256:8144f2b662745dd40d56d82ede1ce1e0bb301df960c6276ed15866185ae8510b",
+              "spoolJsonSha": "sha256:fa382d34e65a952add20477db16266774d499861bb2b90993255b7c014edc7ce"
+            },
+            {
+              "cli": "gemini",
+              "scope": "global",
+              "url": "spools/reverse-skills/main/gemini.global.spool.tgz",
+              "spoolSha": "sha256:18d6f0cd69f040f8b1c64cbe0d1d74b5819d4cf2072c978c6e0e70b21e4b1f1b",
+              "spoolJsonSha": "sha256:72e548d45d59f13ab863f0980e01de5755f26266ed02a245136d74597df774b2"
+            },
+            {
+              "cli": "gemini",
+              "scope": "local",
+              "url": "spools/reverse-skills/main/gemini.local.spool.tgz",
+              "spoolSha": "sha256:2882b8bbb4384d1cb12822e26ff4a03a77c4ef11b65ba8793d38317c32f6a996",
+              "spoolJsonSha": "sha256:6bc58e34923e11597df2c23906ebdfe48cf2c7afa3ccc09418e3d9cf1a4f88ff"
+            },
+            {
+              "cli": "cursor",
+              "scope": "global",
+              "url": "spools/reverse-skills/main/cursor.global.spool.tgz",
+              "spoolSha": "sha256:041711fae9cc29a933e8124b428632c4c92d8e6e66c24d3ec0f284fe484e4454",
+              "spoolJsonSha": "sha256:b40d047e26f7566bef661bc1c42e7f1b2ee2be299af24732d6a9248c7da73f72"
+            },
+            {
+              "cli": "cursor",
+              "scope": "local",
+              "url": "spools/reverse-skills/main/cursor.local.spool.tgz",
+              "spoolSha": "sha256:4fbe3087f978a75636487ace8f35a21e674e6b5f8740997890f96ba9d6727e5e",
+              "spoolJsonSha": "sha256:e465b0852a0c618dc0e263bf660030032c3c36d892840d5765e9ccc818591ece"
+            },
+            {
+              "cli": "opencode",
+              "scope": "global",
+              "url": "spools/reverse-skills/main/opencode.global.spool.tgz",
+              "spoolSha": "sha256:af3d67bc4d34d7c9a559e0b7768ff3d43fc7e4e01380a69b54aecd4c1b9d00ab",
+              "spoolJsonSha": "sha256:046bbe2b94f5b3ddceb2f9953a96b2114e0258b9958f07989a6f5121db9fa07c"
+            },
+            {
+              "cli": "opencode",
+              "scope": "local",
+              "url": "spools/reverse-skills/main/opencode.local.spool.tgz",
+              "spoolSha": "sha256:ca04ed17db9adde39659d05917d31757a23ac575d489c95351dbf2e481c61cd5",
+              "spoolJsonSha": "sha256:206b2af66ab32754a7169512edd2b6a0dfdbcc6ef6db419cbc0649d9ddc62127"
             }
           ]
         }

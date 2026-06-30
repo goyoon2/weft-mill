@@ -1,0 +1,27 @@
+schema: 1
+id: reverse-skills
+displayName: Reverse Engineering Skills
+description: "Reverse-engineering tools for Android/iOS/binary analysis: DEX dumping, symbol analysis, Frida scripts, Unicorn debugging, iOS decryption."
+homepage: "https://github.com/P4nda0s/reverse-skills"
+keywords: [reverse-engineering, android, ios, dex, frida, ida, binary-analysis]
+
+# Plain git repo with 8 skills, no installer, no git tags.
+# Versioning locked to main branch; livecheck opted out (maintainer will tag when ready).
+source: { type: git, url: "https://github.com/P4nda0s/reverse-skills", ref: main }
+versioning: { strategy: semver, track: latest }
+
+# Tagless → no git tags to livecheck; pin main. Drift undetectable until maintainer adds tags.
+livecheck: { skip: true, skipReason: "repository has no git tags; versioned by main branch only" }
+
+namespace: { mode: as-is }
+
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      # 8 reverse-engineering skills, each self-contained with bundled binary (panda-dex-dumper)
+      - { kind: skill, from: "skills/*/SKILL.md", as: "skill:${name}" }
+  codex: *skills
+  gemini: *skills
+  cursor: *skills
+  opencode: *skills

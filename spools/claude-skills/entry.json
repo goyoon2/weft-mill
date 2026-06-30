@@ -1,0 +1,42 @@
+{
+  "id": "claude-skills",
+  "displayName": "Claude Skills",
+  "description": "66 specialized skills for full-stack developers: language/framework experts, infrastructure, DevOps, security, testing, ML + 9 project workflow commands",
+  "homepage": "https://github.com/Jeffallan/claude-skills",
+  "keywords": [
+    "claude-skill",
+    "fullstack",
+    "typescript",
+    "python",
+    "go",
+    "rust",
+    "frameworks",
+    "devops",
+    "security"
+  ],
+  "latest": "0.4.15",
+  "clis": [
+    "claude-code"
+  ],
+  "versions": [
+    {
+      "version": "0.4.15",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/claude-skills/0.4.15/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:9131c2e456a66ccd71cbbc2218e5465bc956c752a1adc4e5037c8390f117851b",
+          "spoolJsonSha": "sha256:55c69300d88dee2ff14b84249aa353c8f953b3f21000f023ce59820fad89c8cf"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/claude-skills/0.4.15/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:ba6faf233ce0ff16d3b3e772427c5d00c43260497c4373d2d825b37dc470b22a",
+          "spoolJsonSha": "sha256:ab979d85abcd3804ab83fb486cc79ea9e56449c72b8c65d096d818575736fca1"
+        }
+      ]
+    }
+  ]
+}

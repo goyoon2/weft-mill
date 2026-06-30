@@ -82,5 +82,95 @@
     "stars": 64570,
     "reason": "Rebranded/superseded \u2014 this repo is ARCHIVED and its npm package `get-shit-done-cc` is DEPRECATED (\"no longer supported\"). The project was renamed to open-gsd/gsd-core (npm `@opengsd/gsd-core`), which is ALREADY in the catalog as `gsd-core`. Onboarding get-shit-done would duplicate gsd-core with a dead upstream. Do not re-recon.",
     "date": "2026-06-29"
+  },
+  {
+    "repo": "JuliusBrussee/caveman",
+    "stars": 78089,
+    "reason": "Archetype C \u2014 plugin-host-native with SessionStart hooks using ${CLAUDE_PLUGIN_ROOT} env var. Multi-CLI support requires host-side activation weft cannot reproduce.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "thedotmack/claude-mem",
+    "stars": 85125,
+    "reason": "Archetype C \u2014 daemon worker service with persistent context compression. Worker lifecycle and runtime bootstrap not modelable by weft.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "stars": 37190,
+    "reason": "Archetype C \u2014 config-clobbering installer that merges into ~/.claude/CLAUDE.md and rewrites settings.json. Violates weft's additive-only constraint.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "stars": 42042,
+    "reason": "Parameterized npm installer with user-directed filtering (--category, --tags, --risk). Install-time customization not capturable as static weft build.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "VoltAgent/awesome-agent-skills",
+    "stars": 50776,
+    "reason": "Awesome-list reference with links to external skills repositories. No distributable artifacts, only curation/navigation.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "ChromeDevTools/chrome-devtools-mcp",
+    "stars": 44742,
+    "reason": "Archetype C \u2014 plugin-host-native MCP server with host-side registration. Weft has no slot to model MCP server registration.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "jarrodwatts/claude-hud",
+    "stars": 25953,
+    "reason": "Archetype C \u2014 Node.js plugin requiring per-install path resolution into settings.json statusLine entry. Weft has no statusLine slot.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "mastra-ai/mastra",
+    "stars": 25603,
+    "reason": "TypeScript framework/SDK for building AI applications. Not a harness distribution; designed for developing agents, not distributing them.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "phuryn/pm-skills",
+    "stars": 21794,
+    "reason": "Archetype C \u2014 9 independent plugin manifests in marketplace.json, each with per-plugin scope. Requires multi-pattern support weft lacks.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "vercel-labs/skills",
+    "stars": 24395,
+    "reason": "CLI package manager for discovering and installing skills. Not itself a harness repository; analogous to npm, not a package.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "oraios/serena",
+    "stars": 25923,
+    "reason": "Python MCP server (PyPI distributed). Different distribution channel than weft; designed for independent MCP client configuration.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "SawyerHood/dev-browser",
+    "stars": 6346,
+    "reason": "npm package with postinstall downloading per-OS Rust binary. Not reproducible via captured (OS-specific) or declarative (binary omitted).",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "alirezarezvani/claude-skills",
+    "stars": 19435,
+    "reason": "Multi-platform awesome-list with per-platform scripts and pre-converted artifacts (.codex/, .claude/, .gemini/). Not single source; endpoint distribution.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "daymade/claude-code-skills",
+    "stars": 1231,
+    "reason": "Archetype C \u2014 plugin-host-native with per-skill marketplace versioning and metadata. Declarative map would be degraded subset.",
+    "date": "2026-06-30"
+  },
+  {
+    "repo": "DrCatHicks/learning-opportunities",
+    "stars": 2222,
+    "reason": "Archetype C \u2014 3 plugins including auto-nudge hook using ${CLAUDE_PLUGIN_ROOT} env var. Hook not reproducible; all-or-nothing violation.",
+    "date": "2026-06-30"
   }
 ]

@@ -1,0 +1,68 @@
+# weft pattern: claude-skills
+# Archetype B — plain git skills repo, declarative distribution
+# https://github.com/Jeffallan/claude-skills
+#
+# The repo ships 66 SKILL.md files across 12 language/framework categories
+# plus 9 workflow commands (common-ground, intake, project) in COMMAND.md format.
+# Versioned by semantic git tags (v0.0.1 → v0.4.15+). Distributed via the
+# Claude Code plugin marketplace (plugin.json + marketplace.json), but contains
+# no installer—just plain markdown skills and commands that every CLI reads
+# from their native `skills/` and `commands/` directories.
+#
+# Per-CLI faithfulness: the repo declares distribution *only* through Claude Code's
+# plugin marketplace (not explicitly via other CLIs' native paths), so we onboard
+# Claude Code only. Codex/gemini/cursor/opencode could consume the markdown plainly,
+# but the repo's README, tagging, and marketplace focus are Claude-centric. Scope:
+# claude-code global only (user's `.claude/skills/` dir placement).
+#
+# Hard rule compliance ([[weft-no-degraded-onboarding]]):
+# The plugin's defining behavior is distribution through plugin.json — which weft
+# reproduces by placing the plain skill/command markdown files into the user's
+# skills/ and commands/ dirs, exactly as a `/plugin install` would. The
+# `plugin.json` file itself (metadata, version, keywords) is not reproduced
+# (weft has no "plugin metadata" slot), but it's manifest/discovery only — the
+# *functional* install (landing the skills and commands) is complete. This is
+# faithful, not degraded.
+
+schema: 1
+id: claude-skills
+displayName: Claude Skills
+description: "66 specialized skills for full-stack developers: language/framework experts, infrastructure, DevOps, security, testing, ML + 9 project workflow commands"
+homepage: https://github.com/Jeffallan/claude-skills
+keywords: [claude-skill, fullstack, typescript, python, go, rust, frameworks, devops, security]
+
+source:
+  type: git
+  url: https://github.com/Jeffallan/claude-skills
+
+versioning:
+  strategy: semver
+  track: latest
+
+# Derived livecheck: git-tags strategy (repo has consistent v* tags).
+# No override needed.
+
+namespace:
+  mode: as-is  # Skills are bare names; install-time collision namespacing handles it.
+
+targets:
+  claude-code: &skills
+    strategy: declarative
+    map:
+      # 66 SKILL.md files, each bundling its skill dir (references/, scripts/, etc.)
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+
+      # 9 project workflow commands (common-ground, intake, project categories)
+      - kind: command
+        from: "commands/*/COMMAND.md"
+        as: "command:${name}"
+
+  # Note on other CLIs:
+  # The repo's distribution is Claude Code–centric (plugin marketplace, /plugin install flow).
+  # Codex, gemini, cursor, and opencode could theoretically read the plain markdown, but
+  # (a) the repo declares no native distribution to their marketplaces, and (b) onboarding
+  # them would require verifying the skills work identically across all CLIs — a per-CLI
+  # faithfulness check the repo doesn't advertise. Per Archetype F's per-CLI faithfulness
+  # rule, we onboard only the CLI weft fully reproduces: claude-code.
