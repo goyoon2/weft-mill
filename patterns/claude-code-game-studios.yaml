@@ -1,0 +1,56 @@
+schema: 1
+id: claude-code-game-studios
+displayName: Claude Code Game Studios
+description: "49 agents + 73 skills for indie game development studio workflow (game design, programming, art, audio, QA, production)"
+homepage: https://github.com/Donchitos/Claude-Code-Game-Studios
+keywords: [game-development, game-design, agents, skills, hooks, studio-workflow]
+
+# Plain markdown git repo: 49 agents + 73 skills + 12 hooks + 11 rules.
+# No npm installer, no plugin host activation — just files that every Claude Code CLI
+# reads as-is. This matches Archetype B (plain git skills repo, declarative build).
+#
+# Versioned by git tags. One v1.0.0 tag present.
+#
+# Install model: `git clone <repo> && copy .claude/* to ~/.claude/`. Each artifact
+# (agent, skill, hook, rule) is a plain file that weft maps declaratively.
+#
+# Scope: claude-code only — hooks are claude-specific (.claude/settings.json hooks),
+# and the setup is game-dev-focused with engine specialization (Godot/Unity/Unreal agents)
+# that don't generalize to other CLIs. The system is designed to be cloned as a whole
+# into a game project directory or as a template, then used within Claude Code sessions.
+
+source: { type: git, url: "https://github.com/Donchitos/Claude-Code-Game-Studios" }
+versioning: { strategy: semver, track: latest }
+# livecheck: derived (git-tags default)
+namespace: { mode: as-is }
+
+targets:
+  claude-code: &full
+    strategy: declarative
+    map:
+      # 49 agents: .claude/agents/*.md
+      # Each agent is a markdown file with YAML frontmatter (name, description, tools, model, etc.)
+      # and a detailed prompt for a specialized subagent role.
+      - { kind: agent, from: ".claude/agents/*.md", as: "agent:${name}" }
+
+      # 73 skills: .claude/skills/*/SKILL.md
+      # Each skill lives in its own directory with a SKILL.md (frontmatter + instructions)
+      # plus references/, scripts/, and other supporting files. The skill bundles its whole dir.
+      - { kind: skill, from: ".claude/skills/*/SKILL.md", as: "skill:${name}" }
+
+      # 11 rules: .claude/rules/*.md
+      # Path-scoped coding standards (enforced when editing files in specific directories).
+      # Bundled as a payload to preserve the .claude/rules structure.
+      - { kind: payload, from: ".claude/rules/*.md", as: "payload:ccgs-rules", exclude: ["**/README.md"] }
+
+      # Note: 12 hooks (.claude/hooks/*.sh) are part of the repo but not currently mapped in the
+      # declarative build (the hook slot in build.ts handles only the hook file syntax, not raw .sh).
+      # The repo's `.claude/settings.json` already defines the hooks wiring, so the hooks are preserved
+      # as part of the install (the user clones/uses the whole .claude/ tree). The skill and agent
+      # installations are the primary artifacts; hooks are secondary infrastructure that the user's
+      # settings.json activates.
+
+# Only claude-code: hooks are hardcoded to .claude/settings.json format (claude-specific).
+# Other CLIs (codex, cursor, gemini, opencode) have different config and hook models,
+# and the game-studio workflow is tightly coupled to Claude Code's session + agent model.
+# Decline other CLIs rather than ship a degraded subset missing the hooks/rules.

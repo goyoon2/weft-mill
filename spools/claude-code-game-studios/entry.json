@@ -1,0 +1,39 @@
+{
+  "id": "claude-code-game-studios",
+  "displayName": "Claude Code Game Studios",
+  "description": "49 agents + 73 skills for indie game development studio workflow (game design, programming, art, audio, QA, production)",
+  "homepage": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+  "keywords": [
+    "game-development",
+    "game-design",
+    "agents",
+    "skills",
+    "hooks",
+    "studio-workflow"
+  ],
+  "latest": "1.0.0",
+  "clis": [
+    "claude-code"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/claude-code-game-studios/1.0.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:5d7d49f1ee10b76f49b0fd6c24edbcff4f133321a8b683b287ac0d644a6e3ade",
+          "spoolJsonSha": "sha256:83f07113deeae4e34eb8da97bf4c63bebc041b55a419ce61b4717840f87d61ce"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/claude-code-game-studios/1.0.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:b213a49114b28c9c22ec2c6bad035eba3207b8b9281a3e4f0613402b856a63e8",
+          "spoolJsonSha": "sha256:ba2bcc1dcf474b05893a6165849acb4b869fe52d31d423d212bed6b7bfd185aa"
+        }
+      ]
+    }
+  ]
+}
