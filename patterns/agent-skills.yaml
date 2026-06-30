@@ -1,0 +1,93 @@
+schema: 1
+id: agent-skills
+displayName: Agent Skills (Addy Osmani)
+description: "Production-grade engineering skills covering the full SDLC (spec, plan, build, verify, review, ship) — 24 skills + 4 review agents + slash commands, auto-discovered every session via a SessionStart hook that injects the skill-discovery meta-skill."
+homepage: https://github.com/addyosmani/agent-skills
+keywords:
+  - skills
+  - agents
+  - engineering
+  - tdd
+  - code-review
+  - sdlc
+  - hooks
+
+# Archetype F — DECLARATIVE PLUGIN WITH HOOKS (claude-code only). VERIFIED BY REAL CLONE (not guessed):
+# agent-skills' defining behavior is a SessionStart hook that injects the `using-agent-skills`
+# discovery flowchart every session. It is reproducible WITHOUT a plugin host because — exactly like
+# ponytail — its hook SCRIPT resolves siblings via `$0`/dirname, NOT `process.env.CLAUDE_PLUGIN_ROOT`:
+#
+#   hooks/hooks.json command:  SCRIPT="${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh"; [ -f "$SCRIPT" ] \
+#                              || SCRIPT="${CLAUDE_PROJECT_DIR}/.claude/hooks/session-start.sh"; \
+#                              [ -f "$SCRIPT" ] && bash "$SCRIPT" || true
+#   hooks/session-start.sh:    SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"        # ← self-locate via $0
+#                              SKILLS_DIR="$(dirname "$SCRIPT_DIR")/skills"       # ← payload/skills
+#                              META_SKILL="$SKILLS_DIR/using-agent-skills/SKILL.md"
+#
+# So `${CLAUDE_PLUGIN_ROOT}` appears ONLY in the COMMAND (to locate the script) — the transform below
+# rewrites it to the resolved payload dir, and the script then finds everything by `$0`. No runtime
+# plugin-env var is read (grep confirms: `CLAUDE_PLUGIN_ROOT` appears in NO .sh/.js, only in
+# hooks.json). This corrects an earlier misdiagnosis that it "activates via ${CLAUDE_PLUGIN_ROOT} shell
+# scripts (not __dirname)" — it is `$0`-based, i.e. the SAME reproducible shape as ponytail.
+#
+# The `${CLAUDE_PROJECT_DIR}` fallback is deliberately LEFT as a literal: it is a runtime var Claude
+# sets, used only when the primary (payload) script is absent — which it never is here.
+#
+# CLAUDE-ONLY on purpose (per-CLI faithfulness): the SessionStart meta-skill injection + its JSON
+# `{priority,message}` output are Claude's hook contract. The repo's other-CLI surfaces (`commands/
+# *.toml` for codex, `.gemini/commands`, `.opencode/skills`) carry NO equivalent always-on activation
+# weft reproduces, so shipping there would be a skills-only degraded subset. We onboard the one CLI
+# whose full activation (skills + agents + commands + the hook) we reproduce.
+
+source:
+  type: git
+  url: https://github.com/addyosmani/agent-skills
+  # `MAJOR.MINOR.PATCH` git tags (latest 0.6.2) → derived `git-tags` livecheck.
+
+versioning:
+  strategy: semver
+  track: latest
+
+# Skill/agent/command names are bare (not self-prefixed) — install-time collision namespacing handles it.
+namespace:
+  mode: as-is
+
+targets:
+  claude-code:
+    strategy: declarative
+    map:
+      # User-facing skills (24): discoverable in ~/.claude/skills. Includes `using-agent-skills`, the
+      # meta-skill the hook injects (it also rides in the payload below, for the hook's own read).
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+      # The 4 review agents. `agents/README.md` is an index file (not an agent) sitting among them —
+      # exclude it so it isn't mapped as a junk agent (verified present at 0.6.2).
+      - kind: agent
+        from: "agents/*.md"
+        as: "agent:${name}"
+        exclude: ["agents/README.md"]
+      # Claude slash commands (the `.claude/commands/*.md` set; the root `commands/*.toml` are codex
+      # prompts, not claude's).
+      - kind: command
+        from: ".claude/commands/*.md"
+        as: "command:${name}"
+      # ONE payload at .claude/agent-skills/ carrying the hook's runtime: the hooks/ dir (so
+      # session-start.sh is on disk) AND skills/using-agent-skills/ (the meta-skill it reads via
+      # `$0`/dirname → payload/skills/using-agent-skills/SKILL.md). {{WEFT_PAYLOAD_DIR}} resolves here.
+      - kind: payload
+        from: "hooks/**"
+        as: "payload:agent-skills"
+      - kind: payload
+        from: "skills/using-agent-skills/**"
+        as: "payload:agent-skills"
+      # Register the SessionStart hook into settings.json (one merge fragment, folded into the user's
+      # settings.json without overwriting it).
+      - kind: hook
+        from: "hooks/hooks.json"
+        as: "hook"
+    transforms:
+      # Rewrite the plugin-host var `${CLAUDE_PLUGIN_ROOT}` (which weft never sets) to the resolved
+      # payload dir, BEFORE the hooks.json is exploded into fragments. `${CLAUDE_PROJECT_DIR}` is left
+      # alone (a runtime var; fallback only).
+      - { type: substitute-var, appliesTo: "hooks/hooks.json", from: "${CLAUDE_PLUGIN_ROOT}", to: "{{WEFT_PAYLOAD_DIR}}" }

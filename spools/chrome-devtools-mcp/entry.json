@@ -1,0 +1,100 @@
+{
+  "id": "chrome-devtools-mcp",
+  "displayName": "Chrome DevTools MCP",
+  "description": "Official Chrome DevTools MCP server — gives the agent a live browser it can drive and inspect (navigate, click, fill, read the DOM/console/network, run performance traces) via the Chrome DevTools Protocol.",
+  "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "keywords": [
+    "mcp",
+    "chrome",
+    "devtools",
+    "browser",
+    "automation",
+    "debugging",
+    "performance"
+  ],
+  "latest": "1.4.0",
+  "clis": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "opencode"
+  ],
+  "versions": [
+    {
+      "version": "1.4.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/chrome-devtools-mcp/1.4.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:a679820bda5d99a75e57ed637c565329ef5f0e9dbf573c52df3e4f7899b16480",
+          "spoolJsonSha": "sha256:f67c7eb39c74d879e73f6b509a27305c068f26158d3a499a1c17cfb2b431c096"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/chrome-devtools-mcp/1.4.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:597e770d86f20e9a4835170516054cb32aeaa71fef7115bab8473cf78e44b3ed",
+          "spoolJsonSha": "sha256:cd9c4d96df4f3c3afaf2cfcaae991299442055b5db68878adf68ea34bed335e5"
+        },
+        {
+          "cli": "codex",
+          "scope": "global",
+          "url": "spools/chrome-devtools-mcp/1.4.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:8bc15599655fcdb4a0065390f221ceb5f0a8d6450687600324fb112374fa970b",
+          "spoolJsonSha": "sha256:a035e079025a2b712c96945cb78c2d767664fb67b550bce1fcd72e2620d150b8"
+        },
+        {
+          "cli": "codex",
+          "scope": "local",
+          "url": "spools/chrome-devtools-mcp/1.4.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:1adec183d6008d2ffa384f662551e0ae23be6fe575a5585db198c28f958a9b12",
+          "spoolJsonSha": "sha256:aabfc549bc9f820266b281cee9cfed1a4aaae9494925d25bb573c1b84d1a3f33"
+        },
+        {
+          "cli": "gemini",
+          "scope": "global",
+          "url": "spools/chrome-devtools-mcp/1.4.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:31c9f778f124a0d963c3f8c253247fef925064e6441b382a244886109167dba2",
+          "spoolJsonSha": "sha256:7813641f32013b3603c07fa8af5160a47c6904eaafb5537c0ecd17b6bda05222"
+        },
+        {
+          "cli": "gemini",
+          "scope": "local",
+          "url": "spools/chrome-devtools-mcp/1.4.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:1751efe0d5b0d019356a9546dcdd52b2e977ca951cad6d1a1a2d4a06a24d6953",
+          "spoolJsonSha": "sha256:300c0dfe579d01b42f0ea3958a5aec16aac11a5010ba594fbeee76d1f9c92bb0"
+        },
+        {
+          "cli": "cursor",
+          "scope": "global",
+          "url": "spools/chrome-devtools-mcp/1.4.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:32fb703496aece69b4fbeab9c9efcc36109539b1260952331d06a3c6eac2df76",
+          "spoolJsonSha": "sha256:25a8166c6eaeca89134c63662b5b2cd793dde25502f8fc4436eb1233e1373dde"
+        },
+        {
+          "cli": "cursor",
+          "scope": "local",
+          "url": "spools/chrome-devtools-mcp/1.4.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:835e79e3ea8f437777573ed65dade7b2b18170464d1a016914deabcca54b111a",
+          "spoolJsonSha": "sha256:421131a1608a4bf9c7cf5baf6c85f58f8fb762841922772c2d395c57d886eaa5"
+        },
+        {
+          "cli": "opencode",
+          "scope": "global",
+          "url": "spools/chrome-devtools-mcp/1.4.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:0f1a7e4235c8e3bb3d5f6a21a0f08cffbd9263812da0b6d25c1416eaa86163db",
+          "spoolJsonSha": "sha256:f2ad9a403ccb73e259eb27d33a9f5ad0f30a84460307db4bdf3da0022d293c8a"
+        },
+        {
+          "cli": "opencode",
+          "scope": "local",
+          "url": "spools/chrome-devtools-mcp/1.4.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:d0a69ad79645cb4cca713ba0cbcba9c4927fb78ca6fc491b8a85e928da34775b",
+          "spoolJsonSha": "sha256:e5f9f304a55ad1d571eb2d8eddadec1146957c3674980533195159c4c853cf92"
+        }
+      ]
+    }
+  ]
+}
