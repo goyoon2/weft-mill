@@ -1,0 +1,38 @@
+{
+  "id": "caveman",
+  "displayName": "Caveman",
+  "description": "Ultra-compressed communication mode — cuts ~75% of output tokens while keeping technical accuracy by making the agent talk like a smart caveman. Auto-activates every session via a SessionStart hook, tracks mode per prompt, and shows a status-line badge; plus the cavecrew agents and caveman skills.",
+  "homepage": "https://github.com/JuliusBrussee/caveman",
+  "keywords": [
+    "hooks",
+    "status-line",
+    "token-compression",
+    "caveman",
+    "productivity"
+  ],
+  "latest": "1.9.0",
+  "clis": [
+    "claude-code"
+  ],
+  "versions": [
+    {
+      "version": "1.9.0",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/caveman/1.9.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:cc2e9c2c56cc791d2cc8b8f6fe738088486090acfd74db2e0f58ca40d17f4abb",
+          "spoolJsonSha": "sha256:47f75250171096c2f0191f204398df2474ca9af36b6bf079ca334c27c519bba3"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/caveman/1.9.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:3014bb84f26366fda9550f3f1eaa9a72d216355f1df324012fce0d485f4e477e",
+          "spoolJsonSha": "sha256:55e55b47d67eb031fd20c69f1ede9d59e035cc8651ea7726c5dee68bf8d395f7"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "agent-skills",
+  "displayName": "Agent Skills (Addy Osmani)",
+  "description": "Production-grade engineering skills covering the full SDLC (spec, plan, build, verify, review, ship) — 24 skills + 4 review agents + slash commands, auto-discovered every session via a SessionStart hook that injects the skill-discovery meta-skill.",
+  "homepage": "https://github.com/addyosmani/agent-skills",
+  "keywords": [
+    "skills",
+    "agents",
+    "engineering",
+    "tdd",
+    "code-review",
+    "sdlc",
+    "hooks"
+  ],
+  "latest": "0.6.2",
+  "clis": [
+    "claude-code"
+  ],
+  "versions": [
+    {
+      "version": "0.6.2",
+      "spools": [
+        {
+          "cli": "claude-code",
+          "scope": "global",
+          "url": "spools/agent-skills/0.6.2/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:073e8eff7fe0254d2ea18fe1433c0c2826a7fe89b45e953ac7b80a7566decf60",
+          "spoolJsonSha": "sha256:bad22a55b82ba7065ff792b318b2500ec9f682a95945098e5613b8caa446904a"
+        },
+        {
+          "cli": "claude-code",
+          "scope": "local",
+          "url": "spools/agent-skills/0.6.2/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:63085aabccc6bd69ecd97b4c89dfdc50e36e337b579393dc9e6d28d4d2569d0a",
+          "spoolJsonSha": "sha256:0e9251b3a2d4cfacdda3cbc76683a73cc08f70b68193c3409f6b57969102e088"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+schema: 1
+id: caveman
+displayName: Caveman
+description: "Ultra-compressed communication mode — cuts ~75% of output tokens while keeping technical accuracy by making the agent talk like a smart caveman. Auto-activates every session via a SessionStart hook, tracks mode per prompt, and shows a status-line badge; plus the cavecrew agents and caveman skills."
+homepage: https://github.com/JuliusBrussee/caveman
+keywords:
+  - hooks
+  - status-line
+  - token-compression
+  - caveman
+  - productivity
+
+# Archetype F + status-line (claude-code only). VERIFIED BY REAL CLONE + sandbox dry-run install:
+# caveman's DEFAULT claude install is the plugin host (`claude plugin install caveman@caveman`), but
+# its officially-supported `--with-hooks` path wires the SAME behavior into settings.json directly:
+# it places the hook runtime under ~/.claude/hooks and merges SessionStart + UserPromptSubmit + a
+# statusLine into ~/.claude/settings.json. That standalone path is exactly what weft reproduces — the
+# same precedent as ponytail (reproduce the plugin's hook behavior without the plugin host). The two
+# JS hooks resolve siblings via Node `__dirname` (verified: `CLAUDE_PLUGIN_ROOT` appears only in the
+# plugin.json COMMANDS, never read inside the .js), so baking the payload path is faithful.
+#
+# THE LAYOUT (why `rebase`): caveman-activate.js reads its ruleset from
+# `path.join(__dirname, '..', 'skills', 'caveman', 'SKILL.md')` — "the single source of truth" (its
+# fallback is an explicitly "minimum viable" degraded ruleset). The scripts live at `src/hooks/` and
+# the skill at `skills/caveman/`, so the runtime expects `<root>/hooks/*.js` next to
+# `<root>/skills/caveman/SKILL.md`. weft payloads preserve source paths, which would give
+# `<root>/src/hooks/*` and break the `__dirname/../skills` resolution → the degraded fallback. The
+# `rebase: "src"` on the hooks payload strips the `src/` prefix so the runtime lands at
+# `<payload>/hooks/*` adjacent to `<payload>/skills/caveman/SKILL.md` → the FULL ruleset loads.
+#
+# CLAUDE-ONLY (per-CLI faithfulness): caveman's other CLIs activate host-side and weft can't reproduce
+# them — gemini via `gemini extensions install`, opencode via a native JS runtime plugin, codex via
+# the external `skills` tool. Its `commands/*.toml` are codex prompts (not claude `.md`), and plugin.json
+# declares NO claude commands, so there are no claude slash commands to carry. We onboard the one CLI
+# whose full activation (the 2 hooks + statusLine + the skills/agents + the caveman ruleset) we reproduce.
+#
+# NOTE (runtime state, not a reversal leak): at runtime caveman writes a `~/.claude/.caveman-active`
+# flag (read by the statusline). That is the tool's own runtime state, created when the hook RUNS, not
+# placed by weft install — weft cleanly reverses everything it placed (payload + the 2 hook fragments
+# + the statusLine); the flag is caveman's to manage, like any tool's cache.
+
+source:
+  type: git
+  url: https://github.com/JuliusBrussee/caveman
+  # `vMAJOR.MINOR.PATCH` git tags (latest v1.9.0) → derived `git-tags` livecheck.
+
+versioning:
+  strategy: semver
+  track: latest
+
+namespace:
+  mode: as-is
+
+targets:
+  claude-code:
+    strategy: declarative
+    map:
+      # 7 discoverable skills (incl. `caveman`, which also rides in the payload for the hook's read).
+      - kind: skill
+        from: "skills/*/SKILL.md"
+        as: "skill:${name}"
+      # 3 cavecrew agents.
+      - kind: agent
+        from: "agents/*.md"
+        as: "agent:${name}"
+      # Payload 1: the hook runtime. `rebase: "src"` roots it at <payload>/hooks/ so caveman-activate.js's
+      # `__dirname/../skills/caveman/SKILL.md` resolves to payload 2 below. Drop the standalone installer's
+      # own scripts + integrity manifest (not part of the runtime).
+      - kind: payload
+        from: "src/hooks/**"
+        as: "payload:caveman"
+        rebase: "src"
+        exclude:
+          - "src/hooks/install.sh"
+          - "src/hooks/uninstall.sh"
+          - "src/hooks/README.md"
+          - "src/hooks/checksums.sha256"
+      # Payload 2: the caveman skill the SessionStart hook reads (its "single source of truth" ruleset),
+      # placed at <payload>/skills/caveman/ so `__dirname/../skills/caveman/SKILL.md` finds it.
+      - kind: payload
+        from: "skills/caveman/**"
+        as: "payload:caveman"
+      # SessionStart (caveman-activate.js) + UserPromptSubmit (caveman-mode-tracker.js), read from the
+      # plugin manifest's `hooks` key and folded into settings.json.
+      - kind: hook
+        from: ".claude-plugin/plugin.json"
+        as: "hook"
+      # The status-line badge showing the active caveman level.
+      - kind: status-line
+        as: "status-line"
+        statusLine:
+          type: command
+          command: "bash {{WEFT_PAYLOAD_DIR}}/hooks/caveman-statusline.sh"
+          padding: 0
+    transforms:
+      # The plugin.json hook commands say `${CLAUDE_PLUGIN_ROOT}/src/hooks/<x>.js`. The payload rebased
+      # `src/hooks` → `hooks`, so point the baked path at `{{WEFT_PAYLOAD_DIR}}/hooks/<x>.js` (more
+      # specific rule first), then map any bare `${CLAUDE_PLUGIN_ROOT}` to the payload dir.
+      - { type: substitute-var, appliesTo: ".claude-plugin/plugin.json", from: "${CLAUDE_PLUGIN_ROOT}/src/hooks", to: "{{WEFT_PAYLOAD_DIR}}/hooks" }
+      - { type: substitute-var, appliesTo: ".claude-plugin/plugin.json", from: "${CLAUDE_PLUGIN_ROOT}", to: "{{WEFT_PAYLOAD_DIR}}" }

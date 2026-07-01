@@ -1,0 +1,99 @@
+schema: 1
+id: chrome-devtools-mcp
+displayName: Chrome DevTools MCP
+description: Official Chrome DevTools MCP server — gives the agent a live browser it can drive and inspect (navigate, click, fill, read the DOM/console/network, run performance traces) via the Chrome DevTools Protocol.
+homepage: https://github.com/ChromeDevTools/chrome-devtools-mcp
+keywords:
+  - mcp
+  - chrome
+  - devtools
+  - browser
+  - automation
+  - debugging
+  - performance
+
+# ── Archetype G — MCP server registration (inline launch command) ───────────────────────────────
+# chrome-devtools-mcp is not a skill/agent/command bundle: it is a STDIO MCP server that the host CLI
+# spawns on demand. Onboarding it means registering ONE `mcpServers` entry per CLI that points at the
+# server's published launch command — `npx -y chrome-devtools-mcp@latest` — exactly what the upstream
+# README instructs users to copy into each client's config. The host then starts the process itself
+# the first time a `chrome-devtools` tool is called; weft places no runtime and supervises nothing, so
+# this stays inside weft's additive-static model. Uninstall removes only weft's own `mcpServers` entry
+# (value-hash matched) and restores the user's MCP config byte-for-byte.
+#
+# INLINE, not file-based: the repo ships NO ready `.mcp.json` (verified against the README — users copy
+# the JSON snippet by hand), so the registration is declared inline in this pattern via the
+# `mcp-server` rule's `server:` field rather than read from a source file. `as: "mcpServer:<name>"`
+# supplies the registered name.
+#
+# The launch command is identical across CLIs; only the surrounding VALUE SHAPE differs, so each target
+# carries the value in that CLI's own schema:
+#   • claude-code / gemini / cursor → mcpServers: { command, args }              (JSON, stdio inferred)
+#   • codex                         → [mcp_servers.<name>] command/args          (TOML, same fields)
+#   • opencode                      → mcp: { type:"local", command:[...] }       (launch ARRAY + type)
+# The adapter writes JSON or TOML; weft folds the value verbatim, so per-CLI correctness lives here.
+#
+# Version tracks the npm package (`@latest` is what the README pins, so the launched server always
+# self-resolves to the newest publish); the catalog version is informational + drives livecheck.
+#
+# "Works" = after install the CLI lists a `chrome-devtools` server and its tools (navigate_page,
+# click, take_snapshot, list_console_messages, performance_start_trace, …) are callable; uninstall
+# removes the entry and leaves the user's MCP config exactly as it was.
+
+source:
+  type: npm
+  package: chrome-devtools-mcp
+
+versioning:
+  strategy: semver
+  track: latest
+
+# Derived livecheck (npm → latest dist-tag) is correct here; no override needed.
+
+targets:
+  claude-code:
+    strategy: declarative
+    map:
+      - kind: mcp-server
+        as: "mcpServer:chrome-devtools"
+        server:
+          command: npx
+          args: ["-y", "chrome-devtools-mcp@latest"]
+
+  codex:
+    strategy: declarative
+    map:
+      - kind: mcp-server
+        as: "mcpServer:chrome-devtools"
+        server:
+          command: npx
+          args: ["-y", "chrome-devtools-mcp@latest"]
+
+  gemini:
+    strategy: declarative
+    map:
+      - kind: mcp-server
+        as: "mcpServer:chrome-devtools"
+        server:
+          command: npx
+          args: ["-y", "chrome-devtools-mcp@latest"]
+
+  cursor:
+    strategy: declarative
+    map:
+      - kind: mcp-server
+        as: "mcpServer:chrome-devtools"
+        server:
+          command: npx
+          args: ["-y", "chrome-devtools-mcp@latest"]
+
+  opencode:
+    strategy: declarative
+    map:
+      - kind: mcp-server
+        as: "mcpServer:chrome-devtools"
+        # OpenCode's own shape: `type` + a single `command` launch ARRAY (not command/args), `enabled`.
+        server:
+          type: local
+          command: ["npx", "-y", "chrome-devtools-mcp@latest"]
+          enabled: true
