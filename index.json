@@ -2622,7 +2622,7 @@
         "frontend",
         "design-system"
       ],
-      "latest": "2.9.0",
+      "latest": "2.10.0",
       "clis": [
         "claude-code",
         "codex",
@@ -2632,77 +2632,77 @@
       ],
       "versions": [
         {
-          "version": "2.9.0",
+          "version": "2.10.0",
           "spools": [
             {
               "cli": "claude-code",
               "scope": "global",
-              "url": "spools/ui-ux-pro-max/2.9.0/claude-code.global.spool.tgz",
-              "spoolSha": "sha256:2e7573d857f57aaba48ca9a8607f3cf3b9a9acffad72d1efdebe97ba69eccf98",
-              "spoolJsonSha": "sha256:b8ab8fd818412e09a034382005ebd50d934ed99b93fecde8e6378e42c96186d5"
+              "url": "spools/ui-ux-pro-max/2.10.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:8db882300538f95e7d5b4446726a68c679b83cd135cc7870bc605145a4b0f05e",
+              "spoolJsonSha": "sha256:2a01260a87e95cb10fe5f2e8e7f4f613134752a7d3c22387f1969bfe3be275d3"
             },
             {
               "cli": "claude-code",
               "scope": "local",
-              "url": "spools/ui-ux-pro-max/2.9.0/claude-code.local.spool.tgz",
-              "spoolSha": "sha256:88f259355d40b418c0c3859d8071a811899ca92712d9d7033ebbd30511bac304",
-              "spoolJsonSha": "sha256:c83de52d63a534f233431288a58b52a707b8f7eb9d394d5bf762722d0a1d80c1"
+              "url": "spools/ui-ux-pro-max/2.10.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:47cd627c719bd78d9b76acb16351b7a10b3e0ac6dbb89881e04e86457cc2032c",
+              "spoolJsonSha": "sha256:81e217dd4cbf0f4736c8bf93a729bfb82a15cf3e0dfdec343e272ab2e5b4b20f"
             },
             {
               "cli": "codex",
               "scope": "global",
-              "url": "spools/ui-ux-pro-max/2.9.0/codex.global.spool.tgz",
-              "spoolSha": "sha256:8096a00a939c139bc85d5bae0e062011b08c0d848c889949998720e470d01373",
-              "spoolJsonSha": "sha256:6c67fb4fba7e488db79eed8d1207b4f91e80f2ecd9bf1902de3e8d6945a1cdce"
+              "url": "spools/ui-ux-pro-max/2.10.0/codex.global.spool.tgz",
+              "spoolSha": "sha256:e04db918e483f5298bfffeecfed10d554f570f9ea37dec9ecb79c21fe3060f50",
+              "spoolJsonSha": "sha256:8ea8ef5e0ddb7135f9f9170f451e6ed455a51c00fcde1bda6cd18d0460ff32fa"
             },
             {
               "cli": "codex",
               "scope": "local",
-              "url": "spools/ui-ux-pro-max/2.9.0/codex.local.spool.tgz",
-              "spoolSha": "sha256:7cacb5123f0028e52a4ddadcd52b05f3b43b8dc8804b87ea786b5bf10fb95a72",
-              "spoolJsonSha": "sha256:81951f0e6d111d94d0335e480e8a086fdb9daf97b63f60cb6df59c68750fb193"
+              "url": "spools/ui-ux-pro-max/2.10.0/codex.local.spool.tgz",
+              "spoolSha": "sha256:b93444746b305298e2d4c58293cfe1931d18d5d8d73f24f546ddc6e9e0ba93b8",
+              "spoolJsonSha": "sha256:51864246fc962d3b16e2422347a36b8bd9e3760fab035924a5b67fd575fbce68"
             },
             {
               "cli": "gemini",
               "scope": "global",
-              "url": "spools/ui-ux-pro-max/2.9.0/gemini.global.spool.tgz",
-              "spoolSha": "sha256:caab605f6b5b8e5ea1afddb1294182f0a64de3bfab5dda6e074554fce8f3b710",
-              "spoolJsonSha": "sha256:2c3d5defa8c1117bf304d2e173a66561185addcd97023ecdbc129aa49dff5488"
+              "url": "spools/ui-ux-pro-max/2.10.0/gemini.global.spool.tgz",
+              "spoolSha": "sha256:cec147cf5661c693fc326da954bd61ac48abf6b133b25e106a6ff107891ffb2b",
+              "spoolJsonSha": "sha256:75426beecf85c00cba4c75fd0846448853db987e949057a8300c4ad0431eeb52"
             },
             {
               "cli": "gemini",
               "scope": "local",
-              "url": "spools/ui-ux-pro-max/2.9.0/gemini.local.spool.tgz",
-              "spoolSha": "sha256:049ebd9bc0ab34d222a4808c0a0a32e6142b2c0d29cd293baf5341d5414865ec",
-              "spoolJsonSha": "sha256:fe4e18220839f33212a4ccb59f71e37542a1a49fb6eaab5b4eafdee4b58eb60a"
+              "url": "spools/ui-ux-pro-max/2.10.0/gemini.local.spool.tgz",
+              "spoolSha": "sha256:931052b0ab7678fa85aba7476138303a43e6cb1ce3c043df4cc4c4a4b0d265c2",
+              "spoolJsonSha": "sha256:84c2e26195f9bde1a427de89c7cf3dd174b363226a8075eb2a99e86a8f3b64d8"
             },
             {
               "cli": "cursor",
               "scope": "global",
-              "url": "spools/ui-ux-pro-max/2.9.0/cursor.global.spool.tgz",
-              "spoolSha": "sha256:54533d6e36f3ef124943230853413b8f7f46c844d6287d1e61d2e3aa68842525",
-              "spoolJsonSha": "sha256:a8deb75f142b44e31b87beaf15ef83bf0cf022c026bd403f052e95fa6e445913"
+              "url": "spools/ui-ux-pro-max/2.10.0/cursor.global.spool.tgz",
+              "spoolSha": "sha256:b79e68be812c39413e686b3db781211cb55b567eb9c04563661bd145c2db9edc",
+              "spoolJsonSha": "sha256:dc4a4d0a7dce9e0be086a0233de311fc4c864e08d74de5957be1f8b547927dee"
             },
             {
               "cli": "cursor",
               "scope": "local",
-              "url": "spools/ui-ux-pro-max/2.9.0/cursor.local.spool.tgz",
-              "spoolSha": "sha256:7469cc479aa8ced5544bb57aa4cd7c1d0be4151586a1b0fbe8acace0c7d9d161",
-              "spoolJsonSha": "sha256:4351d998a0afaf9b3eb0005e0d0aa31286706e561753c3681d86d02f0401bde2"
+              "url": "spools/ui-ux-pro-max/2.10.0/cursor.local.spool.tgz",
+              "spoolSha": "sha256:982717b08a7873550e620df47464823b03765bf3fd532a853d3f23c262b6ab27",
+              "spoolJsonSha": "sha256:8971a49623e9410dafd3b2c198369f8fad711460940fb531a1c988369efad662"
             },
             {
               "cli": "opencode",
               "scope": "global",
-              "url": "spools/ui-ux-pro-max/2.9.0/opencode.global.spool.tgz",
-              "spoolSha": "sha256:1090442d209513766da40718b0e73f2d9cee5a4f7677bf5cd2b11a1b4da36685",
-              "spoolJsonSha": "sha256:dbfdfd77cd12c28621b36538e7bbe52e14026f2fe53fbf4367cca9aa2d28fa65"
+              "url": "spools/ui-ux-pro-max/2.10.0/opencode.global.spool.tgz",
+              "spoolSha": "sha256:4c69b0c5c9c49955d55871ece645c6e892378ece4586aca7ea6be0ac69eb79fc",
+              "spoolJsonSha": "sha256:ffdab645894159d0693f9856b0837c89f8f9412c27bd622652ed69b499aae63e"
             },
             {
               "cli": "opencode",
               "scope": "local",
-              "url": "spools/ui-ux-pro-max/2.9.0/opencode.local.spool.tgz",
-              "spoolSha": "sha256:9f4bedf404167413d1207c820443ab890fcf18116a911a56bd1cf6443ae5b0ea",
-              "spoolJsonSha": "sha256:aa24a7be2df3fcd817f8b03ec0ac43c083a2fc0bf2e06d61c64cfefbf6ebd39b"
+              "url": "spools/ui-ux-pro-max/2.10.0/opencode.local.spool.tgz",
+              "spoolSha": "sha256:520134b38b3d62dc036ad81e8e294d447fdccbac9d009546678544a935895e87",
+              "spoolJsonSha": "sha256:158655b35da9cf5d1931113b267e0d54aba863fb72b234bfc20035d728bba7b2"
             }
           ]
         }
