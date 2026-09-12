@@ -1896,7 +1896,7 @@
         "workflow",
         "context-engineering"
       ],
-      "latest": "3.1.3",
+      "latest": "3.17.2",
       "clis": [
         "claude-code",
         "codex",
@@ -1906,77 +1906,77 @@
       ],
       "versions": [
         {
-          "version": "3.1.3",
+          "version": "3.17.2",
           "spools": [
             {
               "cli": "claude-code",
               "scope": "global",
-              "url": "spools/planning-with-files/3.1.3/claude-code.global.spool.tgz",
-              "spoolSha": "sha256:a6167343be06fbe9807b2d54fec9c44f7b4107422fa47b0a81ed6018f4869be4",
-              "spoolJsonSha": "sha256:28f84f9317ab14988adda207f49e0f4b1c52904987fe6624bb3c0c83b11833f0"
+              "url": "spools/planning-with-files/3.17.2/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:ddd4d64077c6b69c1b17d24937651874e33969b03b10d938bb13fb44f27444b8",
+              "spoolJsonSha": "sha256:30adceef619d1043e280604ebade7b78f76da58e3865c37b11ac8cbad3356210"
             },
             {
               "cli": "claude-code",
               "scope": "local",
-              "url": "spools/planning-with-files/3.1.3/claude-code.local.spool.tgz",
-              "spoolSha": "sha256:4ee4cf5a774a463e12afb6416d764c6727789e7798af19288151049ca3b50291",
-              "spoolJsonSha": "sha256:46a8029416638256611f732ce954720aeb8a5a9d8097b3fdc17aae9953f7d409"
+              "url": "spools/planning-with-files/3.17.2/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:8dbd92b40eb611680ccf3b2e7c62c6ee1b366f96f41fb2fa3c161cdd7a6672cc",
+              "spoolJsonSha": "sha256:9604b92fbc22b073fa1316e9adc9da4c426788ac9c6f5d9bcb6ef1e63641069c"
             },
             {
               "cli": "codex",
               "scope": "global",
-              "url": "spools/planning-with-files/3.1.3/codex.global.spool.tgz",
-              "spoolSha": "sha256:52b26e8448ce8433f63a2ffb571206235272ac6f381452014d7d2236a09d1e08",
-              "spoolJsonSha": "sha256:3570af4836cda1044435b10f94c1be9f9d50e11e31679f6fff770e7d150bfc19"
+              "url": "spools/planning-with-files/3.17.2/codex.global.spool.tgz",
+              "spoolSha": "sha256:f139a4ae182731c0c66d736acbf6d25f6d054b779b98aea1bab2de97ee8aeb0e",
+              "spoolJsonSha": "sha256:9212479b55070d795edc5ab07b3f639e67123c1911d940bb73d26c9c66a82200"
             },
             {
               "cli": "codex",
               "scope": "local",
-              "url": "spools/planning-with-files/3.1.3/codex.local.spool.tgz",
-              "spoolSha": "sha256:21860b8b2145a9033a9facbde3dc791e022bc57841e7f56c243732d5d0b000f0",
-              "spoolJsonSha": "sha256:ac30738e0669147eac74eb453adee962df21de5672b16b40b05abdcb0b20c480"
+              "url": "spools/planning-with-files/3.17.2/codex.local.spool.tgz",
+              "spoolSha": "sha256:9f7fac84bdc08e848a6621563094ddb4b68d8b23a27c75e124a4c10d4c10908c",
+              "spoolJsonSha": "sha256:7905eea004bfab5b12d3b78fdc0cfa16d2fa6d08c84bcad795028b10e7863686"
             },
             {
               "cli": "gemini",
               "scope": "global",
-              "url": "spools/planning-with-files/3.1.3/gemini.global.spool.tgz",
-              "spoolSha": "sha256:9dee6aa7d8801cdc6cc95e0e68268bad9a3fecc09b8991867550b912afbf4037",
-              "spoolJsonSha": "sha256:bc817bb6d9afbd7c59df9abf12b53941f3f20a0bcb49f4ed5c55b401777a73b7"
+              "url": "spools/planning-with-files/3.17.2/gemini.global.spool.tgz",
+              "spoolSha": "sha256:54f943026adc1b3e074aaf3a66ee083761620e13d6dc80c471d742b3eae9a1f8",
+              "spoolJsonSha": "sha256:33de2ac0d2ff3e0ce23b79ac3d6ee7b92b665881c197b4f62693a1ebc89af306"
             },
             {
               "cli": "gemini",
               "scope": "local",
-              "url": "spools/planning-with-files/3.1.3/gemini.local.spool.tgz",
-              "spoolSha": "sha256:f8d5e235aecfba7b54b2358cb9389a2365ef5459f1de41b052f30473ef40ca45",
-              "spoolJsonSha": "sha256:e23f83228da74998ba1a99249f7f59cce0276b36104b1dc30f7eb8dc91138cb3"
+              "url": "spools/planning-with-files/3.17.2/gemini.local.spool.tgz",
+              "spoolSha": "sha256:e9ff5d17a84f062d9d05b59b449506ae8c22e47153647f216c484d79b0657d03",
+              "spoolJsonSha": "sha256:211d00bff47107ab15590096edc0d98cda2ec3e84d123064342e4edd3dc08fdd"
             },
             {
               "cli": "cursor",
               "scope": "global",
-              "url": "spools/planning-with-files/3.1.3/cursor.global.spool.tgz",
-              "spoolSha": "sha256:d054ffb617d87023a7973d0e4007c848bff9b19598b3a6d2a03fc0e60e98eda2",
-              "spoolJsonSha": "sha256:0302eea9d29360096bb03f7fc5acf4867ed33e5dad264537d223a2244857e1d5"
+              "url": "spools/planning-with-files/3.17.2/cursor.global.spool.tgz",
+              "spoolSha": "sha256:d4cdb741f6f4f18ac60cfaeb491a693feb6ed661c3c3bd345cfe8e2fafe4cd84",
+              "spoolJsonSha": "sha256:ae8605fede59dcc4eb601cd0fa0cd82f61a20d6c3b349781bfb9c59937bfe9b1"
             },
             {
               "cli": "cursor",
               "scope": "local",
-              "url": "spools/planning-with-files/3.1.3/cursor.local.spool.tgz",
-              "spoolSha": "sha256:dc544180e6db404407fde881e47ac241eefdd9f82547e2872e00acdaea51a715",
-              "spoolJsonSha": "sha256:7c88f9c1ab6568e8e499682f44779dd76b2c469fda8c7301bb794508bed0d30a"
+              "url": "spools/planning-with-files/3.17.2/cursor.local.spool.tgz",
+              "spoolSha": "sha256:55aa08ecff8b1be26cf633fa8b2982684f3b348290092b33bc3ba85cf908a605",
+              "spoolJsonSha": "sha256:4b2dc6cba65d56a0d373c167bbe9b11045a1ebf439f765eca13190b80cdbc910"
             },
             {
               "cli": "opencode",
               "scope": "global",
-              "url": "spools/planning-with-files/3.1.3/opencode.global.spool.tgz",
-              "spoolSha": "sha256:5572ad4426fd7daa2c324d9478c75857a0f2e2d54f6393e9f2f87c0d4bb110b3",
-              "spoolJsonSha": "sha256:0b428f29ce52dee27eef08b7f9e0aaf456abb8b326136ba8bf55b284f11967b0"
+              "url": "spools/planning-with-files/3.17.2/opencode.global.spool.tgz",
+              "spoolSha": "sha256:937eac5620214c0de5640280eb0ed0bc81d4242e8eefd19c1cb2a462d7631ed5",
+              "spoolJsonSha": "sha256:0d6ea427b631045bce9a76c7814a1079c3f76e98e6294f8a9605bcb3310e43c9"
             },
             {
               "cli": "opencode",
               "scope": "local",
-              "url": "spools/planning-with-files/3.1.3/opencode.local.spool.tgz",
-              "spoolSha": "sha256:f1040dedd83048cb9a8cc60ccd8044faa048b3e622b3a3e06aa4e9c55417c6e0",
-              "spoolJsonSha": "sha256:3d393824f61137e6ffb0f57ed407750f78a2b61655313c6297e57694aa28ec33"
+              "url": "spools/planning-with-files/3.17.2/opencode.local.spool.tgz",
+              "spoolSha": "sha256:09f1097269062143d8fd54cf51a79e877700709cf79de0aefdaea106e1ab0bf0",
+              "spoolJsonSha": "sha256:7ff33f1af09c5ce9b00da99b0a9798a30b1327ad81853b7add55d00754846074"
             }
           ]
         }
