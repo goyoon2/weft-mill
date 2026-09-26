@@ -11,7 +11,7 @@
     "data-analysis",
     "machine-learning"
   ],
-  "latest": "2.53.0",
+  "latest": "2.69.0",
   "clis": [
     "claude-code",
     "codex",
@@ -21,77 +21,77 @@
   ],
   "versions": [
     {
-      "version": "2.53.0",
+      "version": "2.69.0",
       "spools": [
         {
           "cli": "claude-code",
           "scope": "global",
-          "url": "spools/scientific-agent-skills/2.53.0/claude-code.global.spool.tgz",
-          "spoolSha": "sha256:e2a76ca0f62c56ba5efed21986bce651d73ea64a09572d4d28befabb2b95d90a",
-          "spoolJsonSha": "sha256:f19035416f9f20ae9c2f0a208f2716c4c5c441c1aac5a35422f1533be7c5e146"
+          "url": "spools/scientific-agent-skills/2.69.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:ac5ab6dc96d70dc49086bd1544f8acced3d756cd054c167cdd1d3beaaa8b053a",
+          "spoolJsonSha": "sha256:f4df5faef401b7a7bd39b30528f917cf30821667bd11afa088cc1ecd1e941d53"
         },
         {
           "cli": "claude-code",
           "scope": "local",
-          "url": "spools/scientific-agent-skills/2.53.0/claude-code.local.spool.tgz",
-          "spoolSha": "sha256:6a47a0e39547a5fc53430150de9758433faf6ba927a0ed58582e8332698cc434",
-          "spoolJsonSha": "sha256:c105e9465a77f35a999d6b6fc0ef72539c1317f0bbd365b23243ab58d7b0a900"
+          "url": "spools/scientific-agent-skills/2.69.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:3c12122d3ef88c4054fc884f7fb00ed49423fc83a738bdd31c2dd590a6c11177",
+          "spoolJsonSha": "sha256:88f148fe0a6ad7c1d2febb51cf555f21374a5341026a9f59b97147d375ee5521"
         },
         {
           "cli": "codex",
           "scope": "global",
-          "url": "spools/scientific-agent-skills/2.53.0/codex.global.spool.tgz",
-          "spoolSha": "sha256:15eff4bb0d763632c6c815158682ee7343da65275f111079ea0c1d1b0c452d50",
-          "spoolJsonSha": "sha256:76339067a004e238f5dfe566efa2524eaa79917ccf5adcb2d21b94327c93c0ab"
+          "url": "spools/scientific-agent-skills/2.69.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:4948af4f586b21dd041e560a38ed0eeacb2619e2ca93cfd941fa901575b45542",
+          "spoolJsonSha": "sha256:d47c2e0431ac2ee6083b7a18cdf245f7caf280774f9e942c1fe18d7f4d6225b4"
         },
         {
           "cli": "codex",
           "scope": "local",
-          "url": "spools/scientific-agent-skills/2.53.0/codex.local.spool.tgz",
-          "spoolSha": "sha256:ba25e8152d1ed4126ff6e340bee4346206369713ab054cf67a95e570c262e8fe",
-          "spoolJsonSha": "sha256:a6f857a1b5d33efcab2a43f80379c00f322a3786ab1e33cc37a9e3bac24fb879"
+          "url": "spools/scientific-agent-skills/2.69.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:bea877a2a7857465c2212b6f90d44389f52ec2deccbe75f794d1b38ca1f11b8c",
+          "spoolJsonSha": "sha256:57fb8a9b6734b0cc77c1bf754528f3684de2650f587613f8e14c501db732fd72"
         },
         {
           "cli": "gemini",
           "scope": "global",
-          "url": "spools/scientific-agent-skills/2.53.0/gemini.global.spool.tgz",
-          "spoolSha": "sha256:e6456c566b611565821a97c7d3a95f9b17c03ca325c4e87273c588161f8cb706",
-          "spoolJsonSha": "sha256:aa74e1f87c7a39a8b1bd74ff5f6dd465a089121a3e3ea91a403cc2479bfe9ed6"
+          "url": "spools/scientific-agent-skills/2.69.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:1c8f81a7657455b5a00b1500a5ff75d081153ed75709fe4f48d01c2a18dc81bc",
+          "spoolJsonSha": "sha256:407c627f21135ffb46e6073235651e363b264de31767d8809ec73857266cd866"
         },
         {
           "cli": "gemini",
           "scope": "local",
-          "url": "spools/scientific-agent-skills/2.53.0/gemini.local.spool.tgz",
-          "spoolSha": "sha256:29074af9cc8af942cfe77bbff1dcfd51067bbe4e9947ebd47911c588c9efdbd3",
-          "spoolJsonSha": "sha256:e987b84c4976ae36fa2e1917839cafc11b922c73b4e8a19572ad26047651acba"
+          "url": "spools/scientific-agent-skills/2.69.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:d34e4894f4dd31e95ea0d22c281aecd4bb18364a35f4aa1980f7cf6ed27c45e7",
+          "spoolJsonSha": "sha256:7dd5dee40d17e74c802d4d630b78a80749c9582c6060b93eab96897d0341168f"
         },
         {
           "cli": "cursor",
           "scope": "global",
-          "url": "spools/scientific-agent-skills/2.53.0/cursor.global.spool.tgz",
-          "spoolSha": "sha256:b17ed7335f746188a8b3c706af2ce15e19970ff8f0bfec9d33b1ca7a8d4f3702",
-          "spoolJsonSha": "sha256:a95e48bf2daceb9085186ed9b1bcf57d389b1bdcccd2b3cee621277df8f4cab3"
+          "url": "spools/scientific-agent-skills/2.69.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:78eec5eaa904330772dcaaffbcf8586da762103cefd3783ea157a8b71b6b611c",
+          "spoolJsonSha": "sha256:6d3e7c12d7f8ab425e0131539406d9ec1df1572fe1504805339364bbc4f8c9b4"
         },
         {
           "cli": "cursor",
           "scope": "local",
-          "url": "spools/scientific-agent-skills/2.53.0/cursor.local.spool.tgz",
-          "spoolSha": "sha256:3ea00e2a2d6e3f6ca08337cf1115bcc0646bc407a4265eb7c37d98f9caf7f342",
-          "spoolJsonSha": "sha256:483b8636f1bff9180c716ccee506a62c858b6b4d3c5fee5c2f4f29e0391cf30b"
+          "url": "spools/scientific-agent-skills/2.69.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:2929fb19d87585444f775eea3ef9a60cf10591c4e96b72fc817d2e82b7814ab7",
+          "spoolJsonSha": "sha256:3bc7f663b01c4f169f7ace061c32aa019733cccba5c95890eecf346845ef0677"
         },
         {
           "cli": "opencode",
           "scope": "global",
-          "url": "spools/scientific-agent-skills/2.53.0/opencode.global.spool.tgz",
-          "spoolSha": "sha256:ecfc9b2a12a18e7623d857ad84ee30a3673d89cb11680f26a12b0fbb03463977",
-          "spoolJsonSha": "sha256:330d5b572a29a58279d46d8c07a5155f2b688446696b8bcfec352c117c25499a"
+          "url": "spools/scientific-agent-skills/2.69.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:41ed01ca99df6a165fa992734349de6db21494790b0f4712ceed07c0eba60912",
+          "spoolJsonSha": "sha256:2d4ed785ac36ed055faea88cc0eb3fafbf5785cab56c27220550f1880feebdfa"
         },
         {
           "cli": "opencode",
           "scope": "local",
-          "url": "spools/scientific-agent-skills/2.53.0/opencode.local.spool.tgz",
-          "spoolSha": "sha256:3b24fe6b171daa6ba998ce396628ee2ecd444d0356bb7a5455d4bf9c16b634bc",
-          "spoolJsonSha": "sha256:e2aa0cc7d509b0100b69ed678fc8fdbf1fe0fa97e852fe3efa4028b3e7806c36"
+          "url": "spools/scientific-agent-skills/2.69.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:043ca4fe4838e70797d9c6820033ab0431a6cf51ab8693f8d373d4beb52c48d7",
+          "spoolJsonSha": "sha256:87bdeaf97baf3737e3741d6bd8d4596df3418f2102f602830d401b1707acbf17"
         }
       ]
     }
