@@ -11,7 +11,7 @@
     "planning",
     "productivity"
   ],
-  "latest": "1.0.1",
+  "latest": "1.2.3",
   "clis": [
     "claude-code",
     "codex",
@@ -21,77 +21,77 @@
   ],
   "versions": [
     {
-      "version": "1.0.1",
+      "version": "1.2.3",
       "spools": [
         {
           "cli": "claude-code",
           "scope": "global",
-          "url": "spools/mattpocock-skills/1.0.1/claude-code.global.spool.tgz",
-          "spoolSha": "sha256:23f8456e8bff84768b77a755e9ad491a88f2df1af6108add28915445e6f4eb48",
-          "spoolJsonSha": "sha256:51dfd3669028cd7c3721eb56ce18bc9d37bbc1b2e87da7b9452643f21c27c1a6"
+          "url": "spools/mattpocock-skills/1.2.3/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:e4dbba4167936c1acc39595923ede1ec991da5200ce445fd7ce00ff518f9c7ac",
+          "spoolJsonSha": "sha256:bd632079b825357dae66e5c7bd936ce11a880c7f13011f989f41082b6a6aff5d"
         },
         {
           "cli": "claude-code",
           "scope": "local",
-          "url": "spools/mattpocock-skills/1.0.1/claude-code.local.spool.tgz",
-          "spoolSha": "sha256:acd630af95ce24e5cdfa5936f62f299c3a6a99e4e3c3cbbb54cc625a07db773b",
-          "spoolJsonSha": "sha256:076c57f45624958600642663eeb6311516d6cd385fa0661cf538d76eaec10299"
+          "url": "spools/mattpocock-skills/1.2.3/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:171d063edbffe027045bb6e1de2d3fdbd7871b9e6126a6cea6628b69e3d1b434",
+          "spoolJsonSha": "sha256:b05a5e91892fbb443e4906eac8d2d05b5b38952e474d85d18499aeb35ca426a0"
         },
         {
           "cli": "codex",
           "scope": "global",
-          "url": "spools/mattpocock-skills/1.0.1/codex.global.spool.tgz",
-          "spoolSha": "sha256:c7de12ce05a5f8ace12527503263708d358eeab6f740f50392af88a48cc617ed",
-          "spoolJsonSha": "sha256:18ac70c5942024cae5538d5f2700ae573ea7afc7591855ceadfeed3632f69e11"
+          "url": "spools/mattpocock-skills/1.2.3/codex.global.spool.tgz",
+          "spoolSha": "sha256:334b5ccaa5a3815d388ba3003881c8248be37ed3cf2fa88c960feb8442860e9a",
+          "spoolJsonSha": "sha256:1d3a8e3d049458174f30f5aab3aa2d0b68d1a87d63f6f4cbfad72d27b9218ec0"
         },
         {
           "cli": "codex",
           "scope": "local",
-          "url": "spools/mattpocock-skills/1.0.1/codex.local.spool.tgz",
-          "spoolSha": "sha256:4c8582b1d84321cbe0b56849e89532642e05dd37e2385987205b30d900c54448",
-          "spoolJsonSha": "sha256:019efe3a5445e2457e51cfbd1463fb1ef207cb6138d02fba21789683843810be"
+          "url": "spools/mattpocock-skills/1.2.3/codex.local.spool.tgz",
+          "spoolSha": "sha256:97cc0203662d70931239f77cc87e894d25d78fce04476c43c593e97b35c3268e",
+          "spoolJsonSha": "sha256:cab851f2682afc8ebb3497a341121a4c12a10ba6ece172d4367d5fed459a3624"
         },
         {
           "cli": "gemini",
           "scope": "global",
-          "url": "spools/mattpocock-skills/1.0.1/gemini.global.spool.tgz",
-          "spoolSha": "sha256:7ebcf87fe7dc6016b6f5484ff96f5ed65db9b515f05934df6e3a520b95347953",
-          "spoolJsonSha": "sha256:446426c2755bd4ba6866ba6c29a30fd1070d6736232ada3bf08db8729a48ad96"
+          "url": "spools/mattpocock-skills/1.2.3/gemini.global.spool.tgz",
+          "spoolSha": "sha256:a2a58cc7b1fdd8f0a2052ad914fea0be4fb90a56dad65caf0977284447739121",
+          "spoolJsonSha": "sha256:70c9d322facb7966f3d85fe0fa4acce5cb3b8b4bb1f6e4208baba90f4b763b1a"
         },
         {
           "cli": "gemini",
           "scope": "local",
-          "url": "spools/mattpocock-skills/1.0.1/gemini.local.spool.tgz",
-          "spoolSha": "sha256:c12e80e1c759720868911df97e7865097d15ce94d1d9c5e8f5441ef8640adf91",
-          "spoolJsonSha": "sha256:0bdcb4615993acd776e0f8f1e71cfc3b386c1347984441b4ee10f1d4078c72db"
+          "url": "spools/mattpocock-skills/1.2.3/gemini.local.spool.tgz",
+          "spoolSha": "sha256:7ccf00c3a40ee426bb7cb3fc26750d8b92ca27f5b9134d83efa3c9a52dfeaa81",
+          "spoolJsonSha": "sha256:f811a14c7d6370dae80fbb59d0dfb93367f8251ce0fdd114e8285d1d417a7e5b"
         },
         {
           "cli": "opencode",
           "scope": "global",
-          "url": "spools/mattpocock-skills/1.0.1/opencode.global.spool.tgz",
-          "spoolSha": "sha256:b54e7a942cd4b0b18ae1d5d00a8b60b662dcc725393cc6bad2c73e5d0c10d7e0",
-          "spoolJsonSha": "sha256:19b993fcb0346ca88a8b74cd4f7f10d91f87d0f2e5128fdd7978259ebcc901c1"
+          "url": "spools/mattpocock-skills/1.2.3/opencode.global.spool.tgz",
+          "spoolSha": "sha256:59e02cdc1f7d3a2d9a4d6372df3ba206e249ce155ccdbfe7128413fea66bd6dd",
+          "spoolJsonSha": "sha256:e54d81ac2e4df1a3fabf336604a41d31e397b04c3f992f4fbec100d05c1b38ba"
         },
         {
           "cli": "opencode",
           "scope": "local",
-          "url": "spools/mattpocock-skills/1.0.1/opencode.local.spool.tgz",
-          "spoolSha": "sha256:8ec8fdcb801674c561bcd6914523d3158d2a4a57dcf40807ab17878c5df41f2f",
-          "spoolJsonSha": "sha256:bb125f7dee36ff2c0ba12053f973886b42c1b35cd7e01f7298b3ab25a6b53f1f"
+          "url": "spools/mattpocock-skills/1.2.3/opencode.local.spool.tgz",
+          "spoolSha": "sha256:c8a7aff3d9c87fed95e0f5f46d9e394e49bdccef5eeb61f310c0fc1fca3e8671",
+          "spoolJsonSha": "sha256:7ec31ab9b7f94caa05d00ae079f579810deb511086f8ac61a17b5adff3a2943b"
         },
         {
           "cli": "cursor",
           "scope": "global",
-          "url": "spools/mattpocock-skills/1.0.1/cursor.global.spool.tgz",
-          "spoolSha": "sha256:699d3b4f7b72aa5a169db4d428aa0a5dda70fc2ab5e3e7fb520c4768abc21196",
-          "spoolJsonSha": "sha256:69f2459b13c04116c506de9d13e01c7bb56afcb8df13a0d608d96e4786d98128"
+          "url": "spools/mattpocock-skills/1.2.3/cursor.global.spool.tgz",
+          "spoolSha": "sha256:236349f1383ce9a8ffe24ebc4e6ca7114d279ffa7061cde3027b13ff91dd44fe",
+          "spoolJsonSha": "sha256:7f3699b86bc71cb6e4756ff47ecda6ce0be39bb590e8c02146c86e368f8b7fd9"
         },
         {
           "cli": "cursor",
           "scope": "local",
-          "url": "spools/mattpocock-skills/1.0.1/cursor.local.spool.tgz",
-          "spoolSha": "sha256:c7f75e764a8081c9afb5b11e63d9d4c2ef254797d56fdc72cc30df725e41a2fb",
-          "spoolJsonSha": "sha256:57e52e2ef8d2ee746234a4cecf2bf20c51450b6c38ecaf779e75f26f7fbb4f81"
+          "url": "spools/mattpocock-skills/1.2.3/cursor.local.spool.tgz",
+          "spoolSha": "sha256:20c0ec75227c89433781f366ebff9a5c732335fc390110a3d5537aa9f4e9addd",
+          "spoolJsonSha": "sha256:5cc43a4cc384039effb7ab9d66875d8e1039ddbce6a5234bbc2d8a9cf8e44f96"
         }
       ]
     }
