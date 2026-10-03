@@ -10,7 +10,7 @@
     "agents",
     "skills"
   ],
-  "latest": "1.4.0",
+  "latest": "1.6.0",
   "clis": [
     "claude-code",
     "gemini",
@@ -20,77 +20,77 @@
   ],
   "versions": [
     {
-      "version": "1.4.0",
+      "version": "1.6.0",
       "spools": [
         {
           "cli": "claude-code",
           "scope": "global",
-          "url": "spools/dotnet-skills/1.4.0/claude-code.global.spool.tgz",
-          "spoolSha": "sha256:70b13077eea5e747b9bb943847b0b2993384766b3301a8091703acf8b55c4fbf",
-          "spoolJsonSha": "sha256:d759a5fa23bee3f6e78785952f1fc784e52198df9538250c75b1761f0029cf17"
+          "url": "spools/dotnet-skills/1.6.0/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:62308a757d6d951aed732973fedde1f3245172ca1158b9201ee1394485b6310d",
+          "spoolJsonSha": "sha256:6a57808d8ca0f4bd7d6194525da09592beef3c64e4345ccc6dccb8b3e457b3cc"
         },
         {
           "cli": "claude-code",
           "scope": "local",
-          "url": "spools/dotnet-skills/1.4.0/claude-code.local.spool.tgz",
-          "spoolSha": "sha256:269222da0cdc72df3e331a22b119e44b76dc8b66bc053a7706c80d02b4d1e750",
-          "spoolJsonSha": "sha256:16af33843f0bc3c6d5b2d4d4893e3810f67288656be3a2dc35208fdef240d537"
+          "url": "spools/dotnet-skills/1.6.0/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:0656905b5d5cd31d74d28aab18754f871e3b6fd43097a5cab302847496d15deb",
+          "spoolJsonSha": "sha256:56bfdea8c450085cd11209c2415be6453db816a3f7226d202035a905e8425539"
         },
         {
           "cli": "gemini",
           "scope": "global",
-          "url": "spools/dotnet-skills/1.4.0/gemini.global.spool.tgz",
-          "spoolSha": "sha256:a276b7265cf6bb00b8c659243c9ecce72b50505d7354ba1d846128c42964ace9",
-          "spoolJsonSha": "sha256:6a10ddc27960ef6367695ae8b2a55fbce8d1a6d5dcb30bb8cbb868284537d706"
+          "url": "spools/dotnet-skills/1.6.0/gemini.global.spool.tgz",
+          "spoolSha": "sha256:843e0195f1c9cebbffd646bb83d039eae149326e5d8d2870115114dec094b44e",
+          "spoolJsonSha": "sha256:a28230443b8f748aa104a41115e9141b1e376fdbb87453c5cc44df85ae8080ed"
         },
         {
           "cli": "gemini",
           "scope": "local",
-          "url": "spools/dotnet-skills/1.4.0/gemini.local.spool.tgz",
-          "spoolSha": "sha256:2deac4b02a98894dd2a1e36720a8abe100ba16d69a563b260e2f5962ab1d561f",
-          "spoolJsonSha": "sha256:a12299885226b0a8522cc832c061bb7895144aca9c851127a14b7ecd81ec3752"
+          "url": "spools/dotnet-skills/1.6.0/gemini.local.spool.tgz",
+          "spoolSha": "sha256:a06fdb0d2e6047a9085ee29041b4f553e6b67a5608f2873fd83037cba2c31a36",
+          "spoolJsonSha": "sha256:539e995f6186125d2d41dcf0c7d39eaaa70190dc4e3a28d967be2f156ddedf24"
         },
         {
           "cli": "cursor",
           "scope": "global",
-          "url": "spools/dotnet-skills/1.4.0/cursor.global.spool.tgz",
-          "spoolSha": "sha256:2ba7d14206ef4cb31d2c869496e90bd315664dbcca0ee058af7c5a1e18126522",
-          "spoolJsonSha": "sha256:bf70ef051b4daab437566b57c8b44ab47c30001e64fed37482316278fd56f420"
+          "url": "spools/dotnet-skills/1.6.0/cursor.global.spool.tgz",
+          "spoolSha": "sha256:f8264726dca1e916406716865fd9fee2b35f7974c78119cf462857b11a652734",
+          "spoolJsonSha": "sha256:05f858a667f2d948c3a1bec755b1e66b5af6fa653b8b0f33bd99fb6e54e0793f"
         },
         {
           "cli": "cursor",
           "scope": "local",
-          "url": "spools/dotnet-skills/1.4.0/cursor.local.spool.tgz",
-          "spoolSha": "sha256:f4a4f1117783ad858358abfde1613d9ce5a418110497be7f672f3fd9814fa41c",
-          "spoolJsonSha": "sha256:98e40955d6f6d1ce0a4fafcf0149d5de62535a5449bf703031f64f6f2aaa8060"
+          "url": "spools/dotnet-skills/1.6.0/cursor.local.spool.tgz",
+          "spoolSha": "sha256:ddcedc331a54a3dfbb9e77fd1ac8aaaef6ab5a9e4e7373ec884cde7d2bbde87e",
+          "spoolJsonSha": "sha256:e7d45f9fde930ac78df92e98b996f6a6792ce572e630e0d704aa85ed38ab43aa"
         },
         {
           "cli": "opencode",
           "scope": "global",
-          "url": "spools/dotnet-skills/1.4.0/opencode.global.spool.tgz",
-          "spoolSha": "sha256:f2674e1c6a3e3a18b8950cc15018f62853ae74801f83890c056a1bf58682d0b9",
-          "spoolJsonSha": "sha256:bc0899c534a3a0f954c64b6cfcd3a4c048f3b05468dbc4c7ffa00b7029aa9ad2"
+          "url": "spools/dotnet-skills/1.6.0/opencode.global.spool.tgz",
+          "spoolSha": "sha256:07e255435c56ed36808928c2aa1be52df904daeabcd53b5eeb6f05765109b63a",
+          "spoolJsonSha": "sha256:b7dd65b69a2abaf2736c2e9958d30f5d69ac51b27a32e984c2288f25e22103e4"
         },
         {
           "cli": "opencode",
           "scope": "local",
-          "url": "spools/dotnet-skills/1.4.0/opencode.local.spool.tgz",
-          "spoolSha": "sha256:2e0520f1e76da85fe727a44276ceb81a8ff08608bae606fefdf087e00336cdf9",
-          "spoolJsonSha": "sha256:d26ba8972659333fc8227623c1f219e7557313917166ea82eca23df2b09b3a74"
+          "url": "spools/dotnet-skills/1.6.0/opencode.local.spool.tgz",
+          "spoolSha": "sha256:272e2c61b9c586a85bdc90c94c01166ba45c7681bf49e23628127603cbec1dcb",
+          "spoolJsonSha": "sha256:509201da6a775abc4c3e4f7f46f3b3dd8fb1ea2878d9f74f0f2929d67a88fc7a"
         },
         {
           "cli": "codex",
           "scope": "global",
-          "url": "spools/dotnet-skills/1.4.0/codex.global.spool.tgz",
-          "spoolSha": "sha256:4ceb3210010a43f5833c9b66764887721f6a169c367817a1961ef034d1e8e5fe",
-          "spoolJsonSha": "sha256:efd256c0e0217ba8b729167b3ca49a27fef5a475509f01f846ae0bd607865d10"
+          "url": "spools/dotnet-skills/1.6.0/codex.global.spool.tgz",
+          "spoolSha": "sha256:a954ee13f98b62929f5b5842edc569285a3d9aa0d2f518b7f135a31c6478f428",
+          "spoolJsonSha": "sha256:ac770eea4cbdeb29171ecf04667a189ef042b23e534b0fb8ff29ce9239a4d4d2"
         },
         {
           "cli": "codex",
           "scope": "local",
-          "url": "spools/dotnet-skills/1.4.0/codex.local.spool.tgz",
-          "spoolSha": "sha256:7fee423e982deae17fff9571f089efaf380056d66eab190e3e44ce567c664974",
-          "spoolJsonSha": "sha256:62e32e5086a14adf0f6668105c6f385e3af4a942fa804d5003cc8bb00330f6db"
+          "url": "spools/dotnet-skills/1.6.0/codex.local.spool.tgz",
+          "spoolSha": "sha256:ffddc16e3db568a6bc08473e44ede622dee34e1f5139e467b451d087d0fc4a58",
+          "spoolJsonSha": "sha256:2e707f93d3e39d98fee4484d4cb5c560a8c59050f33d3b21f72730ecf535956c"
         }
       ]
     }
