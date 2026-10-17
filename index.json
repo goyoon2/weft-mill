@@ -2326,7 +2326,7 @@
         "code-review",
         "skill"
       ],
-      "latest": "1.1.0",
+      "latest": "2.0.0",
       "clis": [
         "claude-code",
         "codex",
@@ -2336,77 +2336,77 @@
       ],
       "versions": [
         {
-          "version": "1.1.0",
+          "version": "2.0.0",
           "spools": [
             {
               "cli": "claude-code",
               "scope": "global",
-              "url": "spools/swiftui-pro/1.1.0/claude-code.global.spool.tgz",
-              "spoolSha": "sha256:ccb96926614ceffb69cf3d5977e49e9f993e6281bb40882dbd90a41b37c43e49",
-              "spoolJsonSha": "sha256:604c3d9b5e7ebb6d91ed733cdae9dcfb3b1c60d9e1ae42477cc3b7a783b91d2b"
+              "url": "spools/swiftui-pro/2.0.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:aba84cdfbf295c6c2b65a3f64d5ee7fcc52e00cf58c8e86956c0799d61332797",
+              "spoolJsonSha": "sha256:a11ec785473479d75a2f699e3b5a2f9fc95e317fb42eb29a5b18eaae41fe218d"
             },
             {
               "cli": "claude-code",
               "scope": "local",
-              "url": "spools/swiftui-pro/1.1.0/claude-code.local.spool.tgz",
-              "spoolSha": "sha256:bbaea5c5f2be7e473f89bf1fca27c7e43e6c58329ca6b099524f0fb1f1fab709",
-              "spoolJsonSha": "sha256:4d47a442c52f1aa0fcf6a222a8c40b244e425dfddd0ff8e5f20ead79752cc81e"
+              "url": "spools/swiftui-pro/2.0.0/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:4f0eccbf23b554dbdb998ccdca2f9da761c75b5e19de0a9fb91246967f41e2d3",
+              "spoolJsonSha": "sha256:9546feb78a68db8731276e3d9e85fd8f4b3484f90d9ff573ef056dddb682bf0a"
             },
             {
               "cli": "codex",
               "scope": "global",
-              "url": "spools/swiftui-pro/1.1.0/codex.global.spool.tgz",
-              "spoolSha": "sha256:167abdd286b59c150e66b541708807352679e476b727e6c3ecde507af9a8dee2",
-              "spoolJsonSha": "sha256:315da94ff4129486a10428256a9ff6d814dfe1643909bb882918e9cce6aced00"
+              "url": "spools/swiftui-pro/2.0.0/codex.global.spool.tgz",
+              "spoolSha": "sha256:006374fc17a3a0b1c3d329da3c62589188fcc55a0298d139affb7d888187d730",
+              "spoolJsonSha": "sha256:c859ca4ef217caafb98a460176edb2405cfbf6c70b7ae473f486c5c4d5b023ab"
             },
             {
               "cli": "codex",
               "scope": "local",
-              "url": "spools/swiftui-pro/1.1.0/codex.local.spool.tgz",
-              "spoolSha": "sha256:d8ec772f0283dcf5cbda3a9b192aad63664d5ab1c4a5e1b191181b72e77095da",
-              "spoolJsonSha": "sha256:7d13092e8e3c0727f1d508943f01e64080b2ba82198f7c39c4401f768bb2348d"
+              "url": "spools/swiftui-pro/2.0.0/codex.local.spool.tgz",
+              "spoolSha": "sha256:aa12218742d5d656d998223c90024b666023264063ce9ccc7fc0caeb5bf7fc1b",
+              "spoolJsonSha": "sha256:8d507f003726d6308098f6335b818ff8fd621aca294ad38c4c54efbb137a1a14"
             },
             {
               "cli": "gemini",
               "scope": "global",
-              "url": "spools/swiftui-pro/1.1.0/gemini.global.spool.tgz",
-              "spoolSha": "sha256:f6a4813a3a222615e6f52a8edb5e9f21fe92a44abe369de4105398ba44db3975",
-              "spoolJsonSha": "sha256:a731edda2eb6439c8df930879057fde92b84c9ab95a15b6690a409d6e77b36ed"
+              "url": "spools/swiftui-pro/2.0.0/gemini.global.spool.tgz",
+              "spoolSha": "sha256:7e04059aa4ee0df3dee30864001ea7ae8966853273d3c70bc2dc12a60215d33f",
+              "spoolJsonSha": "sha256:f74d87245af1df996ced5375f96ed1c16afdb9e4c73f0c8adcf9a4862e619925"
             },
             {
               "cli": "gemini",
               "scope": "local",
-              "url": "spools/swiftui-pro/1.1.0/gemini.local.spool.tgz",
-              "spoolSha": "sha256:41d2989be5a0226d34d2043c30e0620abf8b80fc11a13608a3a39f718e9c9796",
-              "spoolJsonSha": "sha256:d6f4a503860112171f1f3fdd81dbb94701a86c2cf7ed4aae12968cde4cb56fcb"
+              "url": "spools/swiftui-pro/2.0.0/gemini.local.spool.tgz",
+              "spoolSha": "sha256:e543575ed39c5a67361320da8e95aaacfba3b32372e4349fd5a575879f033d6b",
+              "spoolJsonSha": "sha256:5391648a5ee0d1fbcdf264257925887a6f14228bf4606b4a37b38e9069202f96"
             },
             {
               "cli": "opencode",
               "scope": "global",
-              "url": "spools/swiftui-pro/1.1.0/opencode.global.spool.tgz",
-              "spoolSha": "sha256:d912f8cf6cf29cee9c5a0150833db2ae0389a48ef2a0668f8de862a04347bee0",
-              "spoolJsonSha": "sha256:6e6c162b6c97146a3dc2cd5f6b04df8d24d0b0b6c64516e88fcff81483801663"
+              "url": "spools/swiftui-pro/2.0.0/opencode.global.spool.tgz",
+              "spoolSha": "sha256:137e4db42ccbfb11698f637377414212685bab8931d57bc0d6650c04f632d8f6",
+              "spoolJsonSha": "sha256:f31d97fa44bf0a314325caae0facb29d0e3b3f121a03d895253d68ac069e9ac8"
             },
             {
               "cli": "opencode",
               "scope": "local",
-              "url": "spools/swiftui-pro/1.1.0/opencode.local.spool.tgz",
-              "spoolSha": "sha256:60c54505e6025707a52d3638fe62d312ae8d95d3f1ef43c6c5bceabdea9959a3",
-              "spoolJsonSha": "sha256:f78f5efd079c6875820d060c52a99537b03f2bb5da56ffa60c4cd6d88760059a"
+              "url": "spools/swiftui-pro/2.0.0/opencode.local.spool.tgz",
+              "spoolSha": "sha256:64b544e02d3d11a3a122f5fecb1c74dadea4944560addff323fd8ab8da6cab9c",
+              "spoolJsonSha": "sha256:54b95f16b1b16da49c25c5195bc897c90a20c2b14b2511d5b3245a39615777d1"
             },
             {
               "cli": "cursor",
               "scope": "global",
-              "url": "spools/swiftui-pro/1.1.0/cursor.global.spool.tgz",
-              "spoolSha": "sha256:82ed71c2579bc8ce6f53dc0fa469a80b4c22729f81235bf5223c15b7fed430a6",
-              "spoolJsonSha": "sha256:ecd3ead29b2df9151bf9e41fcfef6af06a8b2ff048a9ec47d4177e52f75fd3ea"
+              "url": "spools/swiftui-pro/2.0.0/cursor.global.spool.tgz",
+              "spoolSha": "sha256:e25c80d39ab6ed9e6c30a44b0804fcfdb3aff85e2d58f1a719ac2434e504f5a8",
+              "spoolJsonSha": "sha256:a168e33873151686b45d0b116cb715b4f14ad48aec6e6b17b6738f3d244be069"
             },
             {
               "cli": "cursor",
               "scope": "local",
-              "url": "spools/swiftui-pro/1.1.0/cursor.local.spool.tgz",
-              "spoolSha": "sha256:d583152c4565f2302e04846f4e9ecb90df7ba73d8a43b1e0d05c3b7a58c443d1",
-              "spoolJsonSha": "sha256:94433e9f4b125698c511411629872a5c99db8b7c0e098eb0bf220d2d566c2c93"
+              "url": "spools/swiftui-pro/2.0.0/cursor.local.spool.tgz",
+              "spoolSha": "sha256:96637accbf8fb4e067c11e23b2344325902591ba55f9c910f4b7d380dae580e0",
+              "spoolJsonSha": "sha256:5bbbdc1a94bc71ed3b00dbecebbac757701a5a20967befc8212d1deffbc74901"
             }
           ]
         }
