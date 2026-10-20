@@ -1389,20 +1389,20 @@
         "review",
         "claude"
       ],
-      "latest": "1.58.5.0",
+      "latest": "1.91.164.0",
       "clis": [
         "claude-code"
       ],
       "versions": [
         {
-          "version": "1.58.5.0",
+          "version": "1.91.164.0",
           "spools": [
             {
               "cli": "claude-code",
               "scope": "global",
-              "url": "spools/gstack/1.58.5.0/claude-code.global.spool.tgz",
-              "spoolSha": "sha256:be9491f8e92f3f5ed16a9fee7e2db9665387fcf72d919227a4156542fee7d113",
-              "spoolJsonSha": "sha256:b515315251364d66179e5774140e31809ed695271bd9f8ef09388800deace2aa"
+              "url": "spools/gstack/1.91.164.0/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:d0e526b2d086709cc1b19fdd4a937b8a6c078dc104c9ef808b087331b0bb8a50",
+              "spoolJsonSha": "sha256:626f69bb612fece5518baa49df70cb3e693bf16899b179509500c867ffd8a2f9"
             }
           ]
         }
