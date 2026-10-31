@@ -10,7 +10,7 @@
     "infrastructure",
     "iac"
   ],
-  "latest": "1.17.1",
+  "latest": "1.17.2",
   "clis": [
     "claude-code",
     "codex",
@@ -20,77 +20,77 @@
   ],
   "versions": [
     {
-      "version": "1.17.1",
+      "version": "1.17.2",
       "spools": [
         {
           "cli": "claude-code",
           "scope": "global",
-          "url": "spools/terraform-skill/1.17.1/claude-code.global.spool.tgz",
-          "spoolSha": "sha256:74e18250d9da6dcd32c7c0c6fda560fb4a0a2f270cd7c7c2537546bd0bf43418",
-          "spoolJsonSha": "sha256:4eb78b17addc7ceb7602bb6664274848815a05018e9c58631fd630125aa49b9f"
+          "url": "spools/terraform-skill/1.17.2/claude-code.global.spool.tgz",
+          "spoolSha": "sha256:7247c0393060622f6115eab4282c386a495ad9e1e14bd5f4b3e61a52dd4a921e",
+          "spoolJsonSha": "sha256:f904f608cd6283dda40ae1a6daa66def955512accf0bf9223c2d159021ba5cd4"
         },
         {
           "cli": "claude-code",
           "scope": "local",
-          "url": "spools/terraform-skill/1.17.1/claude-code.local.spool.tgz",
-          "spoolSha": "sha256:349f868cd4927ab8968165a9eedf0803c484a31787af8bfb7e89edd283f791e5",
-          "spoolJsonSha": "sha256:46f85817f71bb87490713b130d7425405d89a5a69f3472517234f6de3df4f2bd"
+          "url": "spools/terraform-skill/1.17.2/claude-code.local.spool.tgz",
+          "spoolSha": "sha256:a26a63f23e9d94acce011ce84666bdc26112774de326b04d2c3f91cd577b5a13",
+          "spoolJsonSha": "sha256:77c79cb0b49bee8dc5552114f83cbb01d6158f08b4453f32a3fd487de627b9ca"
         },
         {
           "cli": "codex",
           "scope": "global",
-          "url": "spools/terraform-skill/1.17.1/codex.global.spool.tgz",
-          "spoolSha": "sha256:f2b066e0286bc6bb3dd6bb680294250c3b335c0bbe5e0bd93f6084316d92e134",
-          "spoolJsonSha": "sha256:4b5de4ff0b806b3d37d6b03d137b4a1a5705d47780e825661e45e0becf71feae"
+          "url": "spools/terraform-skill/1.17.2/codex.global.spool.tgz",
+          "spoolSha": "sha256:17ee61a1589e3c08eb845398c5098f6be92dc49d6264d3b6552013e8b272e4e1",
+          "spoolJsonSha": "sha256:4d4bd480dbd953ea6c99820b531b0b5455fa305aeccb16040d0a47bb4ee97cd8"
         },
         {
           "cli": "codex",
           "scope": "local",
-          "url": "spools/terraform-skill/1.17.1/codex.local.spool.tgz",
-          "spoolSha": "sha256:78b684d91ed3cbc392dac00448ca0338a1815cac94867a0f1651eb75da0da285",
-          "spoolJsonSha": "sha256:221f110c2854874b6184582f6522986aee9ed26363f056e9db5433e1af85acd8"
+          "url": "spools/terraform-skill/1.17.2/codex.local.spool.tgz",
+          "spoolSha": "sha256:2a71dcdc4ec43e4151284a235e59c70ddbf06b2d3ab29bd52d908887c6681b7f",
+          "spoolJsonSha": "sha256:7a21b3566b9707d58121f02d407515e327987e8dd1c818c192b9971db2cb8919"
         },
         {
           "cli": "gemini",
           "scope": "global",
-          "url": "spools/terraform-skill/1.17.1/gemini.global.spool.tgz",
-          "spoolSha": "sha256:45c588c9677e9b86c244b4dc0173864f2637106f6d24c25c76caf5c5abb29285",
-          "spoolJsonSha": "sha256:205e44c7a57af87a1c0414985cd5228231e0d23472590d354151379fcffd1115"
+          "url": "spools/terraform-skill/1.17.2/gemini.global.spool.tgz",
+          "spoolSha": "sha256:ca28fbaaca3019396d5d45f164b89110a85f79018341de283374f6abb483c4da",
+          "spoolJsonSha": "sha256:3f4675bea3bf68caa7c587b265f91400e3e56a1c57900108e7884100c4e3b5b8"
         },
         {
           "cli": "gemini",
           "scope": "local",
-          "url": "spools/terraform-skill/1.17.1/gemini.local.spool.tgz",
-          "spoolSha": "sha256:8705db33d9cc9cd1391862f4eec33b7cd2a860ebf9b7e1b207d8d5d8ed11631b",
-          "spoolJsonSha": "sha256:4f5b327413968906277d90ca8455406c185036d5eac9c9f13d55113058e8aeaa"
+          "url": "spools/terraform-skill/1.17.2/gemini.local.spool.tgz",
+          "spoolSha": "sha256:2b1b583f4c9ff01e4e31d1c2efbd045a7f027d5b879bd862819b896401c22f5e",
+          "spoolJsonSha": "sha256:7f0f67e0e064bbec986c09edca1789de77e2e21a12a4462b036b48e294500bb7"
         },
         {
           "cli": "opencode",
           "scope": "global",
-          "url": "spools/terraform-skill/1.17.1/opencode.global.spool.tgz",
-          "spoolSha": "sha256:83f481155e647cfdeec46b475f2f1d766f07dc8b29f74c6ca12e5a8625a17ba7",
-          "spoolJsonSha": "sha256:9037019678c2a09d74823e2e3780f4eaf339388329be4f21cf14b0b78597b26d"
+          "url": "spools/terraform-skill/1.17.2/opencode.global.spool.tgz",
+          "spoolSha": "sha256:4ddcf78376f08e8201b6b075dc0727b57e8210a667cf46cbd3ee9b0039f9e66d",
+          "spoolJsonSha": "sha256:80456b5054f97e1326b441b1c73aaea3280ce45863095995237d17004c2908c7"
         },
         {
           "cli": "opencode",
           "scope": "local",
-          "url": "spools/terraform-skill/1.17.1/opencode.local.spool.tgz",
-          "spoolSha": "sha256:287ed9ffb2408c7d314db3937b9486b8cd10ef175a548c6017efde9a071ed582",
-          "spoolJsonSha": "sha256:e6a1e3b5cb2718b94a0883013d47eb092e51b735dfbae81eab5ee8d371206efb"
+          "url": "spools/terraform-skill/1.17.2/opencode.local.spool.tgz",
+          "spoolSha": "sha256:ae72d88f988901a064f777067d06c6ca209b48b8b271f07c7ce3aa63265063fa",
+          "spoolJsonSha": "sha256:0f30d048cca8d160b02d864577fb3249471102470ecbf5af7d7acda6c0615321"
         },
         {
           "cli": "cursor",
           "scope": "global",
-          "url": "spools/terraform-skill/1.17.1/cursor.global.spool.tgz",
-          "spoolSha": "sha256:f6ab5cd1cfc5b41b45c43993522ab896efa5015dfb3be6bf6e283bf2522c78c8",
-          "spoolJsonSha": "sha256:54df4f9fb73454b9c029b11296e5f8aadaaafc2b4f805678c18f51c6530820db"
+          "url": "spools/terraform-skill/1.17.2/cursor.global.spool.tgz",
+          "spoolSha": "sha256:607eeda74fd6d3e4df7df7667fa028224bda18168b6f8cf689bc204911801ef5",
+          "spoolJsonSha": "sha256:48091b01c2e61977ad5ff87c79112742dfb35175e00c54595cab342ecec65d3e"
         },
         {
           "cli": "cursor",
           "scope": "local",
-          "url": "spools/terraform-skill/1.17.1/cursor.local.spool.tgz",
-          "spoolSha": "sha256:11f0c027b9bf9adee122d146508cc27ed4c524c17c994f4ef2f5894fca6c0a2f",
-          "spoolJsonSha": "sha256:4cd9bccab09210cf07efa0df891ce870d6b1a8e160b0b1b706adb31432c71f26"
+          "url": "spools/terraform-skill/1.17.2/cursor.local.spool.tgz",
+          "spoolSha": "sha256:bc7c65416141f91d026a0df5f5f9c1be0b10423cbbe226d6e48f0f285b85e3ec",
+          "spoolJsonSha": "sha256:a1be7d57d0c81afbefe2469327acd151cd3bb506b47ff0233d9baed765a08346"
         }
       ]
     }
