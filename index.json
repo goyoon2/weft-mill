@@ -1994,27 +1994,27 @@
         "code-review",
         "productivity"
       ],
-      "latest": "4.8.3",
+      "latest": "5.3.3",
       "clis": [
         "claude-code"
       ],
       "versions": [
         {
-          "version": "4.8.3",
+          "version": "5.3.3",
           "spools": [
             {
               "cli": "claude-code",
               "scope": "global",
-              "url": "spools/ponytail/4.8.3/claude-code.global.spool.tgz",
-              "spoolSha": "sha256:87a024a54268a5644d825863d5f257e1d67117f50943b08714d5f0ce0a3c20cb",
-              "spoolJsonSha": "sha256:08232c0f5b213603b4b159008054b1e5ab45170913c24797061f8137f298b595"
+              "url": "spools/ponytail/5.3.3/claude-code.global.spool.tgz",
+              "spoolSha": "sha256:66673f7b3b6727050489a4a73ea02a7b792abc454945bec037691e7e1bce5457",
+              "spoolJsonSha": "sha256:16ceeb1b480d3c7aff27572aac8fcb03d222dcaa3faf2bc290d54f6e7d45a691"
             },
             {
               "cli": "claude-code",
               "scope": "local",
-              "url": "spools/ponytail/4.8.3/claude-code.local.spool.tgz",
-              "spoolSha": "sha256:5bdd503123ffa6a53484964771b0a7381442bf8d67b09cb9efe232caf438492b",
-              "spoolJsonSha": "sha256:185d58e545aa9fc24cd437b32b1b53c1fb960ead0b335b28a6f345bcf788651e"
+              "url": "spools/ponytail/5.3.3/claude-code.local.spool.tgz",
+              "spoolSha": "sha256:ee5d64506743d34793c386c1b7a6fe5e1299f366d6f3204c2b74845a3e2b6613",
+              "spoolJsonSha": "sha256:3dca2a3d9985306dff87aad9f8add6528e2780ef5d50e985681096c5b5e3daf0"
             }
           ]
         }
